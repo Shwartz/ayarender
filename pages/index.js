@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 
 // import styles from '../styles/Home.module.scss'
 import styles from '../styles/index.module.scss'
@@ -7,14 +8,37 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>AyaRender</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <section>
+        header part
+      </section>
+
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+        <h1>
+          Welcome to Next.js!
         </h1>
+
+        <Image
+          src="/assets/blue.png"
+          alt="Picture of the author"
+          width={300}
+          height={200}
+        />
+        <Image
+          src="/assets/red.png"
+          alt="Picture of the author"
+          width={300}
+          height={200}
+        />
+        <Image
+          src="/assets/green.png"
+          alt="Picture of the author"
+          width={300}
+          height={200}
+        />
       </main>
 
       <footer className={styles.footer}>
