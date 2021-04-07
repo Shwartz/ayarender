@@ -9,7 +9,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>AyaRender</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/ayarender-favicon.svg" />
       </Head>
 
       <section>
@@ -18,9 +18,9 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1>
-          Welcome to Next.js!
+          Welcome to Ayarender!
         </h1>
-
+        <div>
         <Image
           src="/assets/blue.png"
           alt="Picture of the author"
@@ -39,6 +39,7 @@ export default function Home() {
           width={300}
           height={200}
         />
+        </div>
       </main>
 
       <footer className={styles.footer}>
