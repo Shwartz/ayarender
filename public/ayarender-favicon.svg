@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="293px" height="156px" viewBox="0 0 293 156" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>logo fat</title>
+<svg width="198px" height="165px" viewBox="0 0 198 165" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>SameSideLogo</title>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
-        <g id="Logo" transform="translate(-455.000000, -912.000000)" stroke-width="16">
-            <g id="logo-fat" transform="translate(463.000000, 920.000000)">
-                <polyline id="Path-Copy" stroke="#F26C00" stroke-linejoin="round" points="26.0882084 112.88395 137 -1.13686838e-13 179.542257 42.9516969"></polyline>
-                <polyline id="Path-2-Copy" stroke="#F26C00" stroke-linejoin="round" points="163.697022 112.88395 206.758154 70.5 249.819287 112.88395"></polyline>
-                <line x1="0" y1="140" x2="277" y2="140" id="Path-3-Copy" stroke="#444444"></line>
-                <line x1="108.639587" y1="112.88395" x2="161" y2="61" id="Path-4-Copy" stroke="#444444"></line>
-                <line x1="116" y1="61" x2="134" y2="81" id="Path-5-Copy" stroke="#444444"></line>
+        <g id="Logo" transform="translate(-601.000000, -1214.000000)" stroke-width="16">
+            <g id="SameSideLogo" transform="translate(609.000000, 1222.000000)">
+                <polyline id="Path-Copy" stroke="#F26C00" stroke-linejoin="round" points="15 120 90.890719 0 120 45.6593134"/>
+                <polyline id="Path-2-Copy" stroke="#F26C00" stroke-linejoin="round" points="108 120 137.5 75 167 120"/>
+                <line x1="0" y1="149" x2="182" y2="149" id="Path-3-Copy" stroke="#444444"/>
+                <line x1="71" y1="120" x2="107" y2="65" id="Path-4-Copy" stroke="#444444"/>
+                <line x1="77" y1="64" x2="89" y2="85" id="Path-5-Copy" stroke="#444444"/>
             </g>
         </g>
     </g>
