@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="198px" height="165px" viewBox="0 0 198 165" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>SameSideLogo</title>
+<svg width="198px" height="196px" viewBox="0 0 198 196" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>180</title>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
-        <g id="Logo" transform="translate(-601.000000, -1214.000000)" stroke-width="16">
-            <g id="SameSideLogo" transform="translate(609.000000, 1222.000000)">
-                <polyline id="Path-Copy" stroke="#F26C00" stroke-linejoin="round" points="15 120 90.890719 0 120 45.6593134"/>
-                <polyline id="Path-2-Copy" stroke="#F26C00" stroke-linejoin="round" points="108 120 137.5 75 167 120"/>
-                <line x1="0" y1="149" x2="182" y2="149" id="Path-3-Copy" stroke="#444444"/>
-                <line x1="71" y1="120" x2="107" y2="65" id="Path-4-Copy" stroke="#444444"/>
-                <line x1="77" y1="64" x2="89" y2="85" id="Path-5-Copy" stroke="#444444"/>
+        <g id="Grey-logo" transform="translate(-2.000000, -202.000000)" stroke-width="16">
+            <g id="180" transform="translate(10.000000, 210.000000)">
+                <polyline id="Path-Copy" stroke="#434F54" stroke-linejoin="round" points="0 180 90.2868507 0 123.373543 64.7626466"/>
+                <polyline id="Path-2-Copy" stroke="#434F54" stroke-linejoin="round" points="112.163934 180 147.081967 112.131148 182 180"/>
+                <line x1="65.9016393" y1="180" x2="108.196721" y2="97.3770492" id="Path-4-Copy" stroke="#BC903F"/>
+                <line x1="73.7704918" y1="96.3934426" x2="87.5409836" y2="127.868852" id="Path-5-Copy" stroke="#BC903F"/>
             </g>
         </g>
     </g>

@@ -25,32 +25,65 @@ export default function Home() {
       </section>
 
       <main className={styles.main}>
-        <h1>
-          Hi, I create Moodboards!
-        </h1>
+        <div className={styles.intro}>
+          <h1>
+            Hi, I create Visuals!
+          </h1>
 
-        <h3>What is a Moodoard?</h3>
-        <p>I create Moodbard to help communicate and present for a client concepts and visual design ideas. </p>
+          <h3>What is a Visuals?</h3>
+          <p>I create Visuals to help communicate and present for a client concepts and visual design ideas. </p>
+          <p>Take a look at some examples below</p>
+        </div>
 
-        <div>
-          <Image
-            src="/assets/blue.png"
-            alt="Picture of the author"
-            width={300}
-            height={200}
-          />
-          <Image
-            src="/assets/red.png"
-            alt="Picture of the author"
-            width={300}
-            height={200}
-          />
-          <Image
-            src="/assets/green.png"
-            alt="Picture of the author"
-            width={300}
-            height={200}
-          />
+        <div className={styles.moods}>
+          <div>
+            <Image
+              src="/assets/moods/Sogno-de-oriente_m.jpg"
+              alt="Picture of the author"
+              width={1200}
+              height={761}
+            />
+          </div>
+          <div>
+            <Image
+              src="/assets/moods/Bridgerton_m.jpg"
+              alt="Moodboard - five day challenge"
+              width={1200}
+              height={702}
+            />
+          </div>
+          <div>
+            <Image
+              src="/assets/moods/xmas-for-media_m.jpg"
+              alt="Moodboard - five day challenge"
+              width={1200}
+              height={750}
+            />
+          </div>
+          <div>
+            <Image
+              src="/assets/moods/PhResidence3Dstyled_m.jpg"
+              alt="Moodboard - five day challenge"
+              width={1200}
+              height={1008}
+            />
+          </div>
+          <div>
+            <Image
+              src="/assets/moods/Bathroom-5-Day-Challenge-shadows-export_m.jpg"
+              alt="Moodboard - five day challenge"
+              width={996}
+              height={1200}
+            />
+          </div>
+          <div>
+            <Image
+              src="/assets/moods/Home-Office-Elevation-2017-WIP-A_m.jpg"
+              alt="Moodboard - five day challenge"
+              width={1200}
+              height={1104}
+            />
+          </div>
         </div>
       </main>
 
