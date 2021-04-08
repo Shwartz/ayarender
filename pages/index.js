@@ -26,13 +26,13 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.intro}>
-          <h1>
+          {/*<h1>
             Hi, I create Visuals!
           </h1>
 
           <h3>What is a Visuals?</h3>
           <p>I create Visuals to help communicate and present for a client concepts and visual design ideas. </p>
-          <p>Take a look at some examples below</p>
+          <p>Take a look at some examples below</p>*/}
         </div>
 
         <div className={styles.moods}>
