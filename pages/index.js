@@ -26,6 +26,10 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.intro}>
+          {/*
+          TODO: Text for intro
+          TODO: Add alt description for each image
+          */}
           {/*<h1>
             Hi, I create Visuals!
           </h1>
@@ -39,7 +43,7 @@ export default function Home() {
           <div>
             <Image
               src="/assets/moods/Sogno-de-oriente_m.jpg"
-              alt="Picture of the author"
+              alt="Visualisation"
               width={1200}
               height={761}
             />
@@ -47,7 +51,7 @@ export default function Home() {
           <div>
             <Image
               src="/assets/moods/Bridgerton_m.jpg"
-              alt="Moodboard - five day challenge"
+              alt="Visualisation"
               width={1200}
               height={702}
             />
@@ -55,7 +59,7 @@ export default function Home() {
           <div>
             <Image
               src="/assets/moods/xmas-for-media_m.jpg"
-              alt="Moodboard - five day challenge"
+              alt="Visualisation"
               width={1200}
               height={750}
             />
@@ -63,7 +67,7 @@ export default function Home() {
           <div>
             <Image
               src="/assets/moods/PhResidence3Dstyled_m.jpg"
-              alt="Moodboard - five day challenge"
+              alt="Visualisation"
               width={1200}
               height={1008}
             />
@@ -71,7 +75,7 @@ export default function Home() {
           <div>
             <Image
               src="/assets/moods/Bathroom-5-Day-Challenge-shadows-export_m.jpg"
-              alt="Moodboard - five day challenge"
+              alt="Visualisation"
               width={996}
               height={1200}
             />
@@ -79,7 +83,7 @@ export default function Home() {
           <div>
             <Image
               src="/assets/moods/Home-Office-Elevation-2017-WIP-A_m.jpg"
-              alt="Moodboard - five day challenge"
+              alt="Visualisation"
               width={1200}
               height={1104}
             />
@@ -88,7 +92,14 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <p>footer</p>
+        <p className={styles.insta}>Follow me:
+          <a target="_blank" href="http://instagram.com/aya.render">
+            <img alt="Instagram"
+                 src="/assets/icons/instagram.svg"
+                 height="24"
+                 width="24"/>
+          </a>
+        </p>
       </footer>
     </div>
   )
