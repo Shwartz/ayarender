@@ -30,13 +30,14 @@ export default function Home() {
           TODO: Text for intro
           TODO: Add alt description for each image
           */}
-          {/*<h1>
-            Hi, I create Visuals!
+          <h1>
+            Hi, my name is Aija!
           </h1>
 
-          <h3>What is a Visuals?</h3>
-          <p>I create Visuals to help communicate and present for a client concepts and visual design ideas. </p>
-          <p>Take a look at some examples below</p>*/}
+          <p>There is a technical term for what I do - Interior Design visualiser but I
+            would like to call myself Spatial Magician.</p>
+          <p> I can virtually transfer existing living space and show you
+            images of the property that hasn't even been built yet. Below are some examples of my recent work. </p>
         </div>
 
         <div className={styles.moods}>
@@ -92,7 +93,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <p className={styles.insta}>Follow me:
+        <p className={styles.insta}>Follow on:
           <a target="_blank" href="http://instagram.com/aya.render">
             <img alt="Instagram"
                  src="/assets/icons/instagram.svg"
