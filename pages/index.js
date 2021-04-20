@@ -94,7 +94,7 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <p className={styles.insta}>Follow on:
-          <a target="_blank" href="http://instagram.com/aya.render">
+          <a target="_blank" href="https://instagram.com/aya.render">
             <img alt="Instagram"
                  src="/assets/icons/instagram.svg"
                  height="24"
