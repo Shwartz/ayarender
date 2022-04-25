@@ -2,7 +2,7 @@
   "name": "Aya Render",
   "short_name": "AyaRender",
   "icons": [{
-    "src": "/ayarender-google-touch.png",
+    "src": "/android-chrome-512x512.png",
     "sizes": "512x512"
   }],
   "background_color": "#ffffff",

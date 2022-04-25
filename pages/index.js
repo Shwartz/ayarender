@@ -9,15 +9,17 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>AyaRender</title>
-        <link rel="icon" href="/ayarender-favicon.svg"/>
-        <link rel="mask-icon" href="/ayarender-favicon.svg" color="#000000"/>
-        <link rel="apple-touch-icon" href="/ayarender-apple-touch.png"/>
-        <link rel="manifest" href="/manifest.json"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+        <link rel="icon" href="/favicon.svg"/>
+        <link rel="manifest" href="/site.webmanifest"/>
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3f2021"/>
+        <meta name="msapplication-TileColor" content="#f3cfb3"/>
+        <meta name="theme-color" content="#f3cfb3"/>
       </Head>
 
       <section className={styles.header}>
         <Image
-          src="/ayarender-favicon.svg"
+          src="/favicon.svg"
           alt="Ayarender logo"
           width={100}
           height={67}
