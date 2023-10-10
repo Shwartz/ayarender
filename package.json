@@ -37,6 +37,7 @@
 		"node": ">=18.0.0"
 	},
 	"dependencies": {
+		"@sveltejs/adapter-vercel": "^3.0.3",
 		"@vercel/analytics": "^1.1.0"
 	}
 }
