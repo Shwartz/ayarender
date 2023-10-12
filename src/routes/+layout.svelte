@@ -6,7 +6,7 @@
 </script>
 
 <div class="page">
-  <nav>
+  <nav class="section">
     <ul>
       <li>
         <a class:active={$page.url.pathname === '/'} href="{base}/">
@@ -27,7 +27,8 @@
     justify-content: flex-start;
     align-items: center;
     gap: 1rem;
-    padding: 4px 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
     border-bottom: 1px solid var(--cBlack5);
 
     a {

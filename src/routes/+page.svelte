@@ -1,12 +1,14 @@
-<div class="hero">
-  <h1>Freelance Interior Designer</h1>
-  <h3>Interior Design Visualisation</h3>
-  <nav>
-    <a href="#whatIDo">What I do?</a>
-    <a href="#process">Process</a>
-    <a href="#price">Price</a>
-  </nav>
-</div>
+<section class="hero">
+  <div>
+    <h1>Freelance Interior Designer</h1>
+    <h3>Interior Design Visualisation</h3>
+    <nav>
+      <a href="#whatIDo">What I do?</a>
+      <a href="#process">Process</a>
+      <a href="#price">Price</a>
+    </nav>
+  </div>
+</section>
 
 <section id="whatIDo">
   <div>
@@ -38,5 +40,27 @@
 </section>
 
 <style lang="scss">
+  .hero {
+    background: url('/images/hero-home.jpg') 50% 50% no-repeat;
+    background-size: cover;
+    color: var(--cWhite);
 
+    div {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+    }
+
+    h3 {
+      margin-bottom: 1rem;
+    }
+
+    nav {
+      position: absolute;
+      bottom: 0;
+    }
+  }
 </style>

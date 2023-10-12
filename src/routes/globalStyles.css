@@ -134,3 +134,60 @@ body {
     font-size: 16px;
     color: var(--cBlack10);
 }
+
+/**
+SITE SKELETON
+ */
+section,
+.section {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    scroll-margin-top: 3rem;
+}
+
+section > div,
+.section > * {
+    padding: 1rem 1rem 4rem;
+    width: 100%;
+}
+
+@media (min-width: 800px) {
+    section > div,
+    .section > * {
+        padding: 1rem 4rem;
+    }
+}
+
+@media (min-width: 1300px) {
+    section > div,
+    .section > * {
+        padding: 1rem 4rem;
+    }
+}
+
+section.medium > div,
+.section.medium > div {
+    max-width: 800px;
+}
+
+section.large > div,
+.section.large > div {
+    max-width: 1200px;
+}
+
+.hero {
+    min-height: 200px;
+}
+
+@media (min-width: 600px) {
+    .hero {
+        aspect-ratio: 3;
+    }
+}
+@media (min-width: 1300px) {
+    .hero {
+        height: 433px;
+        aspect-ratio: auto;
+    }
+}
