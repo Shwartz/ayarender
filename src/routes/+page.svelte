@@ -29,40 +29,27 @@
     <div>
       <h3 class="mediumTitle">Technical Drawing</h3>
       <img src="{base}/images/technical-drawing.jpg" alt="Technical drawing">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra neque nec est maximus facilisis.
-        Pellentesque tempus at dolor gravida egestas. Etiam tellus nulla.</p>
-      <p>
-        <a class="btn-back" href="#">Technical Drawing</a>
-      </p>
-      <p>
-        <a class="btn-forward" href="#">Technical Drawing</a>
-      </p>
+      <a class="btn-forward" href="#">Technical Drawing</a>
     </div>
     <div>
       <h3 class="mediumTitle">Rendered Floor Plans</h3>
-      <img src="{base}/images/rendered-floor-plan.jpg" alt="Rendered Floor Plan">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra neque nec est maximus facilisis.
-        Pellentesque tempus </p>
+      <img src="{base}/images/rendered-floor-plan.jpg" alt="Rendered Floor Plan"/>
+      <a class="btn-forward" href="#">Rendered Floor Plans</a>
     </div>
     <div>
       <h3 class="mediumTitle">Rendered 2D Elevations</h3>
       <img src="{base}/images/rendered-2d-elevation.jpg" alt="Rendered 2D elevation">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra neque nec est maximus facilisis.
-        Pellentesque tempus at dolor gravida egestas. Etiam tellus nulla. At dolor gravida egestas. Etiam tellus
-        nulla.</p>
+      <a class="btn-forward" href="#">Rendered 2D Elevations</a>
     </div>
     <div>
       <h3 class="mediumTitle">Design Boards</h3>
       <img src="{base}/images/design-board.jpg" alt="Design Board">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra neque nec est maximus facilisis.
-        Pellentesque tempus at dolor gravida egestas. Etiam tellus nulla.</p>
+      <a class="btn-forward" href="#">Desgin Boards</a>
     </div>
     <div>
       <h3 class="mediumTitle">3D Renders</h3>
       <img src="{base}/images/3d-render.jpg" alt="3D render">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. at dolor gravida egestas. Etiam tellus nulla. at dolor
-        gravida egestas. Etiam tellus nulla.Etiam viverra neque nec est maximus facilisis.
-        Pellentesque tempus at dolor gravida egestas. Etiam tellus nulla.</p>
+      <a class="btn-forward" href="#">3D Renders</a>
     </div>
   </div>
 </section>
@@ -163,6 +150,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      gap: 2rem;
       padding: 2rem;
       box-shadow: 0 0 8px rgba(63, 32, 33, 0.2);
       border-radius: 0.5rem;
@@ -172,14 +160,13 @@
       text-align: center;
     }
 
-    img {
-      margin-top: 2rem;
-      width: 100%;
-    }
-
     p {
       max-width: 500px;
 
+    }
+
+    a {
+      margin-top: auto;
     }
   }
 </style>
