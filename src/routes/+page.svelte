@@ -1,3 +1,7 @@
+<script>
+  import { base } from "$app/paths";
+</script>
+
 <section class="hero">
   <div>
     <h1>Interior Design Visualizer</h1>
@@ -21,20 +25,82 @@
 </section>
 
 <section class="large">
-  <div>
-    Gallery
+  <div class="cards">
+    <div>
+      <h3 class="mediumTitle">Technical Drawing</h3>
+      <img src="{base}/images/technical-drawing.jpg" alt="Technical drawing">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra neque nec est maximus facilisis.
+        Pellentesque tempus at dolor gravida egestas. Etiam tellus nulla.</p>
+      <p>
+        <a class="btn-back" href="#">Technical Drawing</a>
+      </p>
+      <p>
+        <a class="btn-forward" href="#">Technical Drawing</a>
+      </p>
+    </div>
+    <div>
+      <h3 class="mediumTitle">Rendered Floor Plans</h3>
+      <img src="{base}/images/rendered-floor-plan.jpg" alt="Rendered Floor Plan">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra neque nec est maximus facilisis.
+        Pellentesque tempus </p>
+    </div>
+    <div>
+      <h3 class="mediumTitle">Rendered 2D Elevations</h3>
+      <img src="{base}/images/rendered-2d-elevation.jpg" alt="Rendered 2D elevation">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra neque nec est maximus facilisis.
+        Pellentesque tempus at dolor gravida egestas. Etiam tellus nulla. At dolor gravida egestas. Etiam tellus
+        nulla.</p>
+    </div>
+    <div>
+      <h3 class="mediumTitle">Design Boards</h3>
+      <img src="{base}/images/design-board.jpg" alt="Design Board">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra neque nec est maximus facilisis.
+        Pellentesque tempus at dolor gravida egestas. Etiam tellus nulla.</p>
+    </div>
+    <div>
+      <h3 class="mediumTitle">3D Renders</h3>
+      <img src="{base}/images/3d-render.jpg" alt="3D render">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. at dolor gravida egestas. Etiam tellus nulla. at dolor
+        gravida egestas. Etiam tellus nulla.Etiam viverra neque nec est maximus facilisis.
+        Pellentesque tempus at dolor gravida egestas. Etiam tellus nulla.</p>
+    </div>
   </div>
 </section>
 
 <section class="medium" id="process">
   <div>
-    process
+    <h3 class="largeTitle">Process</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget libero vestibulum, volutpat dolor eget,
+      iaculis felis. Phasellus lacus arcu, fermentum quis tempus a, auctor quis velit. Quisque euismod urna eleifend
+      erat aliquam, non feugiat nulla venenatis. Duis placerat vehicula nisi sit amet tempus. Curabitur nec metus nunc.
+      Sed ac cursus eros. Aenean eget sagittis nisl. In at tincidunt ligula. Mauris molestie erat a finibus suscipit.
+      Pellentesque nec luctus est. Fusce tempor vehicula justo. Integer ut volutpat risus. Mauris porttitor semper nisi
+      a cursus.</p>
+    <p>Etiam auctor nisl nisi, ut lacinia est consequat quis. Orci varius natoque penatibus et magnis dis parturient
+      montes, nascetur ridiculus mus. Cras sed nunc porta, dignissim ante eu, sagittis orci. Integer ut elit eu tortor
+      vehicula luctus nec ac tortor. Vivamus nec molestie neque. Aliquam imperdiet luctus urna, et aliquam justo
+      facilisis a. Suspendisse potenti. Ut auctor sapien non rhoncus mattis. In quis ultrices arcu. In molestie
+      tincidunt elit vitae dapibus. Nunc ac turpis vel mauris lacinia bibendum id in magna. Aliquam non scelerisque
+      tortor. Suspendisse facilisis sit amet nulla non porttitor. Phasellus id ornare lorem. Donec eget est justo.
+      Maecenas ac viverra est.</p>
+    <p>Mauris nec aliquam tellus. Morbi facilisis, felis ut pretium eleifend, nisl lorem blandit nunc, et facilisis
+      dolor arcu et urna. Quisque porttitor purus ut tortor facilisis finibus in vel justo. Donec tempor justo at tortor
+      condimentum aliquet. Phasellus vitae posuere urna, tristique auctor elit. Mauris eu nulla eu ante cursus gravida.
+      Sed sit amet urna venenatis lorem venenatis volutpat in non erat. Nulla orci nunc, blandit ac porta pharetra,
+      imperdiet at ligula. In hac habitasse platea dictumst. Sed condimentum vel enim sed pellentesque. Aliquam erat
+      volutpat. Nulla et nunc a quam interdum tempus. Aenean vitae volutpat mi.</p>
   </div>
 </section>
 
 <section class="medium" id="price">
   <div>
-    price
+    <h3 class="largeTitle">Price</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget libero vestibulum, volutpat dolor eget,
+      iaculis felis. Phasellus lacus arcu, fermentum quis tempus a, auctor quis velit. Quisque euismod urna eleifend
+      erat aliquam, non feugiat nulla venenatis. Duis placerat vehicula nisi sit amet tempus. Curabitur nec metus nunc.
+      Sed ac cursus eros. Aenean eget sagittis nisl. In at tincidunt ligula. Mauris molestie erat a finibus suscipit.
+      Pellentesque nec luctus est. Fusce tempor vehicula justo. Integer ut volutpat risus. Mauris porttitor semper nisi
+      a cursus.</p>
   </div>
 </section>
 
@@ -83,5 +149,37 @@
 
   .whatIDo > div {
     max-width: 600px;
+  }
+
+  .cards {
+    --min: 48ch;
+    --gap: 2rem;
+
+    display: grid;
+    grid-gap: var(--gap);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      box-shadow: 0 0 8px rgba(63, 32, 33, 0.2);
+      border-radius: 0.5rem;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    img {
+      margin-top: 2rem;
+      width: 100%;
+    }
+
+    p {
+      max-width: 500px;
+
+    }
   }
 </style>
