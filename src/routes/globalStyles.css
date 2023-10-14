@@ -226,15 +226,19 @@ p {
     text-align: center;
 }
 
-.btn-back {
-    padding: 0.5rem 1rem 0.5rem 2.5rem;
+.btn-back, .btn-forward {
     border: 1px solid var(--cBlack10);
     border-radius: 1rem;
     font-size: 0.8rem;
     text-decoration: none;
     color: var(--cBlack10);
-    background: url(/icons/icn-arrow-left.svg) no-repeat 16px 54%;
     transition: background-position 300ms;
+    display: inline-block;
+}
+
+.btn-back {
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
+    background: url(/icons/icn-arrow-left.svg) no-repeat 16px 54%;
 }
 
 .btn-back:hover, .btn-back:focus {
@@ -244,13 +248,7 @@ p {
 
 .btn-forward {
     padding: 0.5rem 2.5rem 0.5rem 1rem;
-    border: 1px solid var(--cBlack10);
-    border-radius: 1rem;
-    font-size: 0.8rem;
-    text-decoration: none;
-    color: var(--cBlack10);
     background: url(/icons/icn-arrow-right.svg) no-repeat calc(100% - 16px) 54%;
-    transition: background-position 300ms;
 }
 
 .btn-forward:hover, .btn-forward:focus {

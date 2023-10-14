@@ -3,19 +3,21 @@
   import { page } from "$app/stores";
   import Logo from "/static/icons/logo.svg?component";
   import "./globalStyles.css";
+
+  $:url = $page.url.pathname.split('/')[1];
 </script>
 
 <div class="page">
   <nav class="section large">
     <ul>
       <li>
-        <a class:active={$page.url.pathname === '/'} href="{base}/">
+        <a class:active={url === ''} href="{base}/">
           <Logo width="48" height="48" />
         </a>
       </li>
-      <li><a class:active={$page.url.pathname === '/'} href="{base}/">Home</a></li>
-      <li><a class:active={$page.url.pathname === '/gallery'} href="{base}/gallery">Gallery</a></li>
-      <li><a class:active={$page.url.pathname === '/contact'} href="{base}/contact">Contact</a></li>
+      <li><a class:active={url === ''} href="{base}/">Home</a></li>
+      <li><a class:active={url === 'gallery'} href="{base}/gallery">Gallery</a></li>
+      <li><a class:active={url === 'contact'} href="{base}/contact">Contact</a></li>
     </ul>
   </nav>
   <slot/>
