@@ -1,7 +1,7 @@
 <script>
   import { base } from "$app/paths";
   import { page } from "$app/stores";
-  import Logo from "/static/icons/logo.svg?component";
+  import Logo from "/src/assets/icons/logo.svg?component";
   import "./globalStyles.css";
 
   $:url = $page.url.pathname.split('/')[1];

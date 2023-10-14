@@ -1,5 +1,20 @@
 <script>
-  import { GalleryImage, GalleryThumbnail, LightboxGallery } from "svelte-lightbox";
+  import LightBox from "../../../components/LightBox.svelte";
+
+  const thumbnails = [
+    '/gallery/art-06-thumb.jpg',
+    '/gallery/art-10-thumb.jpg',
+    '/gallery/art-12-thumb.jpg',
+    '/gallery/art-13-thumb.jpg',
+    '/gallery/art-21-thumb.jpg',
+  ];
+  const images = [
+    '/gallery/art-06.jpg',
+    '/gallery/art-10.jpg',
+    '/gallery/art-12.jpg',
+    '/gallery/art-13.jpg',
+    '/gallery/art-21.jpg',
+  ];
 </script>
 
 <section class="hero">
@@ -8,31 +23,10 @@
   </div>
 </section>
 
+
 <section class="large">
   <div class="card">
-    <LightboxGallery>
-      <svelte:fragment slot="thumbnail">
-        <div class="sample-class-1">
-          <GalleryThumbnail>
-            <img src="./thumbnail-0.jpg" alt="Simple lightbox">
-          </GalleryThumbnail>
-          <div class="sample-class-2">
-            <div class="sample-class-3">
-              <img src="./thumbnail-0.jpg" alt="Simple lightbox">
-            </div>
-            <div class="sample-class-4">
-              <img src="./thumbnail-0.jpg" alt="Simple lightbox">
-            </div>
-          </div>
-        </div>
-      </svelte:fragment>
-      <GalleryImage>
-        <img src="/images/design-board.jpg" alt="Simple lightbox">
-      </GalleryImage>
-      <GalleryImage>
-        <img src="/images/rendered-2d-elevation.jpg" alt="Simple lightbox">
-      </GalleryImage>
-    </LightboxGallery>
+    <LightBox thumbnails={thumbnails} images={images}  />
   </div>
 </section>
 
