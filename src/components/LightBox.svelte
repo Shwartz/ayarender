@@ -1,8 +1,12 @@
 <script>
   import { GalleryImage, GalleryThumbnail, LightboxGallery } from "svelte-lightbox";
-
   export let thumbnails;
   export let images;
+
+  /*
+    Image size optimal 1600*1200
+    Thumb 300*225
+  */
 </script>
 
 <LightboxGallery>
@@ -31,6 +35,5 @@
     grid-gap: var(--gap);
     grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
     width: 100%;
-
   }
 </style>

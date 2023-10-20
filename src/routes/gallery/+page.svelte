@@ -20,7 +20,7 @@
   </div>
 </section>
 
-<section class="large bg">
+<section class="large bg-light">
   <div class="card">
     <div>
       <h2 class="mediumTitle">Rendered Floor Plans</h2>
@@ -44,7 +44,7 @@
   </div>
 </section>
 
-<section class="large bg">
+<section class="large bg-light">
   <div class="card">
     <div>
       <h2 class="mediumTitle">Design Boards</h2>
@@ -69,9 +69,6 @@
 </section>
 
 <style lang="scss">
-  .bg {
-    background: var(--gradientBgLight);
-  }
   .hero {
     background: url('/images/hero-gallery.jpg') 50% 50% no-repeat;
     background-size: cover;

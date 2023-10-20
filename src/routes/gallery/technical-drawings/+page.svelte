@@ -1,5 +1,6 @@
 <script>
   import LightBox from "../../../components/LightBox.svelte";
+  import { base } from "$app/paths";
 
   const thumbnails = [
     '/gallery/art-06-thumb.jpg',
@@ -26,15 +27,14 @@
 
 <section class="large">
   <div class="card">
+    <p>
+      <a class="btn-back" href="{base}/gallery">Back to Gallery</a>
+    </p>
     <LightBox thumbnails={thumbnails} images={images}  />
   </div>
 </section>
 
 <style lang="scss">
-  .bg {
-    background: var(--gradientBgLight);
-  }
-
   .hero {
     background: url('/images/hero-gallery.jpg') 50% 50% no-repeat;
     background-size: cover;
@@ -63,7 +63,6 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    align-items: center;
 
     > div {
 

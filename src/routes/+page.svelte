@@ -29,7 +29,7 @@
     <div>
       <h3 class="mediumTitle">Technical Drawing</h3>
       <img src="{base}/images/technical-drawing.jpg" alt="Technical drawing">
-      <a class="btn-forward" href="#">Technical Drawing</a>
+      <a class="btn-forward" href="{base}/gallery/technical-drawings">Technical Drawing</a>
     </div>
     <div>
       <h3 class="mediumTitle">Rendered Floor Plans</h3>
@@ -54,7 +54,7 @@
   </div>
 </section>
 
-<section class="medium" id="process">
+<section class="medium bg-light" id="process">
   <div>
     <h3 class="largeTitle">Process</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget libero vestibulum, volutpat dolor eget,
