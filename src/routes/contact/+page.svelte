@@ -1,10 +1,14 @@
 <script lang="ts">
-  import { base } from "$app/paths";
-  import { enhance } from '$app/forms';
+  import { superForm } from "sveltekit-superforms/client"
+  import SuperDebug from "sveltekit-superforms/client/SuperDebug.svelte"
+  import type { PageData } from "./$types"
+  import { contactSchema } from "../../lib/contactSchema";
+  export let data: PageData;
 
-  export let form;
-  let email = '';
-  let message= '';
+  const { form, errors, enhance, message } = superForm(data.form, {
+    taintedMessage: "Are you sure you want leave?",
+    validators: contactSchema
+  });
 </script>
 
 <section class="hero">
@@ -15,16 +19,19 @@
 
 <section class="medium">
   <div>
-    {#if form?.missing}<p class="error">All fields are required</p>{/if}
-    {#if !form?.success}
+    <SuperDebug data={$form} />
+
     <form method="POST" use:enhance action="?/contactForm">
-      <label for="message">Message</label>
+      <label for="communication">Your Message</label>
       <textarea
         placeholder="Please send your request and I'll get in touch with you"
-        id="message"
-        name="message"
-        bind:value={message}
+        id="communication"
+        name="communication"
+        bind:value={$form.communication}
         ></textarea>
+      {#if $errors.communication}
+        <small>{$errors.communication}</small>
+      {/if}
 
       <label for="email">Email</label>
       <input
@@ -33,15 +40,21 @@
         id="email"
         name="email"
         placeholder="Enter your email"
-        bind:value={email} />
+        bind:value={$form.email} />
+      {#if $errors.email}
+        <small>{$errors.email}</small>
+      {/if}
 
       <button type="submit">Submit</button>
     </form>
-    {/if}
-    {#if form?.success}
-      <p>Thank you for sending your request. I will contact you soon.</p>
-      <p>Email: {form?.resEmail}, Message: {form?.resMsg}</p>
-      <a href="{base}/contact">Send new message</a>
+
+    {#if $message}
+      <div
+        class:success={$message.status == 'success'}
+        class:error={$message.status == 'error'}
+      >
+        {$message.text}
+      </div>
     {/if}
   </div>
 </section>
@@ -87,5 +100,13 @@
   button {
     border: 1px solid orange;
     cursor: pointer;
+  }
+
+  .error {
+    color: red;
+  }
+
+  .success {
+    color: green;
   }
 </style>
