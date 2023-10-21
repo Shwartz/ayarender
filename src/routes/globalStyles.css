@@ -99,6 +99,7 @@ meter {
 :where([draggable="true"]) {
     -webkit-user-drag: element;
 }
+
 /**
 GLOBAL SETUP
 */
@@ -124,6 +125,7 @@ GLOBAL SETUP
     --cWhite: #fff;
     --cBlack10: #3F2021;
     --cBlack8: #654D4C;
+    --cBlack2: #D0C8C8;
     --cBlack5: #9F9090;
     --cBrick8: #CE8B80;
     --cBrick5: #E0B7B1;
@@ -136,6 +138,11 @@ GLOBAL SETUP
 body {
     font-size: 16px;
     color: var(--cBlack10);
+}
+
+textarea::placeholder,
+input::placeholder {
+    color: var(--cBlack2);
 }
 
 /**
