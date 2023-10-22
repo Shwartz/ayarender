@@ -2,6 +2,11 @@
   import { base } from "$app/paths";
 </script>
 
+<svelte:head>
+  <title>Gallery | AyaRender</title>
+  <meta name="description" content="Examples of Rendered Floor plans, 2D elevations, design boards and technical drawings I can produce for clients" />
+</svelte:head>
+
 <section class="hero">
   <div>
     <h1>Gallery</h1>

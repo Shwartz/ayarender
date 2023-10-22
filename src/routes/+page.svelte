@@ -2,6 +2,11 @@
   import { base } from "$app/paths";
 </script>
 
+<svelte:head>
+  <title>AyaRender Interior Design</title>
+  <meta name="description" content="Converting interior designs in 2D and 3D visualisation" />
+</svelte:head>
+
 <section class="hero">
   <div>
     <h1>Interior Design Visualizer</h1>
@@ -33,7 +38,7 @@
     </div>
     <div>
       <h3 class="mediumTitle">Rendered Floor Plans</h3>
-      <img src="{base}/images/rendered-floor-plan.jpg" alt="Rendered Floor Plan"/>
+      <img src="{base}/images/rendered-floor-plan.jpg" alt="Rendered Floor Plan" />
       <a class="btn-forward" href="#">Rendered Floor Plans</a>
     </div>
     <div>

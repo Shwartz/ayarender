@@ -42,6 +42,7 @@ export const actions = {
 
     try {
       const sendEmail = async (mailDetails: Email) => {
+        // comment out this promise and uncomment the next one for debugging
         await new Promise((resolve, reject) => {
           transporter.sendMail(mailDetails, (err, info) => {
             if (err) {

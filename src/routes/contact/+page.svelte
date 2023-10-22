@@ -13,6 +13,10 @@
   });
 </script>
 
+<svelte:head>
+  <meta name="description" content="AyaRender: Get in touch" />
+</svelte:head>
+
 <section class="hero">
   <div>
     <h1>Contacts</h1>

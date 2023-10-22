@@ -3,27 +3,33 @@
   import { base } from "$app/paths";
 
   const thumbnails = [
-    '/gallery/art-06-thumb.jpg',
-    '/gallery/art-10-thumb.jpg',
-    '/gallery/art-12-thumb.jpg',
-    '/gallery/art-13-thumb.jpg',
-    '/gallery/art-21-thumb.jpg',
+    '/gallery/technical-drawing/bespoke-furniture-thumb.jpg',
+    '/gallery/technical-drawing/built-in-furniture-thumb.jpg',
+    '/gallery/technical-drawing/floor-plan-thumb.jpg',
+    '/gallery/technical-drawing/lighting-plan-thumb.jpg',
+    '/gallery/technical-drawing/technical-elevation-thumb.jpg',
+    '/gallery/technical-drawing/technical-floor-plan-thumb.jpg',
   ];
   const images = [
-    '/gallery/art-06.jpg',
-    '/gallery/art-10.jpg',
-    '/gallery/art-12.jpg',
-    '/gallery/art-13.jpg',
-    '/gallery/art-21.jpg',
+    '/gallery/technical-drawing/bespoke-furniture.jpg',
+    '/gallery/technical-drawing/built-in-furniture.jpg',
+    '/gallery/technical-drawing/floor-plan.jpg',
+    '/gallery/technical-drawing/lighting-plan.jpg',
+    '/gallery/technical-drawing/technical-elevation.jpg',
+    '/gallery/technical-drawing/technical-floor-plan.jpg',
   ];
 </script>
+
+<svelte:head>
+  <title>Technical drawings | Gallery | AyaRender</title>
+  <meta name="description" content="Examples of the Technical drawings" />
+</svelte:head>
 
 <section class="hero">
   <div>
     <h1>Technical drawings</h1>
   </div>
 </section>
-
 
 <section class="large">
   <div class="card">
