@@ -127,11 +127,13 @@ GLOBAL SETUP
     --cBlack8: #654D4C;
     --cBlack2: #D0C8C8;
     --cBlack5: #9F9090;
+    --cBrick10: #C26F60;
     --cBrick8: #CE8B80;
     --cBrick5: #E0B7B1;
     --cOrange10: #FFAA4D;
     --cSand5: #F9E7D9;
     --cSand1: #FDF7F2;
+    --cGreen10: #709F54;
     --gradientBgLight: linear-gradient(130deg, rgba(253,247,242,0.3) 0, rgba(249,231,217,1) 100% );
 }
 
@@ -143,6 +145,7 @@ body {
 textarea::placeholder,
 input::placeholder {
     color: var(--cBlack2);
+    font-size: 1.2rem;
 }
 
 /**
@@ -184,7 +187,7 @@ section.bg-light,
 
 section.medium > div,
 .section.medium > * {
-    max-width: 800px;
+    max-width: 900px;
 }
 
 section.large > div,
@@ -212,7 +215,7 @@ section.large > div,
 /**
 UTILITIES
  */
-p {
+p, label {
     margin-top: 1rem;
     font-size: 1.2rem;
 }
@@ -227,6 +230,10 @@ p {
 
 .mediumTitle {
     font-size: 2rem;
+}
+
+.smallText {
+    font-size: 0.8rem;
 }
 
 .center {

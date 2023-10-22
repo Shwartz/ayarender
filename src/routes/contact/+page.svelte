@@ -1,11 +1,13 @@
 <script lang="ts">
-  import { superForm } from "sveltekit-superforms/client"
-  import SuperDebug from "sveltekit-superforms/client/SuperDebug.svelte"
-  import type { PageData } from "./$types"
+  import { superForm } from "sveltekit-superforms/client";
+  // import SuperDebug from "sveltekit-superforms/client/SuperDebug.svelte"
+  import type { PageData } from "./$types";
   import { contactSchema } from "../../lib/contactSchema";
+  import { BarLoader } from "svelte-loading-spinners";
+
   export let data: PageData;
 
-  const { form, errors, enhance, message } = superForm(data.form, {
+  const { form, errors, enhance, message, delayed } = superForm(data.form, {
     taintedMessage: "Are you sure you want leave?",
     validators: contactSchema
   });
@@ -18,44 +20,58 @@
 </section>
 
 <section class="medium">
-  <div>
-    <SuperDebug data={$form} />
-
-    <form method="POST" use:enhance action="?/contactForm">
-      <label for="communication">Your Message</label>
-      <textarea
-        placeholder="Please send your request and I'll get in touch with you"
-        id="communication"
-        name="communication"
-        bind:value={$form.communication}
+  <div class="content">
+    <div>
+      <!--<SuperDebug data={$form} />-->
+      <form method="POST" use:enhance action="?/contactForm">
+        <label class="smallText" for="communication">Your Message</label>
+        <textarea
+          placeholder="Please email me with details of your project and I will get in touch with you in one working day."
+          id="communication"
+          name="communication"
+          bind:value={$form.communication}
         ></textarea>
-      {#if $errors.communication}
-        <small>{$errors.communication}</small>
+        {#if $errors.communication}
+          <small class="warning">{$errors.communication}</small>
+        {/if}
+
+        <label class="smallText" for="email">Email</label>
+        <input
+          required
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          bind:value={$form.email} />
+        {#if $errors.email}
+          <small class="warning">{$errors.email}</small>
+        {/if}
+
+        <div class="send">
+          {#if $delayed}
+            <BarLoader color="#ffaa4d" />
+          {/if}
+          <button class="btn-forward" type="submit">Send</button>
+        </div>
+      </form>
+
+      {#if $message}
+        <div
+          class="mt-1"
+          class:success={$message.status == 'success'}
+          class:error={$message.status == 'error'}
+        >
+          {$message.text}
+        </div>
       {/if}
-
-      <label for="email">Email</label>
-      <input
-        required
-        type="email"
-        id="email"
-        name="email"
-        placeholder="Enter your email"
-        bind:value={$form.email} />
-      {#if $errors.email}
-        <small>{$errors.email}</small>
-      {/if}
-
-      <button type="submit">Submit</button>
-    </form>
-
-    {#if $message}
-      <div
-        class:success={$message.status == 'success'}
-        class:error={$message.status == 'error'}
-      >
-        {$message.text}
-      </div>
-    {/if}
+    </div>
+    <div class="right">
+      <p class="mediumTitle">Hi, my name is Aija <br /><i>(pronounce as Aya or Ah-yah)</i></p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis nulla facilisis, iaculis mi eget,
+        dictum eros. Morbi tristique mi et feugiat aliquam. Curabitur malesuada quis purus a aliquam. Proin consectetur
+        vel orci vel fermentum. Vestibulum dignissim euismod metus, sed semper odio semper vel. Nullam sodales pulvinar
+        convallis. Vestibulum egestas leo mi, quis tincidunt diam aliquam ac.</p>
+    </div>
   </div>
 </section>
 
@@ -84,29 +100,72 @@
     }
   }
 
+  i {
+    font-style: italic;
+  }
+
+  .send {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
   form {
     display: flex;
     flex-direction: column;
   }
 
-  input {
-    border: 1px solid grey;
+  input, textarea {
+    border: 1px solid var(--cBlack5);
+    border-radius: 4px;
+    padding: 4px;
+    margin-top: 4px;
   }
 
   textarea {
-    border: 1px solid grey;
+    height: 8rem;
   }
 
   button {
-    border: 1px solid orange;
     cursor: pointer;
+    margin-left: auto;
+  }
+
+  .mt-1 {
+    margin-top: 1rem;
+  }
+
+  .right {
+    margin-top: 3rem;
   }
 
   .error {
-    color: red;
+    color: var(--cBrick10);
   }
 
   .success {
-    color: green;
+    color: var(--cGreen10);
   }
+
+  .warning {
+    color: var(--cOrange10);
+  }
+
+  @media (min-width: 800px) {
+    .content {
+      display: flex;
+      gap: 3rem;
+    }
+
+    form {
+      width: 300px;
+    }
+
+    .right {
+      margin-top: 0;
+    }
+  }
+
+
 </style>
