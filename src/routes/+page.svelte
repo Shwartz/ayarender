@@ -39,12 +39,12 @@
     <div>
       <h3 class="mediumTitle">Rendered Floor Plans</h3>
       <img src="{base}/images/rendered-floor-plan.jpg" alt="Rendered Floor Plan" />
-      <a class="btn-forward" href="#">Rendered Floor Plans</a>
+      <a class="btn-forward" href="{base}/gallery/rendered-floor-plans">Rendered Floor Plans</a>
     </div>
     <div>
       <h3 class="mediumTitle">Rendered 2D Elevations</h3>
       <img src="{base}/images/rendered-2d-elevation.jpg" alt="Rendered 2D elevation">
-      <a class="btn-forward" href="#">Rendered 2D Elevations</a>
+      <a class="btn-forward" href="{base}/gallery/rendered-2d-elevations">Rendered 2D Elevations</a>
     </div>
     <div>
       <h3 class="mediumTitle">Design Boards</h3>

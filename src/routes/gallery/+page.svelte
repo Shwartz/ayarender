@@ -31,7 +31,7 @@
       <h2 class="mediumTitle">Rendered Floor Plans</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra neque nec est maximus facilisis.
         Pellentesque tempus at dolor gravida egestas. Etiam tellus nulla.</p>
-      <a class="btn-forward" href="#">Rendered Floor Plans</a>
+      <a class="btn-forward" href="{base}/gallery/rendered-floor-plans">Rendered Floor Plans</a>
     </div>
     <img src="{base}/images/rendered-floor-plan.jpg" alt="Rendered Floor Plan">
   </div>
@@ -43,7 +43,7 @@
       <h2 class="mediumTitle">Rendered 2D Elevations</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra neque nec est maximus facilisis.
         Pellentesque tempus at dolor gravida egestas. Etiam tellus nulla.</p>
-      <a class="btn-forward" href="#">Rendered 2D Elevations</a>
+      <a class="btn-forward" href="{base}/gallery/rendered-2d-elevations">Rendered 2D Elevations</a>
     </div>
     <img src="{base}/images/rendered-2d-elevation.jpg" alt="Rendered 2D Elevation">
   </div>
