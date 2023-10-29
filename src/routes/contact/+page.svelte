@@ -22,17 +22,17 @@
   <div>
     <div class="videoContainer">
       <video autoplay loop muted>
-        <source src="{base}/video/purplish.webm" type="video/webm" />
-        <source src="{base}/video/purplish.mp4" type="video/mp4" />
+        <source src="{base}/video/hero-contacts.webm" type="video/webm" />
+        <source src="{base}/video/hero-contacts.mp4" type="video/mp4" />
       </video>
     </div>
     <h1>Contacts</h1>
   </div>
 </section>
 
-<section class="medium">
+<section class="large fullHeight">
   <div class="content">
-    <div>
+    <div class="contactForm">
       <!--<SuperDebug data={$form} />-->
       <form method="POST" use:enhance action="?/contactForm">
         <label class="smallText" for="communication">Your Message</label>
@@ -78,12 +78,18 @@
     </div>
     <div class="right">
       <p class="mediumTitle">Hi, my name is Aija <br /><i>(pronounce as Aya or Ah-yah)</i></p>
-      <p>There is a technical term for what I do<br/> - Interior Design visualiser, but I would like to call myself
-        Spatial Magician.</p>
+      <p>There is a technical term for what I do<br /> - <em>Interior Design visualiser</em>, but I would like to call
+        myself <em>Spatial Magician</em>.</p>
       <p>I can virtually transfer existing living space and show you images of the property that hasn't even been built
         yet.</p>
       <p>I specialise in Technical Drawings, Rendered Floor Plans, Rendered 2D Elevations and Design Boards</p>
     </div>
+  </div>
+</section>
+
+<section class="large footer">
+  <div>
+    FOOTER HERE
   </div>
 </section>
 
@@ -104,7 +110,7 @@
     h1 {
       position: relative;
       margin-bottom: 3rem;
-      font-size: 2rem;
+      font-size: clamp(2rem, 3vw, 4rem);
       text-align: center;
       text-shadow: 0 0 6px white;
       font-weight: bold;
@@ -127,7 +133,7 @@
       right: 0;
       bottom: 0;
       left: 0;
-      background: rgba(0,0,0,0.2);
+      background: rgb(63 32 33 / 40%);
     }
 
     video {
@@ -142,6 +148,11 @@
 
   i {
     font-style: italic;
+    font-size: 1rem;
+  }
+
+  em {
+    font-family: var(--font-bold);
   }
 
   .send {
@@ -192,14 +203,23 @@
     color: var(--cOrange10);
   }
 
+  form {
+    padding: 2rem 3rem;
+    backdrop-filter: blur(3px);
+    border: 1px solid var(--cSand5);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.4);
+  }
+
   @media (min-width: 800px) {
     .content {
       display: flex;
+      align-items: center;
       gap: 3rem;
-    }
 
-    form {
-      width: 300px;
+      > div {
+        width: 50%;
+      }
     }
 
     .right {
@@ -207,5 +227,14 @@
     }
   }
 
+ .fullHeight {
+   /* full height - nav */
+   min-height: calc(100vh - 388px);
+   background: url('/images/bg-contacts.jpg') no-repeat 50%;
+   background-size: cover ;
+ }
 
+ .footer {
+   background: yellow;
+ }
 </style>

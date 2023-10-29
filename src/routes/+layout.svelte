@@ -25,7 +25,8 @@
 
 <style lang="scss">
   nav {
-    border-bottom: 1px solid var(--cBlack5);
+    background: var(--cSand1);
+    color: var(--cBlack10);
   }
 
   ul {
