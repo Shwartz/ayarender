@@ -31,7 +31,7 @@
 </script>
 
 <svelte:head>
-  <title>Rendered 2D Elevations | Gallery | AyaRender</title>
+  <title>Rendered 2D Elevations | Portfolio | AyaRender</title>
   <meta name="description" content="Examples of the 2D Elevations" />
 </svelte:head>
 

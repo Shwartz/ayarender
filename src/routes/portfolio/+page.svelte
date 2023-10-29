@@ -9,7 +9,7 @@
 
 <section class="hero">
   <div>
-    <h1>Gallery</h1>
+    <h1>Portfolio</h1>
   </div>
 </section>
 

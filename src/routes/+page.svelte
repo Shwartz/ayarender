@@ -15,32 +15,62 @@
 </section>
 
 <section class="large">
-  <div class="cards">
+  <div class="card">
     <div>
-      <h3 class="mediumTitle">Technical Drawing</h3>
-      <img src="{base}/images/technical-drawing.jpg" alt="Technical drawing">
+      <h2 class="mediumTitle">Technical Drawings</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra neque nec est maximus facilisis.
+        Pellentesque tempus at dolor gravida egestas. Etiam tellus nulla.</p>
       <a class="btn-forward" href="{base}/portfolio/technical-drawings">Technical Drawing</a>
     </div>
+    <img src="{base}/images/technical-drawing.jpg" alt="Technical drawing">
+  </div>
+</section>
+
+<section class="large bg-light">
+  <div class="card">
     <div>
-      <h3 class="mediumTitle">Rendered Floor Plans</h3>
-      <img src="{base}/images/rendered-floor-plan.jpg" alt="Rendered Floor Plan" />
+      <h2 class="mediumTitle">Rendered Floor Plans</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra neque nec est maximus facilisis.
+        Pellentesque tempus at dolor gravida egestas. Etiam tellus nulla.</p>
       <a class="btn-forward" href="{base}/portfolio/rendered-floor-plans">Rendered Floor Plans</a>
     </div>
+    <img src="{base}/images/rendered-floor-plan.jpg" alt="Rendered Floor Plan">
+  </div>
+</section>
+
+<section class="large">
+  <div class="card">
     <div>
-      <h3 class="mediumTitle">Rendered 2D Elevations</h3>
-      <img src="{base}/images/rendered-2d-elevation.jpg" alt="Rendered 2D elevation">
+      <h2 class="mediumTitle">Rendered 2D Elevations</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra neque nec est maximus facilisis.
+        Pellentesque tempus at dolor gravida egestas. Etiam tellus nulla.</p>
       <a class="btn-forward" href="{base}/portfolio/rendered-2d-elevations">Rendered 2D Elevations</a>
     </div>
+    <img src="{base}/images/rendered-2d-elevation.jpg" alt="Rendered 2D Elevation">
+  </div>
+</section>
+
+<section class="large bg-light">
+  <div class="card">
     <div>
-      <h3 class="mediumTitle">Presentation Boards</h3>
-      <img src="{base}/images/design-board.jpg" alt="Design Board">
-      <a class="btn-forward" href="#">Presentation Boards</a>
+      <h2 class="mediumTitle">Design Boards</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra neque nec est maximus facilisis.
+        Pellentesque tempus at dolor gravida egestas. Etiam tellus nulla.</p>
+      <a class="btn-forward" href="#">Design Boards</a>
     </div>
+    <img src="{base}/images/design-board.jpg" alt="Design Boards">
+  </div>
+</section>
+
+<section class="large">
+  <div class="card">
     <div>
-      <h3 class="mediumTitle">Rendered 3D visuals</h3>
-      <img src="{base}/images/3d-render.jpg" alt="3D render">
-      <a class="btn-forward" href="#">Rendered 3D visuals</a>
+      <h2 class="mediumTitle">3D Renders</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra neque nec est maximus facilisis.
+        Pellentesque tempus at dolor gravida egestas. Etiam tellus nulla.</p>
+      <a class="btn-forward" href="#">3D Renders</a>
     </div>
+    <img src="{base}/images/3d-render.jpg" alt="3D Render">
   </div>
 </section>
 
@@ -143,39 +173,30 @@
     }
   }
 
-  .whatIDo > div {
-    max-width: 600px;
-  }
-
-  .cards {
-    --min: 48ch;
-    --gap: 2rem;
-
-    display: grid;
-    grid-gap: var(--gap);
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
 
     > div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-      padding: 2rem;
-      box-shadow: 0 0 8px rgba(63, 32, 33, 0.2);
-      border-radius: 0.5rem;
-    }
-
-    h3 {
-      text-align: center;
-    }
-
-    p {
+      flex-basis: fit-content;
       max-width: 500px;
+    }
 
+    img {
+      padding: 8px;
+      background: white;
+      box-shadow: 0 0 4px rgba(0,0,0,0.2);
+      min-width: 300px;
     }
 
     a {
-      margin-top: auto;
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 750px) {
+      flex-direction: row;
     }
   }
 </style>
