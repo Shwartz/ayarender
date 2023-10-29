@@ -9,23 +9,8 @@
 
 <section class="hero">
   <div>
-    <h1>Interior Design Visualizer</h1>
-    <nav>
-      <a href="#whatIDo">What I do?</a>
-      <a href="#process">Process</a>
-      <a href="#price">Price</a>
-    </nav>
-  </div>
-</section>
-
-<section class="medium py-2 bg-light whatIDo" id="whatIDo">
-  <div class="center">
-    <h1 class="largeTitle">What I do?</h1>
-    <p>There is a technical term for what I do - Interior Design visualiser but I would like to call myself
-      <br>Spatial Magician.</p>
-    <p>I can virtually transfer existing living space and show you images of the property that hasn't even been built
-      yet.</p>
-    <p>I specialise in Technical Drawings, Rendered Floor Plans, Rendered 2D Elevations and Design Boards</p>
+    <h1>2D and 3D Interior Design Visualisation <br/>
+      for Interior Designers</h1>
   </div>
 </section>
 
@@ -34,27 +19,27 @@
     <div>
       <h3 class="mediumTitle">Technical Drawing</h3>
       <img src="{base}/images/technical-drawing.jpg" alt="Technical drawing">
-      <a class="btn-forward" href="{base}/gallery/technical-drawings">Technical Drawing</a>
+      <a class="btn-forward" href="{base}/portfolio/technical-drawings">Technical Drawing</a>
     </div>
     <div>
       <h3 class="mediumTitle">Rendered Floor Plans</h3>
       <img src="{base}/images/rendered-floor-plan.jpg" alt="Rendered Floor Plan" />
-      <a class="btn-forward" href="{base}/gallery/rendered-floor-plans">Rendered Floor Plans</a>
+      <a class="btn-forward" href="{base}/portfolio/rendered-floor-plans">Rendered Floor Plans</a>
     </div>
     <div>
       <h3 class="mediumTitle">Rendered 2D Elevations</h3>
       <img src="{base}/images/rendered-2d-elevation.jpg" alt="Rendered 2D elevation">
-      <a class="btn-forward" href="{base}/gallery/rendered-2d-elevations">Rendered 2D Elevations</a>
+      <a class="btn-forward" href="{base}/portfolio/rendered-2d-elevations">Rendered 2D Elevations</a>
     </div>
     <div>
-      <h3 class="mediumTitle">Design Boards</h3>
+      <h3 class="mediumTitle">Presentation Boards</h3>
       <img src="{base}/images/design-board.jpg" alt="Design Board">
-      <a class="btn-forward" href="#">Desgin Boards</a>
+      <a class="btn-forward" href="#">Presentation Boards</a>
     </div>
     <div>
-      <h3 class="mediumTitle">3D Renders</h3>
+      <h3 class="mediumTitle">Rendered 3D visuals</h3>
       <img src="{base}/images/3d-render.jpg" alt="3D render">
-      <a class="btn-forward" href="#">3D Renders</a>
+      <a class="btn-forward" href="#">Rendered 3D visuals</a>
     </div>
   </div>
 </section>
@@ -98,22 +83,35 @@
 
 <style lang="scss">
   .hero {
-    background: url('/images/hero-home.jpg') 50% 50% no-repeat;
+    position: relative;
+    background: url('/images/hero-home.jpg') 50% 60% no-repeat;
     background-size: cover;
     color: var(--cWhite);
 
-    div {
+    > div {
       position: relative;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       padding: 0;
+
+      &:after {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.2);
+      }
     }
 
     h1 {
+      position: relative;
+      z-index: 1;
       margin-bottom: 3rem;
-      font-size: 2rem;
+      font-size: clamp(1.5rem, 3vw, 4rem);
       text-align: center;
       text-shadow: 0 0 6px white;
       font-weight: bold;
@@ -136,6 +134,12 @@
       border-radius: 8px;
       color: var(--cBlack10);
       background: var(--cOrange10);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .hero {
+      background-position: 50% 68%;
     }
   }
 

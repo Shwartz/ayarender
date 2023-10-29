@@ -3,38 +3,38 @@
   import { base } from "$app/paths";
 
   const thumbnails = [
-    '/gallery/rendered-floor-plans/Juice-bar-and-cloakroom-floorplan-thumb.jpg',
-    '/gallery/rendered-floor-plans/kitchen-floor-plan-thumb.jpg',
-    '/gallery/rendered-floor-plans/PhResidence-floorplan-thumb.jpg',
-    '/gallery/rendered-floor-plans/rendered-floorplan-thumb.jpg',
-    '/gallery/rendered-floor-plans/study-floorplan-thumb.jpg',
-    '/gallery/rendered-floor-plans/two-bedroom-flat-floorplan-thumb.jpg',
+    '/portfolio/technical-drawing/bespoke-furniture-thumb.jpg',
+    '/portfolio/technical-drawing/built-in-furniture-thumb.jpg',
+    '/portfolio/technical-drawing/floor-plan-thumb.jpg',
+    '/portfolio/technical-drawing/lighting-plan-thumb.jpg',
+    '/portfolio/technical-drawing/technical-elevation-thumb.jpg',
+    '/portfolio/technical-drawing/technical-floor-plan-thumb.jpg',
   ];
   const images = [
-    '/gallery/rendered-floor-plans/Juice-bar-and-cloakroom-floorplan.jpg',
-    '/gallery/rendered-floor-plans/kitchen-floor-plan.jpg',
-    '/gallery/rendered-floor-plans/PhResidence-floorplan.jpg',
-    '/gallery/rendered-floor-plans/rendered-floorplan.jpg',
-    '/gallery/rendered-floor-plans/study-floorplan.jpg',
-    '/gallery/rendered-floor-plans/two-bedroom-flat-floorplan.jpg',
+    '/portfolio/technical-drawing/bespoke-furniture.jpg',
+    '/portfolio/technical-drawing/built-in-furniture.jpg',
+    '/portfolio/technical-drawing/floor-plan.jpg',
+    '/portfolio/technical-drawing/lighting-plan.jpg',
+    '/portfolio/technical-drawing/technical-elevation.jpg',
+    '/portfolio/technical-drawing/technical-floor-plan.jpg',
   ];
 </script>
 
 <svelte:head>
-  <title>Rendered Floor Plans | Gallery | AyaRender</title>
-  <meta name="description" content="Examples of the Rendered Floor Plans" />
+  <title>Technical drawings | Gallery | AyaRender</title>
+  <meta name="description" content="Examples of the Technical drawings" />
 </svelte:head>
 
 <section class="hero">
   <div>
-    <h1>Rendered Floor Plans</h1>
+    <h1>Technical drawings</h1>
   </div>
 </section>
 
 <section class="large">
   <div class="card">
     <p>
-      <a class="btn-back" href="{base}/gallery">Back to Gallery</a>
+      <a class="btn-back" href="{base}/">Back to Home</a>
     </p>
     <LightBox thumbnails={thumbnails} images={images}  />
   </div>

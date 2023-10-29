@@ -16,7 +16,7 @@
         </a>
       </li>
       <li><a class:active={url === ''} href="{base}/">Home</a></li>
-      <li><a class:active={url === 'gallery'} href="{base}/gallery">Gallery</a></li>
+      <!--<li><a class:active={url === 'portfolio'} href="{base}/portfolio">Portfolio</a></li>-->
       <li><a class:active={url === 'contact'} href="{base}/contact">Contact</a></li>
     </ul>
   </nav>

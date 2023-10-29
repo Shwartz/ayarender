@@ -4,6 +4,7 @@
   import type { PageData } from "./$types";
   import { contactSchema } from "../../lib/contactSchema";
   import { BarLoader } from "svelte-loading-spinners";
+  import { base } from "$app/paths";
 
   export let data: PageData;
 
@@ -19,6 +20,12 @@
 
 <section class="hero">
   <div>
+    <div class="videoContainer">
+      <video autoplay loop muted>
+        <source src="{base}/video/purplish.webm" type="video/webm" />
+        <source src="{base}/video/purplish.mp4" type="video/mp4" />
+      </video>
+    </div>
     <h1>Contacts</h1>
   </div>
 </section>
@@ -71,21 +78,21 @@
     </div>
     <div class="right">
       <p class="mediumTitle">Hi, my name is Aija <br /><i>(pronounce as Aya or Ah-yah)</i></p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis nulla facilisis, iaculis mi eget,
-        dictum eros. Morbi tristique mi et feugiat aliquam. Curabitur malesuada quis purus a aliquam. Proin consectetur
-        vel orci vel fermentum. Vestibulum dignissim euismod metus, sed semper odio semper vel. Nullam sodales pulvinar
-        convallis. Vestibulum egestas leo mi, quis tincidunt diam aliquam ac.</p>
+      <p>There is a technical term for what I do<br/> - Interior Design visualiser, but I would like to call myself
+        Spatial Magician.</p>
+      <p>I can virtually transfer existing living space and show you images of the property that hasn't even been built
+        yet.</p>
+      <p>I specialise in Technical Drawings, Rendered Floor Plans, Rendered 2D Elevations and Design Boards</p>
     </div>
   </div>
 </section>
 
 <style lang="scss">
   .hero {
-    background: url('/images/hero-contacts.jpg') 50% 50% no-repeat;
     background-size: cover;
     color: var(--cWhite);
 
-    div {
+    > div {
       position: relative;
       display: flex;
       flex-direction: column;
@@ -95,12 +102,41 @@
     }
 
     h1 {
+      position: relative;
       margin-bottom: 3rem;
       font-size: 2rem;
       text-align: center;
       text-shadow: 0 0 6px white;
       font-weight: bold;
       letter-spacing: 1px;
+    }
+  }
+
+  .videoContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0,0,0,0.2);
+    }
+
+    video {
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
