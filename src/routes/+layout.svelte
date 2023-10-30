@@ -5,17 +5,18 @@
   import "./globalStyles.css";
 
   $:url = $page.url.pathname.split("/")[1];
+
 </script>
 
 <div class="page">
   <nav class="section large">
     <ul>
       <li>
-        <a class:active={url === ''} href="{base}/">
+        <a href="{base}/">
           <Logo width="48" height="48" />
         </a>
       </li>
-      <li><a class:active={url === ''} href="{base}/">Home</a></li>
+      <li><a class:active={url === '' || url === 'portfolio'} href="{base}/">Home</a></li>
       <!--<li><a class:active={url === 'portfolio'} href="{base}/portfolio">Portfolio</a></li>-->
       <li><a class:active={url === 'contact'} href="{base}/contact">Contact</a></li>
     </ul>

@@ -27,7 +27,7 @@
 
 <section class="hero">
   <div>
-    <h1>Technical drawings</h1>
+    <h1>Presentation Boards</h1>
   </div>
 </section>
 

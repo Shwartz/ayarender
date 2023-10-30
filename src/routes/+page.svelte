@@ -68,7 +68,7 @@
       <h2 class="mediumTitle">3D Renders</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra neque nec est maximus facilisis.
         Pellentesque tempus at dolor gravida egestas. Etiam tellus nulla.</p>
-      <a class="btn-forward" href="#">3D Renders</a>
+      <a class="btn-forward" href="{base}/portfolio/3d-renders">3D Renders</a>
     </div>
     <img src="{base}/images/3d-render.jpg" alt="3D Render">
   </div>

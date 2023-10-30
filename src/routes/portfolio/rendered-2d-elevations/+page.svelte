@@ -37,7 +37,7 @@
 
 <section class="hero">
   <div>
-    <h1>2D Elevations</h1>
+    <h1>Rendered 2D Elevations</h1>
   </div>
 </section>
 

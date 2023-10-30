@@ -3,20 +3,20 @@
   import { base } from "$app/paths";
 
   const thumbnails = [
-    '/portfolio/technical-drawing/bespoke-furniture-thumb.jpg',
-    '/portfolio/technical-drawing/built-in-furniture-thumb.jpg',
-    '/portfolio/technical-drawing/floor-plan-thumb.jpg',
-    '/portfolio/technical-drawing/lighting-plan-thumb.jpg',
-    '/portfolio/technical-drawing/technical-elevation-thumb.jpg',
-    '/portfolio/technical-drawing/technical-floor-plan-thumb.jpg',
+    '/portfolio/3d-renders/Japandi-inspired-3D-kitchen-model-thumb.jpg',
+    '/portfolio/3d-renders/Living-room-3D-model-thumb.jpg',
+    '/portfolio/3d-renders/Living-room-with-fireplace-3D-model-thumb.jpg',
+    '/portfolio/3d-renders/Office-letter-box-area-3D-model-thumb.jpg',
+    '/portfolio/3d-renders/Office-parcel-and-letter-box-area-3D-model-thumb.jpg',
+    '/portfolio/3d-renders/Show-home-living-room-3D-model-thumb.jpg',
   ];
   const images = [
-    '/portfolio/technical-drawing/bespoke-furniture.jpg',
-    '/portfolio/technical-drawing/built-in-furniture.jpg',
-    '/portfolio/technical-drawing/floor-plan.jpg',
-    '/portfolio/technical-drawing/lighting-plan.jpg',
-    '/portfolio/technical-drawing/technical-elevation.jpg',
-    '/portfolio/technical-drawing/technical-floor-plan.jpg',
+    '/portfolio/3d-renders/Japandi-inspired-3D-kitchen-model.jpg',
+    '/portfolio/3d-renders/Living-room-3D-model.jpg',
+    '/portfolio/3d-renders/Living-room-with-fireplace-3D-model.jpg',
+    '/portfolio/3d-renders/Office-letter-box-area-3D-model.jpg',
+    '/portfolio/3d-renders/Office-parcel-and-letter-box-area-3D-model.jpg',
+    '/portfolio/3d-renders/Show-home-living-room-3D-model.jpg',
   ];
 </script>
 
@@ -27,7 +27,7 @@
 
 <section class="hero">
   <div>
-    <h1>Technical Drawings</h1>
+    <h1>3D Renders</h1>
   </div>
 </section>
 
