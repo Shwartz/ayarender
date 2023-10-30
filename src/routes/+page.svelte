@@ -17,8 +17,7 @@
   <div class="card">
     <div>
       <h2 class="mediumTitle">Technical Drawings</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra neque nec est maximus facilisis.
-        Pellentesque tempus at dolor gravida egestas. Etiam tellus nulla.</p>
+      <p></p>
       <a class="btn-forward" href="{base}/portfolio/technical-drawings">Technical Drawing</a>
     </div>
     <img src="{base}/images/technical-drawing.jpg" alt="Technical drawing">
@@ -29,8 +28,7 @@
   <div class="card">
     <div>
       <h2 class="mediumTitle">Rendered Floor Plans</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra neque nec est maximus facilisis.
-        Pellentesque tempus at dolor gravida egestas. Etiam tellus nulla.</p>
+      <p></p>
       <a class="btn-forward" href="{base}/portfolio/rendered-floor-plans">Rendered Floor Plans</a>
     </div>
     <img src="{base}/images/rendered-floor-plan.jpg" alt="Rendered Floor Plan">
@@ -41,8 +39,7 @@
   <div class="card">
     <div>
       <h2 class="mediumTitle">Rendered 2D Elevations</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra neque nec est maximus facilisis.
-        Pellentesque tempus at dolor gravida egestas. Etiam tellus nulla.</p>
+      <p></p>
       <a class="btn-forward" href="{base}/portfolio/rendered-2d-elevations">Rendered 2D Elevations</a>
     </div>
     <img src="{base}/images/rendered-2d-elevation.jpg" alt="Rendered 2D Elevation">
@@ -53,8 +50,7 @@
   <div class="card">
     <div>
       <h2 class="mediumTitle">Rendered 3D visuals</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra neque nec est maximus facilisis.
-        Pellentesque tempus at dolor gravida egestas. Etiam tellus nulla.</p>
+      <p></p>
       <a class="btn-forward" href="{base}/portfolio/rendered-3d-visuals">Rendered 3D visuals</a>
     </div>
     <img src="{base}/images/3d-render.jpg" alt="3D Render">
@@ -65,8 +61,7 @@
   <div class="card">
     <div>
       <h2 class="mediumTitle">Presentation Boards</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra neque nec est maximus facilisis.
-        Pellentesque tempus at dolor gravida egestas. Etiam tellus nulla.</p>
+      <p></p>
       <a class="btn-forward" href="{base}/portfolio/presentation-boards">Presentation Boards</a>
     </div>
     <img src="{base}/images/presentation-board.jpg" alt="Presentation board">
@@ -165,6 +160,7 @@
     > div {
       flex-basis: fit-content;
       max-width: 500px;
+      min-width: 30%;
     }
 
     img {
