@@ -21,6 +21,9 @@
     </ul>
   </nav>
   <slot/>
+  <footer class="large section">
+    <div>footer</div>
+  </footer>
 </div>
 
 <style lang="scss">
@@ -36,6 +39,11 @@
     gap: 1rem;
     padding-top: 8px;
     padding-bottom: 8px;
+    font-size: 1.2rem;
+
+    li:first-child {
+      margin-right: 1rem;
+    }
 
     a {
       display: block;
@@ -44,5 +52,14 @@
         text-decoration: underline;
       }
     }
+  }
+
+  footer {
+    background: var(--cBlack5);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
   }
 </style>

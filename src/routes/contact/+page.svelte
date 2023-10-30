@@ -87,12 +87,6 @@
   </div>
 </section>
 
-<section class="large footer">
-  <div>
-    FOOTER HERE
-  </div>
-</section>
-
 <style lang="scss">
   .hero {
     background-size: cover;
@@ -175,7 +169,7 @@
   }
 
   textarea {
-    height: 8rem;
+    height: 12rem;
   }
 
   button {
@@ -232,9 +226,5 @@
    min-height: calc(100vh - 388px);
    background: url('/images/bg-contacts.jpg') no-repeat 50%;
    background-size: cover ;
- }
-
- .footer {
-   background: yellow;
  }
 </style>
