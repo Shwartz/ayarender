@@ -81,6 +81,7 @@
         <em>Step 1</em>
         <h3> Free initial consultation</h3>
         <p>To discuss a project, gather technical details and provide a written quotation for work.</p>
+        <p>Please use <a href="{base}/contact">Contact Form</a> to get in touch.</p>
       </div>
 
       <div>
@@ -231,6 +232,10 @@
     li {
       list-style: inside;
       margin-top: 0.4rem;
+    }
+
+    a {
+      text-decoration: underline;
     }
 
     @media (min-width: 800px) {
