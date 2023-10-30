@@ -204,6 +204,38 @@ section.large > div,
 
 .hero {
     min-height: 240px;
+    position: relative;
+    color: var(--cWhite);
+}
+
+.hero > div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.hero:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 3rem;
+    font-size: clamp(1.5rem, 3vw, 4rem);
+    text-align: center;
+    text-shadow: 0 0 6px white;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 @media (min-width: 600px) {

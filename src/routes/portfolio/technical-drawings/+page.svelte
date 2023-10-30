@@ -3,26 +3,26 @@
   import { base } from "$app/paths";
 
   const thumbnails = [
-    '/portfolio/technical-drawing/bespoke-furniture-thumb.jpg',
-    '/portfolio/technical-drawing/built-in-furniture-thumb.jpg',
-    '/portfolio/technical-drawing/floor-plan-thumb.jpg',
-    '/portfolio/technical-drawing/lighting-plan-thumb.jpg',
-    '/portfolio/technical-drawing/technical-elevation-thumb.jpg',
-    '/portfolio/technical-drawing/technical-floor-plan-thumb.jpg',
+    "/portfolio/technical-drawing/bespoke-furniture-thumb.jpg",
+    "/portfolio/technical-drawing/built-in-furniture-thumb.jpg",
+    "/portfolio/technical-drawing/floor-plan-thumb.jpg",
+    "/portfolio/technical-drawing/lighting-plan-thumb.jpg",
+    "/portfolio/technical-drawing/technical-elevation-thumb.jpg",
+    "/portfolio/technical-drawing/technical-floor-plan-thumb.jpg"
   ];
   const images = [
-    '/portfolio/technical-drawing/bespoke-furniture.jpg',
-    '/portfolio/technical-drawing/built-in-furniture.jpg',
-    '/portfolio/technical-drawing/floor-plan.jpg',
-    '/portfolio/technical-drawing/lighting-plan.jpg',
-    '/portfolio/technical-drawing/technical-elevation.jpg',
-    '/portfolio/technical-drawing/technical-floor-plan.jpg',
+    "/portfolio/technical-drawing/bespoke-furniture.jpg",
+    "/portfolio/technical-drawing/built-in-furniture.jpg",
+    "/portfolio/technical-drawing/floor-plan.jpg",
+    "/portfolio/technical-drawing/lighting-plan.jpg",
+    "/portfolio/technical-drawing/technical-elevation.jpg",
+    "/portfolio/technical-drawing/technical-floor-plan.jpg"
   ];
 </script>
 
 <svelte:head>
-  <title>Technical drawings | Gallery | AyaRender</title>
-  <meta name="description" content="Examples of the Technical drawings" />
+  <title>Technical Drawings | Portfolio | Ayarender</title>
+  <meta name="description" content="Examples of the Technical Drawings" />
 </svelte:head>
 
 <section class="hero">
@@ -34,34 +34,21 @@
 <section class="large">
   <div class="card">
     <p>
-      <a class="btn-back" href="{base}/">Back to Home</a>
+      <a class="btn-back" href="{base}/">Back</a>
     </p>
-    <LightBox thumbnails={thumbnails} images={images}  />
+    <LightBox thumbnails={thumbnails} images={images} />
   </div>
 </section>
 
 <style lang="scss">
   .hero {
-    background: url('/images/hero-gallery.jpg') 50% 50% no-repeat;
+    background: url('/images/hero-home.jpg') 50% 60% no-repeat;
     background-size: cover;
-    color: var(--cWhite);
+  }
 
-    div {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 0;
-    }
-
-    h1 {
-      margin-bottom: 3rem;
-      font-size: 2rem;
-      text-align: center;
-      text-shadow: 0 0 6px white;
-      font-weight: bold;
-      letter-spacing: 1px;
+  @media (min-width: 1200px) {
+    .hero {
+      background-position: 50% 68%;
     }
   }
 

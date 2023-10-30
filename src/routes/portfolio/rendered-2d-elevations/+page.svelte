@@ -31,8 +31,8 @@
 </script>
 
 <svelte:head>
-  <title>Rendered 2D Elevations | Portfolio | AyaRender</title>
-  <meta name="description" content="Examples of the 2D Elevations" />
+  <title>Rendered 2D Elevations | Portfolio | Ayarender</title>
+  <meta name="description" content="Examples of the Rendered 2D Elevations" />
 </svelte:head>
 
 <section class="hero">
@@ -44,7 +44,7 @@
 <section class="large">
   <div class="card">
     <p>
-      <a class="btn-back" href="{base}/">Back to Home</a>
+      <a class="btn-back" href="{base}/">Back</a>
     </p>
     <LightBox thumbnails={thumbnails} images={images}  />
   </div>
@@ -52,26 +52,13 @@
 
 <style lang="scss">
   .hero {
-    background: url('/images/hero-gallery.jpg') 50% 50% no-repeat;
+    background: url('/images/hero-home.jpg') 50% 60% no-repeat;
     background-size: cover;
-    color: var(--cWhite);
+  }
 
-    div {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 0;
-    }
-
-    h1 {
-      margin-bottom: 3rem;
-      font-size: 2rem;
-      text-align: center;
-      text-shadow: 0 0 6px white;
-      font-weight: bold;
-      letter-spacing: 1px;
+  @media (min-width: 1200px) {
+    .hero {
+      background-position: 50% 68%;
     }
   }
 

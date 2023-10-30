@@ -9,8 +9,7 @@
 
 <section class="hero">
   <div>
-    <h1>2D and 3D Interior Design Visualisation <br />
-      for Interior Designers</h1>
+    <h1>2D and 3D Interior Design Visualisation</h1>
   </div>
 </section>
 
@@ -53,24 +52,24 @@
 <section class="large bg-light">
   <div class="card">
     <div>
-      <h2 class="mediumTitle">Presentation Boards</h2>
+      <h2 class="mediumTitle">Rendered 3D visuals</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra neque nec est maximus facilisis.
         Pellentesque tempus at dolor gravida egestas. Etiam tellus nulla.</p>
-      <a class="btn-forward" href="{base}/portfolio/presentation-boards">Presentation Boards</a>
+      <a class="btn-forward" href="{base}/portfolio/3d-renders">Rendered 3D visuals</a>
     </div>
-    <img src="{base}/images/presentation-board.jpg" alt="Presentation board">
+    <img src="{base}/images/3d-render.jpg" alt="3D Render">
   </div>
 </section>
 
 <section class="large">
   <div class="card">
     <div>
-      <h2 class="mediumTitle">3D Renders</h2>
+      <h2 class="mediumTitle">Presentation Boards</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra neque nec est maximus facilisis.
         Pellentesque tempus at dolor gravida egestas. Etiam tellus nulla.</p>
-      <a class="btn-forward" href="{base}/portfolio/3d-renders">3D Renders</a>
+      <a class="btn-forward" href="{base}/portfolio/presentation-boards">Presentation Boards</a>
     </div>
-    <img src="{base}/images/3d-render.jpg" alt="3D Render">
+    <img src="{base}/images/presentation-board.jpg" alt="Presentation board">
   </div>
 </section>
 
@@ -119,40 +118,8 @@
 
 <style lang="scss">
   .hero {
-    position: relative;
     background: url('/images/hero-home.jpg') 50% 60% no-repeat;
     background-size: cover;
-    color: var(--cWhite);
-
-    > div {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 0;
-
-      &:after {
-        position: absolute;
-        content: '';
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: rgba(0, 0, 0, 0.2);
-      }
-    }
-
-    h1 {
-      position: relative;
-      z-index: 1;
-      margin-bottom: 3rem;
-      font-size: clamp(1.5rem, 3vw, 4rem);
-      text-align: center;
-      text-shadow: 0 0 6px white;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
 
     h3 {
       margin-bottom: 1rem;
