@@ -53,12 +53,12 @@
 <section class="large bg-light">
   <div class="card">
     <div>
-      <h2 class="mediumTitle">Design Boards</h2>
+      <h2 class="mediumTitle">Presentation Boards</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra neque nec est maximus facilisis.
         Pellentesque tempus at dolor gravida egestas. Etiam tellus nulla.</p>
-      <a class="btn-forward" href="#">Design Boards</a>
+      <a class="btn-forward" href="{base}/portfolio/presentation-boards">Presentation Boards</a>
     </div>
-    <img src="{base}/images/design-board.jpg" alt="Design Boards">
+    <img src="{base}/images/presentation-board.jpg" alt="Presentation board">
   </div>
 </section>
 

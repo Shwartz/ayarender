@@ -19,9 +19,9 @@
       <h2 class="mediumTitle">Technical Drawings</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra neque nec est maximus facilisis.
         Pellentesque tempus at dolor gravida egestas. Etiam tellus nulla.</p>
-      <a class="btn-forward" href="{base}/gallery/technical-drawings">Technical Drawing</a>
+      <a class="btn-forward" href="{base}/gallery/presentation-boardss">Technical Drawing</a>
     </div>
-    <img src="{base}/images/technical-drawing.jpg" alt="Technical drawing">
+    <img src="{base}/images/presentation-boards.jpg" alt="Technical drawing">
   </div>
 </section>
 
