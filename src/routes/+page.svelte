@@ -9,7 +9,7 @@
 
 <section class="hero">
   <div>
-    <h1>2D and 3D Interior Design Visualisation <br/>
+    <h1>2D and 3D Interior Design Visualisation <br />
       for Interior Designers</h1>
   </div>
 </section>
@@ -76,38 +76,44 @@
 
 <section class="medium bg-light" id="process">
   <div>
-    <h3 class="largeTitle">Process</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget libero vestibulum, volutpat dolor eget,
-      iaculis felis. Phasellus lacus arcu, fermentum quis tempus a, auctor quis velit. Quisque euismod urna eleifend
-      erat aliquam, non feugiat nulla venenatis. Duis placerat vehicula nisi sit amet tempus. Curabitur nec metus nunc.
-      Sed ac cursus eros. Aenean eget sagittis nisl. In at tincidunt ligula. Mauris molestie erat a finibus suscipit.
-      Pellentesque nec luctus est. Fusce tempor vehicula justo. Integer ut volutpat risus. Mauris porttitor semper nisi
-      a cursus.</p>
-    <p>Etiam auctor nisl nisi, ut lacinia est consequat quis. Orci varius natoque penatibus et magnis dis parturient
-      montes, nascetur ridiculus mus. Cras sed nunc porta, dignissim ante eu, sagittis orci. Integer ut elit eu tortor
-      vehicula luctus nec ac tortor. Vivamus nec molestie neque. Aliquam imperdiet luctus urna, et aliquam justo
-      facilisis a. Suspendisse potenti. Ut auctor sapien non rhoncus mattis. In quis ultrices arcu. In molestie
-      tincidunt elit vitae dapibus. Nunc ac turpis vel mauris lacinia bibendum id in magna. Aliquam non scelerisque
-      tortor. Suspendisse facilisis sit amet nulla non porttitor. Phasellus id ornare lorem. Donec eget est justo.
-      Maecenas ac viverra est.</p>
-    <p>Mauris nec aliquam tellus. Morbi facilisis, felis ut pretium eleifend, nisl lorem blandit nunc, et facilisis
-      dolor arcu et urna. Quisque porttitor purus ut tortor facilisis finibus in vel justo. Donec tempor justo at tortor
-      condimentum aliquet. Phasellus vitae posuere urna, tristique auctor elit. Mauris eu nulla eu ante cursus gravida.
-      Sed sit amet urna venenatis lorem venenatis volutpat in non erat. Nulla orci nunc, blandit ac porta pharetra,
-      imperdiet at ligula. In hac habitasse platea dictumst. Sed condimentum vel enim sed pellentesque. Aliquam erat
-      volutpat. Nulla et nunc a quam interdum tempus. Aenean vitae volutpat mi.</p>
-  </div>
-</section>
-
-<section class="medium" id="price">
-  <div>
-    <h3 class="largeTitle">Price</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget libero vestibulum, volutpat dolor eget,
-      iaculis felis. Phasellus lacus arcu, fermentum quis tempus a, auctor quis velit. Quisque euismod urna eleifend
-      erat aliquam, non feugiat nulla venenatis. Duis placerat vehicula nisi sit amet tempus. Curabitur nec metus nunc.
-      Sed ac cursus eros. Aenean eget sagittis nisl. In at tincidunt ligula. Mauris molestie erat a finibus suscipit.
-      Pellentesque nec luctus est. Fusce tempor vehicula justo. Integer ut volutpat risus. Mauris porttitor semper nisi
-      a cursus.</p>
+    <h2 class="largeTitle">Easy four step process</h2>
+    <div class="process">
+      <div>
+        <h3><em>Step 1</em> - free initial consultation</h3>
+        <p>To discuss a project, gather technical details and provide a written quotation for work.</p>
+      </div>
+      <div>
+        <h3><em>Step 2</em> - booking the project</h3>
+        <p>50% deposit is paid upon booking. Detailed project information is submitted via Email or DropBox. The
+          information required can vary, however, standard project will require:</p>
+        <ul>
+          <li>floor plan and elevations with dimensions (including hand drawn sketches, existing AutoCAD, SketchUp files
+            etc.)
+          </li>
+          <li>furniture layout with dimensions</li>
+          <li>dimensions of windows and doors</li>
+          <li>images or website links to all finishes (paint colour, fabric, hardware etc.)</li>
+        </ul>
+        <p>For branded documents:</p>
+        <ul>
+          <li>your logo,</li>
+          <li>your contact info</li>
+          <li>fonts, text size etc.</li>
+          <li>title block (if applicable)</li>
+        </ul>
+      </div>
+      <div>
+        <h3><em>Step 3</em> - Design and revision stage</h3>
+        <p>After studying the submitted information I start construction. In order for this stage to run smoothly and
+          within agreed timescale make sure you provide as much relevant information as possible. Design draft is sent
+          to the client for approval.</p>
+      </div>
+      <div>
+        <h3><em>Step 4</em> - Final design</h3>
+        <p>Revisions are made, if applicable, the final drawings are sent to the client via Email or DropBox and final
+          invoice is issued.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -187,7 +193,7 @@
     img {
       padding: 8px;
       background: white;
-      box-shadow: 0 0 4px rgba(0,0,0,0.2);
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
       min-width: 300px;
     }
 
