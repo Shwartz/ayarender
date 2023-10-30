@@ -4,7 +4,7 @@
   import Logo from "/src/assets/icons/logo.svg?component";
   import "./globalStyles.css";
 
-  $:url = $page.url.pathname.split('/')[1];
+  $:url = $page.url.pathname.split("/")[1];
 </script>
 
 <div class="page">
@@ -20,9 +20,16 @@
       <li><a class:active={url === 'contact'} href="{base}/contact">Contact</a></li>
     </ul>
   </nav>
-  <slot/>
+  <slot />
   <footer class="large section">
-    <div>footer</div>
+    <div>
+      <p class="left">&copy; 2023 Ayarender | Follow on <a href="https://instagram.com/aya.render">
+        <img alt="Instagram"
+             src="/icons/instagram.svg"
+             height="24" width="24"></a>
+      </p>
+      <p>Created by <a href="https://shvarcs.com/">Shvarcs</a></p>
+    </div>
   </footer>
 </div>
 
@@ -47,6 +54,7 @@
 
     a {
       display: block;
+
       &.active,
       &:focus {
         text-decoration: underline;
@@ -55,11 +63,49 @@
   }
 
   footer {
-    background: var(--cBlack5);
     position: fixed;
-    bottom: 0;
     right: 0;
     left: 0;
+    bottom: 0;
     z-index: -1;
+    background: var(--cBlack8);
+    color: var(--cSand5);
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    p {
+      font-size: 1rem;
+      margin: 0;
+      line-height: 1.5rem;
+    }
+
+    .left {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    img {
+      display: block;
+      width: 24px;
+      height: 24px;
+      filter: grayscale(60%);
+      transition: filter 300ms;
+
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
+
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        color: var(--cWhite);
+      }
+    }
   }
 </style>
