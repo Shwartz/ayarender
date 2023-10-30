@@ -153,6 +153,11 @@
   form {
     display: flex;
     flex-direction: column;
+    padding: 2rem 1rem;
+    backdrop-filter: blur(3px);
+    border: 1px solid var(--cSand5);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.4);
   }
 
   input, textarea {
@@ -192,14 +197,6 @@
     color: var(--cOrange10);
   }
 
-  form {
-    padding: 2rem 3rem;
-    backdrop-filter: blur(3px);
-    border: 1px solid var(--cSand5);
-    border-radius: 8px;
-    background: rgba(255,255,255,0.4);
-  }
-
   @media (min-width: 800px) {
     .content {
       display: flex;
@@ -213,6 +210,10 @@
 
     .right {
       margin-top: 0;
+    }
+
+    form {
+      padding: 2rem 3rem;
     }
   }
 
