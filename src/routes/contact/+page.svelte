@@ -102,13 +102,7 @@
     }
 
     h1 {
-      position: relative;
-      margin-bottom: 3rem;
       font-size: clamp(2rem, 3vw, 4rem);
-      text-align: center;
-      text-shadow: 0 0 6px white;
-      font-weight: bold;
-      letter-spacing: 1px;
     }
   }
 

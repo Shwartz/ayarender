@@ -71,11 +71,16 @@
     z-index: -1;
     background: var(--cBlack8);
     color: var(--cSand5);
+    min-height: 12rem;
 
     div {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
+      flex-direction: column;
       align-items: center;
+      padding: 1rem;
+      max-width: 800px;
+      margin: auto;
     }
 
     p {
@@ -106,6 +111,13 @@
 
       &:hover {
         color: var(--cWhite);
+      }
+    }
+
+    @media (min-width: 800px) {
+      div {
+        flex-direction: row;
+        justify-content: space-between;
       }
     }
   }
