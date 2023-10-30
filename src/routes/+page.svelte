@@ -9,7 +9,7 @@
 
 <section class="hero">
   <div>
-    <h1>2D and 3D Interior Design Visualisation</h1>
+    <h1 role="heading">2D and 3D Interior Design Visualisation</h1>
   </div>
 </section>
 
