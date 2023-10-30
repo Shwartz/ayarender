@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-  <title>Gallery | AyaRender</title>
+  <title>Portfolio | Ayarender</title>
   <meta name="description" content="Examples of Rendered Floor plans, 2D elevations, design boards and technical drawings I can produce for clients" />
 </svelte:head>
 

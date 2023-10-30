@@ -135,7 +135,8 @@ GLOBAL SETUP
     --cSand5: #F9E7D9;
     --cSand1: #FDF7F2;
     --cGreen10: #709F54;
-    --gradientBgLight: linear-gradient(135deg, var(--cSand1) 30%, var(--cSand10) );
+    --gradientBgLight: linear-gradient(135deg, var(--cSand1) 30%, var(--cSand5) );
+    --gradientBgWhite: linear-gradient(45deg, var(--cSand5) 0%, var(--cWhite) 70%);
 }
 
 body {
@@ -171,6 +172,12 @@ section.bg-light,
 .section.bg-light {
     background: rgb(249,231,217);
     background: var(--gradientBgLight);
+}
+
+section.bg-white,
+.section.bg-white {
+    background: rgb(255, 255, 255);
+    background: var(--gradientBgWhite);
 }
 
 .page section:last-of-type {
@@ -291,7 +298,7 @@ p, label {
 
 .btn-back {
     padding: 0.5rem 1rem 0.5rem 2.5rem;
-    background: url(/icons/icn-arrow-left.svg) no-repeat 16px 54%;
+    background: url(/icons/icn-arrow-left.svg) no-repeat 16px 54% var(--cWhite);
 }
 
 .btn-back:hover, .btn-back:focus {
@@ -301,7 +308,7 @@ p, label {
 
 .btn-forward {
     padding: 0.5rem 2.5rem 0.5rem 1rem;
-    background: url(/icons/icn-arrow-right.svg) no-repeat calc(100% - 16px) 54%;
+    background: url(/icons/icn-arrow-right.svg) no-repeat calc(100% - 16px) 54% var(--cWhite);
 }
 
 .btn-forward:hover, .btn-forward:focus {

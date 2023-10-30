@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-  <title>AyaRender Interior Design</title>
+  <title>Ayarender Interior Design</title>
   <meta name="description" content="Converting interior designs in 2D and 3D visualisation" />
 </svelte:head>
 
@@ -13,7 +13,7 @@
   </div>
 </section>
 
-<section class="large">
+<section class="large bg-white">
   <div class="card">
     <div>
       <h2 class="mediumTitle">Technical Drawings</h2>
@@ -37,7 +37,7 @@
   </div>
 </section>
 
-<section class="large">
+<section class="large bg-white">
   <div class="card">
     <div>
       <h2 class="mediumTitle">Rendered 2D Elevations</h2>
@@ -55,13 +55,13 @@
       <h2 class="mediumTitle">Rendered 3D visuals</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra neque nec est maximus facilisis.
         Pellentesque tempus at dolor gravida egestas. Etiam tellus nulla.</p>
-      <a class="btn-forward" href="{base}/portfolio/3d-renders">Rendered 3D visuals</a>
+      <a class="btn-forward" href="{base}/portfolio/rendered-3d-visuals">Rendered 3D visuals</a>
     </div>
     <img src="{base}/images/3d-render.jpg" alt="3D Render">
   </div>
 </section>
 
-<section class="large">
+<section class="large bg-white">
   <div class="card">
     <div>
       <h2 class="mediumTitle">Presentation Boards</h2>

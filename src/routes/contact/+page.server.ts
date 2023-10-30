@@ -27,9 +27,9 @@ export const actions = {
       return message(form, {status: 'error', text: 'Sorry, I can\'t send the form. There might be missing info for some fields.'});
     }
 
-    const subject = "AyaRender contact form";
+    const subject = "Ayarender contact form";
     const {communication, email} = form.data;
-    const html = `<h2>AyaRender Web Form!</h2><p>Email: ${email}</p><pre>${communication}</pre>`;
+    const html = `<h2>Ayarender Web Form!</h2><p>Email: ${email}</p><pre>${communication}</pre>`;
     const mailDetails = {
       from: GOOGLE_EMAIL,
       to: RECIPIENT_EMAIL,

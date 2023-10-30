@@ -15,7 +15,7 @@
 </script>
 
 <svelte:head>
-  <meta name="description" content="AyaRender: Get in touch" />
+  <meta name="description" content="Ayarender: Get in touch" />
 </svelte:head>
 
 <section class="hero">
@@ -166,6 +166,7 @@
     border-radius: 4px;
     padding: 4px;
     margin-top: 4px;
+    background: var(--cWhite);
   }
 
   textarea {

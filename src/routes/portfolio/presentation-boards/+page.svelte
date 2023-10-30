@@ -21,7 +21,7 @@
 </script>
 
 <svelte:head>
-  <title>Presentation Boards | Portfolio | AyaRender</title>
+  <title>Presentation Boards | Portfolio | Ayarender</title>
   <meta name="description" content="Examples of the Presentation Boards" />
 </svelte:head>
 
