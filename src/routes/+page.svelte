@@ -1,127 +1,140 @@
 <script>
-  import { base } from "$app/paths";
+	import { base } from '$app/paths';
 </script>
 
 <svelte:head>
-  <title>Ayarender Interior Design</title>
-  <meta name="description" content="Converting interior designs in 2D and 3D visualisation" />
+	<title>Ayarender Interior Design</title>
+	<meta name='description' content='Converting interior designs in 2D and 3D visualisation' />
 </svelte:head>
 
-<section class="hero">
-  <div>
-    <h1 role="heading">2D and 3D Interior Design Visualisation</h1>
-  </div>
+<section class='hero'>
+	<div>
+		<h1 role='heading'>2D and 3D Interior Design Visualisation</h1>
+	</div>
 </section>
 
-<section class="large bg-white">
-  <div class="card">
-    <div>
-      <h2 class="mediumTitle">Technical Drawings</h2>
-      <p></p>
-      <a class="btn-forward" href="{base}/portfolio/technical-drawings">Technical Drawings</a>
-    </div>
-    <img src="{base}/images/technical-drawing.jpg" alt="Technical drawing" width="750" height="530">
-  </div>
+<section class='large bg-white'>
+	<div class='card'>
+		<div>
+			<h2 class='mediumTitle'>Technical Drawings</h2>
+			<p>Classical black and white or colour rendered to highlight your design selections.</p>
+			<p> The drawing solutions include a range of options - initial floorplans, elevations, electrical and lighting
+				layouts and bespoke joinery.</p>
+			<p>Depending on your requirements they can be presented to scale, with dimensions, title block and your branding.
+			<p>These plans usually start at &pound;50. </p>
+			<a class='btn-forward' href='{base}/portfolio/technical-drawings'>Technical Drawings</a>
+		</div>
+		<img src='{base}/images/technical-drawing.jpg' alt='Technical drawing' width='750' height='530'>
+	</div>
 </section>
 
-<section class="large bg-light">
-  <div class="card">
-    <div>
-      <h2 class="mediumTitle">Rendered Floor Plans</h2>
-      <p></p>
-      <a class="btn-forward" href="{base}/portfolio/rendered-floor-plans">Rendered Floor Plans</a>
-    </div>
-    <img src="{base}/images/rendered-floor-plan.jpg" alt="Rendered Floor Plan" width="750" height="579">
-  </div>
+<section class='large bg-light'>
+	<div class='card'>
+		<div>
+			<h2 class='mediumTitle'>Rendered Floor Plans</h2>
+			<p>With color-rendered floor plans, it's easier to distinguish between various elements and spaces, making it more
+				straightforward for clients to understand the design.</p>
+			<p>Color-rendered floor plans can be versatile, serving various purposes from client presentations to marketing
+				materials, and can be easily adapted to different styles and themes.</p>
+			<p>These plans usually start at &pound;80. </p>
+			<a class='btn-forward' href='{base}/portfolio/rendered-floor-plans'>Rendered Floor Plans</a>
+		</div>
+		<img src='{base}/images/rendered-floor-plan.jpg' alt='Rendered Floor Plan' width='750' height='579'>
+	</div>
 </section>
 
-<section class="large bg-white">
-  <div class="card">
-    <div>
-      <h2 class="mediumTitle">Rendered 2D Elevations</h2>
-      <p></p>
-      <a class="btn-forward" href="{base}/portfolio/rendered-2d-elevations">Rendered 2D Elevations</a>
-    </div>
-    <img src="{base}/images/rendered-2d-elevation.jpg" alt="Rendered 2D Elevation" width="561" height="419">
-  </div>
+<section class='large bg-white'>
+	<div class='card'>
+		<div>
+			<h2 class='mediumTitle'>Rendered 2D Elevations</h2>
+			<p>Color-rendered interior elevations, like color-rendered floor plans, offer several advantages. They provide a more realistic and detailed representation of interior spaces, allowing clients to visualise the final design better.</p>
+			<p>The use of colour enhances the overall aesthetics of the elevation drawings, making them more visually appealing and engaging.</p>
+			<p>Colour elevations allow you to emphasise specific design elements, such as focal points or custom furnishings, which can be crucial for conveying the design intent.</p>
+			<p>These elevations usually start at &pound;80.</p>
+			<a class='btn-forward' href='{base}/portfolio/rendered-2d-elevations'>Rendered 2D Elevations</a>
+		</div>
+		<img src='{base}/images/rendered-2d-elevation.jpg' alt='Rendered 2D Elevation' width='561' height='419'>
+	</div>
 </section>
 
-<section class="large bg-light">
-  <div class="card">
-    <div>
-      <h2 class="mediumTitle">Rendered 3D visuals</h2>
-      <p></p>
-      <a class="btn-forward" href="{base}/portfolio/rendered-3d-visuals">Rendered 3D visuals</a>
-    </div>
-    <img src="{base}/images/3d-render.jpg" alt="3D Render" width="750" height="533">
-  </div>
+<section class='large bg-light'>
+	<div class='card'>
+		<div>
+			<h2 class='mediumTitle'>Rendered 3D visuals</h2>
+			<p></p>
+			<a class='btn-forward' href='{base}/portfolio/rendered-3d-visuals'>Rendered 3D visuals</a>
+		</div>
+		<img src='{base}/images/3d-render.jpg' alt='3D Render' width='750' height='533'>
+	</div>
 </section>
 
-<section class="large bg-white">
-  <div class="card">
-    <div>
-      <h2 class="mediumTitle">Presentation Boards</h2>
-      <p></p>
-      <a class="btn-forward" href="{base}/portfolio/presentation-boards">Presentation Boards</a>
-    </div>
-    <img src="{base}/images/presentation-board.jpg" alt="Presentation board" width="750" height="530">
-  </div>
+<section class='large bg-white'>
+	<div class='card'>
+		<div>
+			<h2 class='mediumTitle'>Presentation Boards</h2>
+			<p></p>
+			<a class='btn-forward' href='{base}/portfolio/presentation-boards'>Presentation Boards</a>
+		</div>
+		<img src='{base}/images/presentation-board.jpg' alt='Presentation board' width='750' height='530'>
+	</div>
 </section>
 
-<section class="large bg-light" id="process">
-  <div>
-    <h2 class="largeTitle center">Easy four step process</h2>
-    <div class="steps">
-      <div>
-        <em>Step 1</em>
-        <h3> Free initial consultation</h3>
-        <p>To discuss a project, gather technical details and provide a written quotation for work.</p>
-        <p>Please use <a href="{base}/contact">Contact Form</a> to get in touch.</p>
-      </div>
+<section class='large bg-light' id='process'>
+	<div>
+		<h2 class='largeTitle center'>Easy four step process</h2>
+		<div class='steps'>
+			<div>
+				<em>Step 1</em>
+				<h3> Free initial consultation</h3>
+				<p>To discuss a project, gather technical details and provide a written quotation for work.</p>
+				<p>Please use <a href='{base}/contact'>Contact Form</a> to get in touch.</p>
+			</div>
 
-      <div>
-        <em>Step 2</em>
-        <h3>Booking the project</h3>
-        <p>50% deposit is paid upon booking. <br/>Detailed project information is submitted via Email or DropBox.<br/> The
-          information required can vary, however, standard project will require:</p>
-        <ul>
-          <li>floor plan and elevations with dimensions <br/>(including hand drawn sketches, existing AutoCAD, SketchUp files
-            etc.)
-          </li>
-          <li>furniture layout with dimensions</li>
-          <li>dimensions of windows and doors</li>
-          <li>images or website links to all finishes <br/>(paint colour, fabric, hardware etc.)</li>
-        </ul>
-        <p>For branded documents:</p>
-        <ul>
-          <li>your logo,</li>
-          <li>your contact info</li>
-          <li>fonts, text size etc.</li>
-          <li>title block (if applicable)</li>
-        </ul>
-      </div>
+			<div>
+				<em>Step 2</em>
+				<h3>Booking the project</h3>
+				<p>50% deposit is paid upon booking. <br />Detailed project information is submitted via Email or DropBox.<br />
+					The
+					information required can vary, however, standard project will require:</p>
+				<ul>
+					<li>floor plan and elevations with dimensions <br />(including hand drawn sketches, existing AutoCAD, SketchUp
+						files
+						etc.)
+					</li>
+					<li>furniture layout with dimensions</li>
+					<li>dimensions of windows and doors</li>
+					<li>images or website links to all finishes <br />(paint colour, fabric, hardware etc.)</li>
+				</ul>
+				<p>For branded documents:</p>
+				<ul>
+					<li>your logo,</li>
+					<li>your contact info</li>
+					<li>fonts, text size etc.</li>
+					<li>title block (if applicable)</li>
+				</ul>
+			</div>
 
-      <div>
-        <em>Step 3</em>
-        <h3>Design and revision stage</h3>
-        <p>After studying the submitted information I start construction. </p>
-        <p>In order for this stage to run smoothly and
-          within agreed timescale make sure you provide as much relevant information as possible.</p>
-        <p>Design draft is sent
-          to the client for approval.</p>
-      </div>
+			<div>
+				<em>Step 3</em>
+				<h3>Design and revision stage</h3>
+				<p>After studying the submitted information I start construction. </p>
+				<p>In order for this stage to run smoothly and
+					within agreed timescale make sure you provide as much relevant information as possible.</p>
+				<p>Design draft is sent
+					to the client for approval.</p>
+			</div>
 
-      <div>
-        <em>Step 4</em>
-        <h3>Final design</h3>
-        <p>Revisions are made, if applicable, the final drawings are sent to the client via Email or DropBox and final
-          invoice is issued.</p>
-      </div>
-    </div>
-  </div>
+			<div>
+				<em>Step 4</em>
+				<h3>Final design</h3>
+				<p>Revisions are made, if applicable, the final drawings are sent to the client via Email or DropBox and final
+					invoice is issued.</p>
+			</div>
+		</div>
+	</div>
 </section>
 
-<style lang="scss">
+<style lang='scss'>
   .hero {
     background: url('/images/hero-home.jpg') 50% 60% no-repeat;
     background-size: cover;
@@ -194,7 +207,7 @@
       backdrop-filter: blur(2px);
       border: 1px solid var(--cBlack5);
       border-radius: 4rem;
-      box-shadow: 0 0 1rem rgba(0,0,0,0.2);
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
       color: var(--cWhite);
     }
 
