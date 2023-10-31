@@ -40,6 +40,7 @@ img {
     max-block-size: 100%;
     width: 100%;
     height: auto;
+    aspect-ratio: attr(width) / attr(height);
 }
 
 /* removes spacing between cells in tables */
