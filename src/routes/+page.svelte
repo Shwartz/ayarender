@@ -20,7 +20,7 @@
       <p></p>
       <a class="btn-forward" href="{base}/portfolio/technical-drawings">Technical Drawings</a>
     </div>
-    <img src="{base}/images/technical-drawing.jpg" alt="Technical drawing">
+    <img src="{base}/images/technical-drawing.jpg" alt="Technical drawing" width="750" height="530">
   </div>
 </section>
 
@@ -31,7 +31,7 @@
       <p></p>
       <a class="btn-forward" href="{base}/portfolio/rendered-floor-plans">Rendered Floor Plans</a>
     </div>
-    <img src="{base}/images/rendered-floor-plan.jpg" alt="Rendered Floor Plan">
+    <img src="{base}/images/rendered-floor-plan.jpg" alt="Rendered Floor Plan" width="750" height="579">
   </div>
 </section>
 
@@ -42,7 +42,7 @@
       <p></p>
       <a class="btn-forward" href="{base}/portfolio/rendered-2d-elevations">Rendered 2D Elevations</a>
     </div>
-    <img src="{base}/images/rendered-2d-elevation.jpg" alt="Rendered 2D Elevation">
+    <img src="{base}/images/rendered-2d-elevation.jpg" alt="Rendered 2D Elevation" width="561" height="419">
   </div>
 </section>
 
@@ -53,7 +53,7 @@
       <p></p>
       <a class="btn-forward" href="{base}/portfolio/rendered-3d-visuals">Rendered 3D visuals</a>
     </div>
-    <img src="{base}/images/3d-render.jpg" alt="3D Render">
+    <img src="{base}/images/3d-render.jpg" alt="3D Render" width="750" height="533">
   </div>
 </section>
 
@@ -64,7 +64,7 @@
       <p></p>
       <a class="btn-forward" href="{base}/portfolio/presentation-boards">Presentation Boards</a>
     </div>
-    <img src="{base}/images/presentation-board.jpg" alt="Presentation board">
+    <img src="{base}/images/presentation-board.jpg" alt="Presentation board" width="750" height="530">
   </div>
 </section>
 
