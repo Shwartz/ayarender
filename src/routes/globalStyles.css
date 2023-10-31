@@ -1,0 +1,317 @@
+/***
+    The new CSS reset - version 1.9 (last updated 19.6.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+    - The "html" element is excluded, otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+    cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+    list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+    max-inline-size: 100%;
+    max-block-size: 100%;
+    width: 100%;
+    height: auto;
+}
+
+/* removes spacing between cells in tables */
+table {
+    border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input, textarea {
+    -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+    white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+    -webkit-appearance: revert;
+    appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+    all: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+    color: unset;
+}
+
+/* remove default dot (•) sign */
+::marker {
+    content: initial;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+    display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable="false"])) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
+    -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable="true"]) {
+    -webkit-user-drag: element;
+}
+
+/**
+GLOBAL SETUP
+*/
+@font-face {
+    font-family: 'Segoe UI Normal';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''), url('/fonts/segoe-ui-4-cufonfonts/Segoe UI.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Segoe UI Bold';
+    font-style: normal;
+    src: local(''), url('/fonts/segoe-ui-4-cufonfonts/Segoe UI Bold.ttf') format('truetype');
+}
+
+:root {
+    --font-body: 'Segoe UI Normal', 'Segoe UI', Helvetica Neue, Helvetica,Arial,sans-serif, Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', sans-serif;
+    --font-bold: 'Segoe UI Bold', 'Segoe UI', Helvetica Neue, Helvetica,Arial,sans-serif, Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', sans-serif;
+    font-family: var(--font-body);
+    --cWhite: #fff;
+    --cBlack10: #3F2021;
+    --cBlack8: #654D4C;
+    --cBlack2: #D0C8C8;
+    --cBlack5: #9F9090;
+    --cBrick10: #C26F60;
+    --cBrick8: #CE8B80;
+    --cBrick5: #E0B7B1;
+    --cOrange10: #FFAA4D;
+    --cSand10: #F3CFB3;
+    --cSand5: #F9E7D9;
+    --cSand1: #FDF7F2;
+    --cGreen10: #709F54;
+    --gradientBgLight: linear-gradient(135deg, var(--cSand1) 30%, var(--cSand5) );
+    --gradientBgWhite: linear-gradient(45deg, var(--cSand5) 0%, var(--cWhite) 70%);
+}
+
+body {
+    font-size: 16px;
+    color: var(--cBlack10);
+}
+
+textarea::placeholder,
+input::placeholder {
+    color: var(--cBlack2);
+    font-size: 1.2rem;
+}
+
+/**
+SITE SKELETON
+ */
+section,
+.section {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    scroll-margin-top: 3rem;
+    background: var(--cWhite);
+}
+
+section > div,
+.section > * {
+    padding: 1rem 1rem 4rem;
+    width: 100%;
+}
+
+section.bg-light,
+.section.bg-light {
+    background: rgb(249,231,217);
+    background: var(--gradientBgLight);
+}
+
+section.bg-white,
+.section.bg-white {
+    background: rgb(255, 255, 255);
+    background: var(--gradientBgWhite);
+}
+
+.page section:last-of-type {
+    margin-bottom: 12rem;
+
+}
+
+@media (min-width: 500px) {
+    section > div,
+    .section > * {
+        padding: 2rem 4rem;
+    }
+}
+
+@media (min-width: 1300px) {
+    section > div,
+    .section > * {
+        padding: 2rem 4rem;
+    }
+}
+
+section.medium > div,
+.section.medium > * {
+    max-width: 900px;
+}
+
+section.large > div,
+.section.large > * {
+    max-width: 1400px;
+}
+
+.hero {
+    min-height: 240px;
+    position: relative;
+    color: var(--cWhite);
+}
+
+.hero > div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.hero:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 3rem;
+    font-size: clamp(1.5rem, 3vw, 4rem);
+    text-align: center;
+    text-shadow: 0 0 4px white;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+@media (min-width: 600px) {
+    .hero {
+        aspect-ratio: 5/2;
+    }
+}
+
+@media (min-width: 800px) {
+    .hero {
+        height: 320px;
+        aspect-ratio: auto;
+    }
+}
+
+/**
+UTILITIES
+ */
+p, label {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.py-2 {
+    padding: 2rem 0;
+}
+
+.largeTitle {
+    font-size: 2.5rem;
+}
+
+.mediumTitle {
+    font-size: 2rem;
+}
+
+.smallText {
+    font-size: 0.8rem;
+}
+
+.center {
+    text-align: center;
+}
+
+.btn-back, .btn-forward {
+    border: 1px solid var(--cBlack10);
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: var(--cBlack10);
+    transition: background-position 300ms;
+    display: inline-block;
+}
+
+.btn-back {
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
+    background: url(/icons/icn-arrow-left.svg) no-repeat 16px 54% var(--cWhite);
+}
+
+.btn-back:hover, .btn-back:focus {
+    color: var(--cBlack10);
+    background-position: 8px 54%;
+}
+
+.btn-forward {
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    background: url(/icons/icn-arrow-right.svg) no-repeat calc(100% - 16px) 54% var(--cWhite);
+}
+
+.btn-forward:hover, .btn-forward:focus {
+    color: var(--cBlack10);
+    background-position: calc(100% - 8px) 54%;
+}
