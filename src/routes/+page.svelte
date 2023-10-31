@@ -18,7 +18,7 @@
     <div>
       <h2 class="mediumTitle">Technical Drawings</h2>
       <p></p>
-      <a class="btn-forward" href="{base}/portfolio/technical-drawings">Technical Drawing</a>
+      <a class="btn-forward" href="{base}/portfolio/technical-drawings">Technical Drawings</a>
     </div>
     <img src="{base}/images/technical-drawing.jpg" alt="Technical drawing">
   </div>
@@ -125,24 +125,6 @@
   .hero {
     background: url('/images/hero-home.jpg') 50% 60% no-repeat;
     background-size: cover;
-
-    h3 {
-      margin-bottom: 1rem;
-    }
-
-    nav {
-      position: absolute;
-      display: flex;
-      gap: 1rem;
-      bottom: 1rem;
-    }
-
-    a {
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      color: var(--cBlack10);
-      background: var(--cOrange10);
-    }
   }
 
   @media (min-width: 1200px) {
