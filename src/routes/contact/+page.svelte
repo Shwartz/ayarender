@@ -21,7 +21,7 @@
 <section class="hero">
   <div>
     <div class="videoContainer">
-      <video autoplay loop muted>
+      <video preload autoplay loop muted playsinline>
         <source src="{base}/video/hero-contacts.webm" type="video/webm" />
         <source src="{base}/video/hero-contacts.mp4" type="video/mp4" />
       </video>
