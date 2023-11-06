@@ -16,7 +16,7 @@
 <section class='medium'>
 	<div class='welcome'>
 		<h1 class='center'>Welcome to AYARENDER</h1>
-		<p class='center'>Design documentation and Visualisation for Interior Designers</p>
+		<p class='center mt-0'>Design documentation and Visualisation for Interior Designers</p>
 		<p>My design support service is tailored to meet your unique needs. I understand the ebb and flow of the industry;
 			some months are a whirlwind of activity, while others are more tranquil.</p>
 		<p>My approach is designed to complement
@@ -95,17 +95,6 @@
 			<a class='btn-forward' href='{base}/portfolio/rendered-3d-visuals'>Rendered 3D visuals</a>
 		</div>
 		<img src='{base}/images/3d-render.jpg' alt='3D Render' width='750' height='533'>
-	</div>
-</section>
-
-<section class='large bg-white'>
-	<div class='card'>
-		<div>
-			<h2 class='mediumTitle'>Presentation Boards</h2>
-			<p></p>
-			<a class='btn-forward' href='{base}/portfolio/presentation-boards'>Presentation Boards</a>
-		</div>
-		<img src='{base}/images/presentation-board.jpg' alt='Presentation board' width='750' height='530'>
 	</div>
 </section>
 
@@ -213,6 +202,10 @@
       font-size: 2rem;
       color: var(--cBlack8);
     }
+
+		.mt-0 {
+			margin-top: 0;
+		}
 
     .strong {
       font-family: var(--font-bold);
