@@ -13,6 +13,28 @@
 	</div>
 </section>
 
+<section class='medium'>
+	<div class='welcome'>
+		<h1 class='center'>Welcome to AYARENDER</h1>
+		<p class='center mt-0'>Design documentation and Visualisation for Interior Designers</p>
+		<p>My design support service is tailored to meet your unique needs. I understand the ebb and flow of the industry;
+			some months are a whirlwind of activity, while others are more tranquil.</p>
+		<p>My approach is designed to complement
+			your workflow seamlessly. There are no lengthy commitments and no concerns about the overhead of hiring a design
+			assistant or junior designer. </p>
+		<p class='strong'>Why should you consider hiring me?</p>
+		<ul>
+			<li>You want to enhance your presentations and create professional-looking deliverables for your clients and
+				contractors.
+			</li>
+			<li>You are swamped with projects and need assistance with specific tasks.</li>
+			<li>You prefer to avoid design drafting.</li>
+			<li>You need to gain skills in CAD software.</li>
+		</ul>
+		<p>I am here to assist with all these challenges and more.</p>
+	</div>
+</section>
+
 <section class='large bg-white'>
 	<div class='card'>
 		<div>
@@ -47,9 +69,13 @@
 	<div class='card'>
 		<div>
 			<h2 class='mediumTitle'>Rendered 2D Elevations</h2>
-			<p>Color-rendered interior elevations, like color-rendered floor plans, offer several advantages. They provide a more realistic and detailed representation of interior spaces, allowing clients to visualise the final design better.</p>
-			<p>The use of colour enhances the overall aesthetics of the elevation drawings, making them more visually appealing and engaging.</p>
-			<p>Colour elevations allow you to emphasise specific design elements, such as focal points or custom furnishings, which can be crucial for conveying the design intent.</p>
+			<p>Color-rendered interior elevations, like color-rendered floor plans, offer several advantages. They provide a
+				more realistic and detailed representation of interior spaces, allowing clients to visualise the final design
+				better.</p>
+			<p>The use of colour enhances the overall aesthetics of the elevation drawings, making them more visually
+				appealing and engaging.</p>
+			<p>Colour elevations allow you to emphasise specific design elements, such as focal points or custom furnishings,
+				which can be crucial for conveying the design intent.</p>
 			<p>These elevations usually start at &pound;80.</p>
 			<a class='btn-forward' href='{base}/portfolio/rendered-2d-elevations'>Rendered 2D Elevations</a>
 		</div>
@@ -61,21 +87,14 @@
 	<div class='card'>
 		<div>
 			<h2 class='mediumTitle'>Rendered 3D visuals</h2>
-			<p></p>
+			<p>Give your clients a “WOW” factor with 3D visuals. These visuals help you match your proposal to your client's
+			requirements and avoid misunderstandings. This, in turn, prevents disappointment, additional expenditure, or extra
+			time to deliver the project.</p>
+			<p>The process involves constructing a virtual scene with 3D objects and setting up
+			lighting and materials to make them look realistic. These visuals start at £130.</p>
 			<a class='btn-forward' href='{base}/portfolio/rendered-3d-visuals'>Rendered 3D visuals</a>
 		</div>
 		<img src='{base}/images/3d-render.jpg' alt='3D Render' width='750' height='533'>
-	</div>
-</section>
-
-<section class='large bg-white'>
-	<div class='card'>
-		<div>
-			<h2 class='mediumTitle'>Presentation Boards</h2>
-			<p></p>
-			<a class='btn-forward' href='{base}/portfolio/presentation-boards'>Presentation Boards</a>
-		</div>
-		<img src='{base}/images/presentation-board.jpg' alt='Presentation board' width='750' height='530'>
 	</div>
 </section>
 
@@ -127,8 +146,8 @@
 			<div>
 				<em>Step 4</em>
 				<h3>Final design</h3>
-				<p>Revisions are made, if applicable, the final drawings are sent to the client via Email or DropBox and final
-					invoice is issued.</p>
+				<p>If applicable, revisions are made, the final drawings are sent to the client via Email or DropBox and the
+					final invoice is issued.</p>
 			</div>
 		</div>
 	</div>
@@ -171,6 +190,37 @@
 
     @media (min-width: 750px) {
       flex-direction: row;
+    }
+  }
+
+  .welcome {
+    font-size: 1.2rem;
+
+    h1 {
+      font-weight: bold;
+      font-family: var(--font-bold);
+      font-size: 2rem;
+      color: var(--cBlack8);
+    }
+
+		.mt-0 {
+			margin-top: 0;
+		}
+
+    .strong {
+      font-family: var(--font-bold);
+    }
+
+    ul {
+      margin-top: 1rem;
+    }
+
+    li {
+      background: var(--cBrick5);
+      margin-bottom: 0.5rem;
+      padding: 1rem 0.5rem;
+      border-radius: 0.5rem;
+
     }
   }
 
