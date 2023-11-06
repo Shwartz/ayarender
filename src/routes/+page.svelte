@@ -24,7 +24,7 @@
 			assistant or junior designer. </p>
 		<p class='strong'>Why should you consider hiring me?</p>
 		<ul>
-			<li>You want to enhance your presentations and create professional-looking deliverables for - your clients and
+			<li>You want to enhance your presentations and create professional-looking deliverables for your clients and
 				contractors.
 			</li>
 			<li>You are swamped with projects and need assistance with specific tasks.</li>
