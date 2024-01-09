@@ -124,7 +124,8 @@ GLOBAL SETUP
     Cantarell, 'Open Sans', sans-serif;
     font-family: var(--font-body);
     --cWhite: #fff;
-    --cBlack10: #3F2021;
+    /*--cBlack10: #3F2021;*/
+    --cBlack10: #2A2C38;
     --cBlack8: #654D4C;
     --cBlack2: #D0C8C8;
     --cBlack5: #9F9090;
@@ -134,7 +135,8 @@ GLOBAL SETUP
     --cOrange10: #FFAA4D;
     --cSand10: #F3CFB3;
     --cSand5: #F9E7D9;
-    --cSand1: #FDF7F2;
+    /*--cSand1: #FDF7F2;*/
+    --cSand1: #EDEDED;
     --cGreen10: #709F54;
     --gradientBgLight: linear-gradient(135deg, var(--cSand1) 30%, var(--cSand5) );
     --gradientBgWhite: linear-gradient(45deg, var(--cSand5) 0%, var(--cWhite) 70%);
@@ -143,6 +145,7 @@ GLOBAL SETUP
 body {
     font-size: 16px;
     color: var(--cBlack10);
+    background: var(--cSand1)
 }
 
 textarea::placeholder,
@@ -315,4 +318,8 @@ p, label {
 .btn-forward:hover, .btn-forward:focus {
     color: var(--cBlack10);
     background-position: calc(100% - 8px) 54%;
+}
+
+svg {
+    vertical-align: middle;
 }

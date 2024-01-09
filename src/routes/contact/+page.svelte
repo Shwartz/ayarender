@@ -2,7 +2,7 @@
   import { superForm } from "sveltekit-superforms/client";
   // import SuperDebug from "sveltekit-superforms/client/SuperDebug.svelte"
   import type { PageData } from "./$types";
-  import { contactSchema } from "../../lib/contactSchema";
+  import { contactSchema } from '$lib/contactSchema';
   import { BarLoader } from "svelte-loading-spinners";
   import { base } from "$app/paths";
 
@@ -15,7 +15,7 @@
 </script>
 
 <svelte:head>
-  <meta name="description" content="Ayarender: Get in touch" />
+  <meta name="description" content="Get in touch | Ayarender" />
 </svelte:head>
 
 <section class="hero">

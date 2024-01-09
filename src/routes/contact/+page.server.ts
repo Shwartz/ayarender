@@ -1,7 +1,7 @@
 import { GOOGLE_EMAIL, RECIPIENT_EMAIL } from "$env/static/private";
 import transporter from "$lib/emailSetup.server.js";
 import { superValidate, message } from "sveltekit-superforms/server"
-import { contactSchema } from "../../lib/contactSchema";
+import { contactSchema } from '$lib/contactSchema';
 
 interface Message { status: 'error' | 'success'; text: string }
 

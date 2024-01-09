@@ -5,22 +5,26 @@
   import "./globalStyles.css";
 
   $:url = $page.url.pathname.split("/")[1];
-
 </script>
 
 <div class="page">
-  <nav class="section large">
-    <ul>
-      <li>
+
+  <section>
+    <div class="nav">
+      <div>
+          <a class:active={url === '' || url === 'portfolio'} href="{base}/">Home</a>
+          <a class:active={url === 'contact'} href="{base}/contact">Contact</a>
+          <!--<li><a class:active={url === 'portfolio'} href="{base}/portfolio">Portfolio</a></li>-->
+      </div>
+      <div>
         <a href="{base}/">
           <Logo width="48" height="48" />
         </a>
-      </li>
-      <li><a class:active={url === '' || url === 'portfolio'} href="{base}/">Home</a></li>
-      <!--<li><a class:active={url === 'portfolio'} href="{base}/portfolio">Portfolio</a></li>-->
-      <li><a class:active={url === 'contact'} href="{base}/contact">Contact</a></li>
-    </ul>
-  </nav>
+      </div>
+      <div>&nbsp;</div>
+    </div>
+  </section>
+
   <slot />
   <footer class="large section">
     <div>
@@ -35,33 +39,56 @@
 </div>
 
 <style lang="scss">
-  nav {
-    background: var(--cSand1);
-    color: var(--cBlack10);
-  }
-
-  ul {
+  .nav {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1rem;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    font-size: 1.2rem;
+    flex-direction: column-reverse;
 
-    li:first-child {
-      margin-right: 1rem;
+    div {
+      align-items: center;
     }
 
-    a {
-      display: block;
+    div:nth-child(1) {
+      margin-top: 1rem;
+      text-align: center;
 
-      &.active,
-      &:focus {
-        text-decoration: underline;
+      a {
+        display: inline-block;
+        padding: 0.5rem 1.5rem;
+
+        &.active {
+          border-radius: 20px;
+          background: var(--cBlack10);
+          color: var(--cWhite);
+          font-weight: 700;
+        }
+      }
+    }
+
+    div:nth-child(2) {
+      text-align: center;
+    }
+
+    div:nth-child(3) {
+      display: none;
+    }
+
+    @media (min-width: 800px) {
+      display: grid;
+      grid-template-columns: 1fr 64px 1fr;
+
+      div:nth-child(1) {
+        display: flex;
+        margin: 0;
+        text-align: left;
+      }
+
+      div:nth-child(3) {
+        display: block;
       }
     }
   }
+
+
 
   footer {
     position: fixed;
