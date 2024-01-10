@@ -172,69 +172,103 @@
 </section>
 
 <style lang='scss'>
-	section:has(.intro) {
-    background: linear-gradient(180deg, rgba(42, 44, 56, 0.2), rgba(42, 44, 56, 0.2)) repeat-y 50%;
-    background-size: 2px auto;
-	}
-
-	.intro {
-		display: flex;
-
-		> div {
-			width: 50%;
-		}
+  .intro {
+    display: flex;
+    flex-direction: column;
 
     div:nth-child(1) {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
-			div {
-				text-align: right;
-				align-items: end;
+      dt {
+        font-weight: 300;
+        font-size: 2.5rem;
+        letter-spacing: 0.875rem;
+        margin-right: -0.875rem;
+      }
 
-				img {
-					width: 32px;
-					height: 32px;
-					margin-right: -8px;
-				}
-			}
-
-			dl {
-				margin-right: 4rem;
-			}
-
-			dt {
-				font-weight: 300;
-				font-size: 2.5rem;
-				letter-spacing: 0.875rem;
-				margin-right: -0.875rem;
-			}
-
-			dd {
-				font-weight: 600;
-				font-size: 6.25rem;
-        line-height: 6.25rem;
+      dd {
+        font-weight: 600;
+        font-size: clamp(3rem, 9vw, 3.7rem);
+        line-height: clamp(4rem, 7vw, 6.25rem);
         margin-top: 2rem;
-				text-shadow: 0 0 10px rgba(0,0,0,0.3);
-			}
+        text-shadow: 0 0 10px rgba(0,0,0,0.3);
+      }
 
-			p {
-				margin: 2rem 4rem 0 0;
-				width: 100%;
-				max-width: 420px;
+      div {
+        text-align: center;
 
-			}
-		}
+        img {
+          width: 32px;
+          height: 32px;
+        }
+      }
+
+      p:first-of-type {
+        padding: 2rem 0 0;
+      }
+    }
 
     div:nth-child(2) {
-			border-left: 4px solid var(--cBlack8);
-
-			img {
-				margin-left: 2rem;
-			}
+			display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
-	}
+  }
+
+  @media (min-width: 800px) {
+    section:has(.intro) {
+      background: linear-gradient(180deg, var(--cOpaqueBlack), var(--cOpaqueBlack)) repeat-y 50%;
+      background-size: 2px auto;
+    }
+
+    .intro {
+      flex-direction: row;
+
+      > div {
+        width: 50%;
+      }
+
+      div:nth-child(1) {
+        dl {
+          margin-right: 4rem;
+        }
+
+        dd {
+          font-size: clamp(4rem, 7vw, 6.25rem);
+        }
+
+        div {
+          text-align: right;
+          align-items: end;
+
+          img {
+            margin-right: -8px;
+          }
+        }
+
+        p:first-of-type {
+          padding: 2rem 4rem 0 0;
+          width: 100%;
+          max-width: 420px;
+        }
+
+        p {
+          padding-right: 4rem;
+        }
+      }
+
+      div:nth-child(2) {
+        border-left: 4px solid var(--cBlack8);
+
+        img {
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+
 
 
   .card {

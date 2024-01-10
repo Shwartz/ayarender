@@ -154,6 +154,8 @@ GLOBAL SETUP
     --cGreen10: #709F54;
     --gradientBgLight: linear-gradient(135deg, var(--cSand1) 30%, var(--cSand5) );
     --gradientBgWhite: linear-gradient(45deg, var(--cSand5) 0%, var(--cWhite) 70%);
+
+    --cOpaqueBlack: rgba(42, 44, 56, 0.2);
 }
 
 body {
@@ -193,7 +195,7 @@ section > div,
 @media (min-width: 500px) {
     section > div,
     .section > * {
-        padding: 2rem 4rem;
+        padding: 2rem;
     }
 }
 
@@ -268,7 +270,6 @@ UTILITIES
  */
 p, label {
     margin-top: 1rem;
-    font-size: 1.2rem;
 }
 
 .py-2 {
