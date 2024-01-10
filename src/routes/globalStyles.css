@@ -105,28 +105,42 @@ meter {
 GLOBAL SETUP
 */
 @font-face {
-    font-family: 'Segoe UI Normal';
+    font-family: 'OpenSans';
+    src: local(''), url('/fonts/OpenSans/OpenSans-Bold.ttf') format('truetype');
+    src: local(''), url('/fonts/OpenSans/OpenSans-Bold.woff2') format('woff2');
+    font-weight: 600;
     font-style: normal;
-    font-weight: 400;
-    src: local(''), url('/fonts/segoe-ui-4-cufonfonts/Segoe UI.ttf') format('truetype');
+    font-stretch: normal;
 }
 
 @font-face {
-    font-family: 'Segoe UI Bold';
+    font-family: 'OpenSans';
+    src: local(''), url('/fonts/OpenSans/OpenSans-Regular.ttf') format('truetype');
+    src: local(''), url('/fonts/OpenSans/OpenSans-Regular.woff2') format('woff2');
+    font-weight: 400;
     font-style: normal;
-    src: local(''), url('/fonts/segoe-ui-4-cufonfonts/Segoe UI Bold.ttf') format('truetype');
+    font-stretch: normal;
 }
 
+@font-face {
+    font-family: 'OpenSans';
+    src: local(''), url('/fonts/OpenSans/OpenSans-Light.ttf') format('truetype');
+    src: local(''), url('/fonts/OpenSans/OpenSans-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+/* Refactor fonts to use one font family only */
 :root {
-    --font-body: 'Segoe UI Normal', 'Segoe UI', Helvetica Neue, Helvetica,Arial,sans-serif, Roboto, Oxygen, Ubuntu,
-    Cantarell, 'Open Sans', sans-serif;
-    --font-bold: 'Segoe UI Bold', 'Segoe UI', Helvetica Neue, Helvetica,Arial,sans-serif, Roboto, Oxygen, Ubuntu,
-    Cantarell, 'Open Sans', sans-serif;
+    --font-body: 'OpenSans',Helvetica Neue,Helvetica,Arial,sans-serif,Roboto,Oxygen,Ubuntu,
+    Cantarell,'Open Sans',sans-serif;
     font-family: var(--font-body);
     --cWhite: #fff;
     /*--cBlack10: #3F2021;*/
     --cBlack10: #2A2C38;
-    --cBlack8: #654D4C;
+    /*--cBlack8: #654D4C;*/
+    --cBlack8: #2A2C38;
     --cBlack2: #D0C8C8;
     --cBlack5: #9F9090;
     --cBrick10: #C26F60;
@@ -163,25 +177,12 @@ section,
     display: flex;
     justify-content: center;
     scroll-margin-top: 3rem;
-    background: var(--cWhite);
 }
 
 section > div,
 .section > * {
     padding: 1rem 1rem 4rem;
     width: 100%;
-}
-
-section.bg-light,
-.section.bg-light {
-    background: rgb(249,231,217);
-    background: var(--gradientBgLight);
-}
-
-section.bg-white,
-.section.bg-white {
-    background: rgb(255, 255, 255);
-    background: var(--gradientBgWhite);
 }
 
 .page section:last-of-type {

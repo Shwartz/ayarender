@@ -42,8 +42,9 @@
   .nav {
     display: flex;
     flex-direction: column-reverse;
+    max-width: 900px;
 
-    div {
+    > div {
       align-items: center;
     }
 

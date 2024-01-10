@@ -140,7 +140,8 @@
   }
 
   em {
-    font-family: var(--font-bold);
+    /*font-family: var(--font-bold);*/
+    font-weight: 700;
   }
 
   .send {

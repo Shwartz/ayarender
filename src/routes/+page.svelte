@@ -1,5 +1,6 @@
 <script>
 	import { base } from '$app/paths';
+	import Logo from "/src/assets/icons/logo.svg?component";
 </script>
 
 <svelte:head>
@@ -7,11 +8,28 @@
 	<meta name='description' content='Converting interior designs in 2D and 3D visualisation' />
 </svelte:head>
 
-<section class='hero'>
-	<div>
-		<h1>2D and 3D Interior Design Visualisation</h1>
+<section class='large'>
+	<div class='intro'>
+		<div>
+			<div>
+				<dl>
+					<dt>AIJA SVARCS</dt>
+					<dd>Interior Visualiser</dd>
+				</dl>
+				<p>Check out my areas of expertise below and how I can make your dreams come to life</p>
+				<p>
+					<img alt="Instagram"
+								src="/icons/chevron-double.svg"
+								height="32" width="32">
+				</p>
+			</div>
+		</div>
+		<div>
+			<img src='{base}/images/AdobeStock_72495839.jpg' alt='Technical drawing' width='630' height='460' />
+		</div>
 	</div>
 </section>
+
 
 <section class='medium'>
 	<div class='welcome'>
@@ -154,16 +172,70 @@
 </section>
 
 <style lang='scss'>
-  .hero {
-    background: url('/images/hero-home.jpg') 50% 60% no-repeat;
-    background-size: cover;
-  }
+	section:has(.intro) {
+    background: linear-gradient(180deg, rgba(42, 44, 56, 0.2), rgba(42, 44, 56, 0.2)) repeat-y 50%;
+    background-size: 2px auto;
+	}
 
-  @media (min-width: 1200px) {
-    .hero {
-      background-position: 50% 68%;
+	.intro {
+		display: flex;
+
+		> div {
+			width: 50%;
+		}
+
+    div:nth-child(1) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			div {
+				text-align: right;
+				align-items: end;
+
+				img {
+					width: 32px;
+					height: 32px;
+					margin-right: -8px;
+				}
+			}
+
+			dl {
+				margin-right: 4rem;
+			}
+
+			dt {
+				font-weight: 300;
+				font-size: 2.5rem;
+				letter-spacing: 0.875rem;
+				margin-right: -0.875rem;
+			}
+
+			dd {
+				font-weight: 600;
+				font-size: 6.25rem;
+        line-height: 6.25rem;
+        margin-top: 2rem;
+				text-shadow: 0 0 10px rgba(0,0,0,0.3);
+			}
+
+			p {
+				margin: 2rem 4rem 0 0;
+				width: 100%;
+				max-width: 420px;
+
+			}
+		}
+
+    div:nth-child(2) {
+			border-left: 4px solid var(--cBlack8);
+
+			img {
+				margin-left: 2rem;
+			}
     }
-  }
+	}
+
 
   .card {
     display: flex;
@@ -197,8 +269,8 @@
     font-size: 1.2rem;
 
     h1 {
-      font-weight: bold;
-      font-family: var(--font-bold);
+      /*font-family: var(--font-bold);*/
+			font-weight: 700;
       font-size: 2rem;
       color: var(--cBlack8);
     }
@@ -208,7 +280,7 @@
 		}
 
     .strong {
-      font-family: var(--font-bold);
+			font-weight: 700;
     }
 
     ul {
