@@ -43,6 +43,10 @@ img {
     aspect-ratio: attr(width) / attr(height);
 }
 
+em {
+    font-weight: bold;
+}
+
 /* removes spacing between cells in tables */
 table {
     border-collapse: collapse;
@@ -140,6 +144,7 @@ GLOBAL SETUP
     --cGrey: #D8D8D8;
     /*--cBlack10: #3F2021;*/
     --cBlack10: #2A2C38;
+
     --cBlack8: #654D4C;
     --cBlack2: #D0C8C8;
     --cBlack5: #9F9090;
@@ -154,8 +159,6 @@ GLOBAL SETUP
     --cGreen10: #709F54;
     --gradientBgLight: linear-gradient(135deg, var(--cSand1) 30%, var(--cSand5) );
     --gradientBgWhite: linear-gradient(45deg, var(--cSand5) 0%, var(--cWhite) 70%);
-
-    --cOpaqueBlack: rgba(42, 44, 56, 0.2);
 }
 
 body {
@@ -209,15 +212,24 @@ section.large > div,
     max-width: 1128px;
 }
 
+@media (min-width: 800px) {
+    .vLine {
+        background: linear-gradient(180deg, var(--cGrey), var(--cGrey)) repeat-y 50%;
+        background-size: 2px auto;
+    }
+}
+
 /**
+****************************************
 Boxes layout
+****************************************
  */
 .boxes {
     display: flex;
     flex-direction: column;
 }
 
-.boxes > div {outline: 0.5px dotted blue;}
+/*.boxes > div {outline: 0.5px dotted blue;}*/
 
 .boxes > div {
     display: flex;
@@ -226,10 +238,16 @@ Boxes layout
     padding: 1rem;
 }
 
+.boxes.light {
+    background-color: var(--cWhite);
+}
+
 .boxes.dark {
-    background: var(--cBlack10);
+    background-color: var(--cBlack10);
     color: var(--cWhite);
 }
+
+.boxes.dark p {font-weight: 300}
 
 @media (min-width: 800px) {
     .boxes {
@@ -253,11 +271,16 @@ Boxes layout
 
 .boxTitle span {
     display: inline-block;
-    margin: 2rem auto;
+    margin: 8rem auto 2rem;
     padding: 0.5rem 1rem;
     font-size: 40px;
     font-weight: 300;
     background: var(--cGrey);
+}
+
+.boxes h2 {
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 
@@ -313,7 +336,7 @@ Boxes layout
 /**
 UTILITIES
  */
-p, label {
+p, label, ul {
     margin-top: 1rem;
 }
 
@@ -340,16 +363,23 @@ p, label {
 .btn-back, .btn-forward {
     border: 1px solid var(--cBlack10);
     border-radius: 1rem;
-    font-size: 0.8rem;
     text-decoration: none;
     color: var(--cBlack10);
     transition: background-position 300ms;
     display: inline-block;
+    font-weight: 600;
 }
+
+.dark .btn-back,
+.dark .btn-forward {
+    border: 1px solid var(--cWhite);
+    color: var(--cWhite);
+}
+
 
 .btn-back {
     padding: 0.5rem 1rem 0.5rem 2.5rem;
-    background: url(/icons/icn-arrow-left.svg) no-repeat 16px 54% var(--cWhite);
+    background: url(/icons/icn-arrow-left-light.svg) no-repeat 16px 54%;
 }
 
 .btn-back:hover, .btn-back:focus {
@@ -359,11 +389,18 @@ p, label {
 
 .btn-forward {
     padding: 0.5rem 2.5rem 0.5rem 1rem;
-    background: url(/icons/icn-arrow-right.svg) no-repeat calc(100% - 16px) 54% var(--cWhite);
+    background: url(/icons/icn-arrow-right-light.svg) no-repeat calc(100% - 16px) 54%;
+}
+
+.light .btn-back {
+    background: url(/icons/icn-arrow-left-dark.svg) no-repeat 16px 54%;
+}
+
+.light .btn-forward {
+    background: url(/icons/icn-arrow-right-dark.svg) no-repeat calc(100% - 16px) 54%;
 }
 
 .btn-forward:hover, .btn-forward:focus {
-    color: var(--cBlack10);
     background-position: calc(100% - 8px) 54%;
 }
 

@@ -92,11 +92,6 @@
 
 
   footer {
-    position: fixed;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
     background: var(--cBlack10);
     color: var(--cSand5);
     min-height: 12rem;
