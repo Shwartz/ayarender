@@ -2,7 +2,7 @@
   import { superForm } from "sveltekit-superforms/client";
   // import SuperDebug from "sveltekit-superforms/client/SuperDebug.svelte"
   import type { PageData } from "./$types";
-  import { contactSchema } from "../../lib/contactSchema";
+  import { contactSchema } from '$lib/contactSchema';
   import { BarLoader } from "svelte-loading-spinners";
   import { base } from "$app/paths";
 
@@ -15,7 +15,7 @@
 </script>
 
 <svelte:head>
-  <meta name="description" content="Ayarender: Get in touch" />
+  <meta name="description" content="Get in touch | Ayarender" />
 </svelte:head>
 
 <section class="hero">
@@ -90,7 +90,6 @@
 <style lang="scss">
   .hero {
     background-size: cover;
-    color: var(--cWhite);
 
     > div {
       position: relative;
@@ -140,7 +139,8 @@
   }
 
   em {
-    font-family: var(--font-bold);
+    /*font-family: var(--font-bold);*/
+    font-weight: 700;
   }
 
   .send {
