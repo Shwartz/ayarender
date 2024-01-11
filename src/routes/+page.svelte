@@ -18,14 +18,17 @@
 				</dl>
 				<p>Check out my areas of expertise below and how I can make your dreams come to life</p>
 				<p>
-					<img alt='Instagram'
-							 src='/icons/chevron-double.svg'
-							 height='32' width='32'>
+					<a href='#whyHireMe'>
+						<img alt='Instagram'
+								 src='/icons/chevron-double.svg'
+								 height='32' width='32'>
+					</a>
 				</p>
 			</div>
 		</div>
 		<div>
-			<img src='{base}/images/Japandi-kitchen-3D-render-and-black-and-white.jpg' alt='Example of Japandi Kithen render' width='630' height='460' />
+			<img src='{base}/images/Japandi-kitchen-3D-render-and-black-and-white.jpg' alt='Example of Japandi Kithen render'
+					 width='630' height='460' />
 		</div>
 	</div>
 </section>
@@ -33,7 +36,7 @@
 <section class='large vLine'>
 	<div>
 		<h1 class='boxTitle'>
-			<span>Why hire me?</span>
+			<span id='whyHireMe'>Why hire me?</span>
 		</h1>
 		<div class='boxes vLine light'>
 			<div>
@@ -66,7 +69,7 @@
 <section class='large vLine'>
 	<div>
 		<h1 class='boxTitle'>
-			<span>Rendered Floor Plans</span>
+			<span id='renderedFloorPlans'>Rendered Floor Plans</span>
 		</h1>
 		<div class='boxes reverse dark'>
 			<div>
@@ -94,7 +97,7 @@
 <section class='large vLine'>
 	<div>
 		<h1 class='boxTitle'>
-			<span>Rendered 2D Elevations</span>
+			<span id='rendered2dElevations'>Rendered 2D Elevations</span>
 		</h1>
 		<div class='boxes vLine light'>
 			<div>
@@ -116,7 +119,7 @@
 				<p>These plans usually start at £80.</p>
 
 				<p>
-					<a class='btn-forward' href='{base}/portfolio/rendered-floor-plans'>Rendered 2D Elevations</a>
+					<a class='btn-forward' href='{base}/portfolio/rendered-2d-elevations'>Rendered 2D Elevations</a>
 				</p>
 			</div>
 		</div>
@@ -126,7 +129,7 @@
 <section class='large vLine'>
 	<div>
 		<h1 class='boxTitle'>
-			<span>Rendered 3D visuals</span>
+			<span id='rendered3dVisuals'>Rendered 3D visuals</span>
 		</h1>
 		<div class='boxes reverse dark'>
 			<div>
@@ -152,7 +155,7 @@
 <section class='large vLine'>
 	<div>
 		<h1 class='boxTitle'>
-			<span>Technical Drawings</span>
+			<span id='technicalDrawings'>Technical Drawings</span>
 		</h1>
 		<div class='boxes vLine light'>
 			<div>

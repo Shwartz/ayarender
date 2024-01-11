@@ -182,7 +182,7 @@ section,
     margin: auto;
     display: flex;
     justify-content: center;
-    scroll-margin-top: 3rem;
+    /*scroll-margin-top: 3rem;*/
 }
 
 section > div,

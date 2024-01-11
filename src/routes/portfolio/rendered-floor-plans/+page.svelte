@@ -33,8 +33,8 @@
 
 <section class="large">
   <div class="card">
-    <p>
-      <a class="btn-back" href="{base}/">Back</a>
+    <p class='light'>
+      <a class="btn-back" href="{base}/#renderedFloorPlans">Back</a>
     </p>
     <LightBox thumbnails={thumbnails} images={images}  />
   </div>
