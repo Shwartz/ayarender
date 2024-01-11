@@ -9,7 +9,7 @@
 </svelte:head>
 
 <section class='large'>
-	<div class='intro'>
+	<div class='intro boxes'>
 		<div>
 			<div>
 				<dl>
@@ -26,6 +26,30 @@
 		</div>
 		<div>
 			<img src='{base}/images/AdobeStock_72495839.jpg' alt='Technical drawing' width='630' height='460' />
+		</div>
+	</div>
+</section>
+
+<section class='large'>
+	<div>
+		<div class='boxTitle'>
+			<span>2D &amp; 3D Visualisation</span>
+		</div>
+		<div class='boxes'>
+			<div>box 1 image</div>
+			<div>box 2 text</div>
+		</div>
+	</div>
+</section>
+
+<section class='large'>
+	<div>
+		<div class='boxTitle'>
+			<span>2D &amp; 3D Visualisation</span>
+		</div>
+		<div class='boxes reverse dark'>
+			<div>box 1 image</div>
+			<div>box 2 text</div>
 		</div>
 	</div>
 </section>
@@ -173,13 +197,12 @@
 
 <style lang='scss'>
   .intro {
-    display: flex;
-    flex-direction: column;
+
+		> div {
+			padding: 0;
+		}
 
     div:nth-child(1) {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
 
       dt {
         font-weight: 300;
@@ -209,12 +232,6 @@
         padding: 2rem 0 0;
       }
     }
-
-    div:nth-child(2) {
-			display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
   }
 
   @media (min-width: 800px) {
@@ -224,12 +241,6 @@
     }
 
     .intro {
-      flex-direction: row;
-
-      > div {
-        width: 50%;
-      }
-
       div:nth-child(1) {
         dl {
           margin-right: 4rem;
@@ -249,9 +260,10 @@
         }
 
         p:first-of-type {
-          padding: 2rem 4rem 0 0;
           width: 100%;
           max-width: 420px;
+					margin-left: auto;
+          padding: 2rem 4rem 0 0;
         }
 
         p {
@@ -260,7 +272,7 @@
       }
 
       div:nth-child(2) {
-        border-left: 4px solid var(--cBlack8);
+        border-left: 4px solid var(--cBlack10);
 
         img {
           margin-left: 2rem;
@@ -306,7 +318,7 @@
       /*font-family: var(--font-bold);*/
 			font-weight: 700;
       font-size: 2rem;
-      color: var(--cBlack8);
+      color: var(--cBlack10);
     }
 
 		.mt-0 {
