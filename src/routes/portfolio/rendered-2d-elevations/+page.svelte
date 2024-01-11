@@ -66,13 +66,5 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-
-    > div {
-
-    }
-
-    img {
-      width: 200px;
-    }
   }
 </style>

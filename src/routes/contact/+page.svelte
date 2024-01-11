@@ -90,7 +90,6 @@
 <style lang="scss">
   .hero {
     background-size: cover;
-    color: var(--cWhite);
 
     > div {
       position: relative;
