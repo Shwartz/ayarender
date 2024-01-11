@@ -144,6 +144,7 @@ GLOBAL SETUP
     --cGrey: #D8D8D8;
     /*--cBlack10: #3F2021;*/
     --cBlack10: #2A2C38;
+    --cNight: #000;
 
     --cBlack8: #654D4C;
     --cBlack2: #D0C8C8;
@@ -210,6 +211,21 @@ section.medium > div,
 section.large > div,
 .section.large > * {
     max-width: 1128px;
+}
+
+section.dark {
+    background: var(--cBlack10);
+    color: var(--cWhite);
+
+    @media (min-width: 800px) {
+        background-image:
+                linear-gradient(180deg, var(--cGrey), var(--cGrey)),
+                linear-gradient(var(--cBlack10), var(--cBlack10));
+        background-repeat: repeat-y, no-repeat;
+        background-position: 50%, 0;
+        background-size: 1px auto, 100%;
+    }
+
 }
 
 @media (min-width: 800px) {

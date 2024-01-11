@@ -28,7 +28,7 @@
   <slot />
   <footer class="large section">
     <div>
-      <p class="left">&copy; 2023 Ayarender | Follow on <a href="https://instagram.com/aya.render">
+      <p class="left">&copy; 2024 Ayarender | Follow on <a href="https://instagram.com/aya.render">
         <img alt="Instagram"
              src="/icons/instagram.svg"
              height="24" width="24"></a>
@@ -92,8 +92,8 @@
 
 
   footer {
-    background: var(--cBlack10);
-    color: var(--cSand5);
+    background: var(--cNight);
+    color: var(--cWhite);
     min-height: 12rem;
 
     div {

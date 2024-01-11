@@ -25,7 +25,7 @@
 			</div>
 		</div>
 		<div>
-			<img src='{base}/images/AdobeStock_72495839.jpg' alt='Technical drawing' width='630' height='460' />
+			<img src='{base}/images/Japandi-kitchen-3D-render-and-black-and-white.jpg' alt='Example of Japandi Kithen render' width='630' height='460' />
 		</div>
 	</div>
 </section>
@@ -98,15 +98,20 @@
 		</h1>
 		<div class='boxes vLine light'>
 			<div>
-				<img class='boxImage' src='{base}/images/rendered-2d-elevation.jpg' alt='Rendered 2D Elevation' width='561' height='419'>
+				<img class='boxImage' src='{base}/images/rendered-2d-elevation.jpg' alt='Rendered 2D Elevation' width='561'
+						 height='419'>
 			</div>
 			<div>
 				<h2>Overview</h2>
-				<p>Color-rendered interior elevations, like color-rendered floor plans, offer several advantages. They provide a more realistic and detailed representation of interior spaces, allowing clients to visualise the final design better.</p>
+				<p>Color-rendered interior elevations, like color-rendered floor plans, offer several advantages. They provide a
+					more realistic and detailed representation of interior spaces, allowing clients to visualise the final design
+					better.</p>
 
-				<p>The use of colour enhances the overall aesthetics of the elevation drawings, making them more visually appealing and engaging.</p>
+				<p>The use of colour enhances the overall aesthetics of the elevation drawings, making them more visually
+					appealing and engaging.</p>
 
-				<p>Colour elevations allow you to emphasise specific design elements, such as focal points or custom furnishings, which can be crucial for conveying the design intent.</p>
+				<p>Colour elevations allow you to emphasise specific design elements, such as focal points or custom
+					furnishings, which can be crucial for conveying the design intent.</p>
 
 				<p>These plans usually start at £80.</p>
 
@@ -151,14 +156,16 @@
 		</h1>
 		<div class='boxes vLine light'>
 			<div>
-				<img class='boxImage' src='{base}/images/technical-drawing.jpg' alt='Technical drawing' width='750' height='530'>
+				<img class='boxImage' src='{base}/images/technical-drawing.jpg' alt='Technical drawing' width='750'
+						 height='530'>
 			</div>
 			<div>
 				<h2>Overview</h2>
 				<p>Classical black and white or colour rendered to highlight your design selections.</p>
 				<p> The drawing solutions include a range of options - initial floorplans, elevations, electrical and lighting
 					layouts and bespoke joinery.</p>
-				<p>Depending on your requirements they can be presented to scale, with dimensions, title block and your branding.
+				<p>Depending on your requirements they can be presented to scale, with dimensions, title block and your
+					branding.
 				<p>These plans usually start at &pound;50. </p>
 				<p>
 					<a class='btn-forward' href='{base}/portfolio/technical-drawings'>Technical Drawings</a>
@@ -233,12 +240,36 @@
 	</div>
 </section>
 
+<section class='large vline dark last'>
+	<div>
+		<div class='boxes'>
+			<div>
+				<div class='roundedImages'>
+					<img src='{base}/images/aija-svarcs-gallery.jpg' alt='Aija Svarcs' width='350'
+							 height='350'>
+				</div>
+			</div>
+			<div>
+				<h1>
+					<span>Hi I'm Aija</span>
+				</h1>
+				<p>There is a technical term for what I do - Interior Design visualiser, but I would like to call myself Spatial
+					Magician. </p>
+				<p>I can virtually transfer existing living space and show you images of the property that hasn't even
+					been built yet.</p>
+				<p>I specialise in Technical Drawings, Rendered Floor Plans, Rendered 2D Elevations and Design Boards</p>
+				<p>
+					<a class='btn-forward' href='{base}/contact'>Contact me</a>
+				</p>
+			</div>
+
+		</div>
+	</div>
+</section>
+
 
 <style lang='scss'>
   .intro {
-    min-height: calc(100vh - 112px);
-    height: 100%;
-
     > div {
       padding: 0;
     }
@@ -277,6 +308,9 @@
 
   @media (min-width: 800px) {
     .intro {
+      height: 100%;
+      min-height: calc(100vh - 112px);
+
       div:nth-child(1) {
         dl {
           margin-right: 4rem;
@@ -326,9 +360,25 @@
     }
   }
 
-	.steps {
-		.light {
-			background: var(--cWhite);
-		}
-	}
+  .steps {
+    .light {
+      background: var(--cWhite);
+    }
+  }
+
+  .roundedImages {
+    max-width: 300px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+
+    img {
+
+    }
+  }
+
+  .last {
+    margin-bottom: 0;
+  }
 </style>
