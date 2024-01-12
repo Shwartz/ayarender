@@ -187,8 +187,12 @@ section,
 
 section > div,
 .section > * {
-    padding: 1rem 1rem 4rem;
     width: 100%;
+    padding: 1rem 1rem 1rem;
+
+    @media (min-width: 800px) {
+        padding: 1rem 1rem 4rem;
+    }
 }
 
 .page section:last-of-type {
@@ -287,11 +291,15 @@ Boxes layout
 
 .boxTitle span {
     display: inline-block;
-    margin: 8rem auto 2rem;
+    margin: 3rem auto;
     padding: 0.5rem 1rem;
     font-size: 40px;
     font-weight: 300;
     background: var(--cGrey);
+
+    @media (min-width: 800px) {
+        margin: 8rem auto 2rem;
+    }
 }
 
 .boxes h2 {

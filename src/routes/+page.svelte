@@ -17,9 +17,9 @@
 					<dd>Interior Visualiser</dd>
 				</dl>
 				<p>Check out my areas of expertise below and how I can make your dreams come to life</p>
-				<p>
+				<p class='icnChevron'>
 					<a href='#whyHireMe'>
-						<img alt='Instagram'
+						<img alt=''
 								 src='/icons/chevron-double.svg'
 								 height='32' width='32'>
 					</a>
@@ -272,6 +272,24 @@
 
 
 <style lang='scss'>
+  @keyframes jumping {
+    0% {
+			transform: translate3d(0,0,0);
+		}
+    30% {
+      transform: translate3d(0,0,0);
+    }
+    50% {
+      transform: translate3d(0,12px,0);
+    }
+    70% {
+      transform: translate3d(0,0,0);
+    }
+    100% {
+      transform: translate3d(0,0,0);
+    }
+  }
+
   .intro {
     > div {
       padding: 0;
@@ -297,6 +315,11 @@
       div {
         text-align: center;
 
+				a {
+					display: inline-block;
+					animation: 3s jumping infinite;
+				}
+
         img {
           width: 32px;
           height: 32px;
@@ -307,6 +330,10 @@
         padding: 2rem 0 0;
       }
     }
+
+		.icnChevron {
+			margin-bottom: 1rem;
+		}
   }
 
   @media (min-width: 800px) {
@@ -327,9 +354,9 @@
           text-align: right;
           align-items: end;
 
-          img {
-            margin-right: -8px;
-          }
+					a {
+						margin-right: -8px;
+					}
         }
 
         p:first-of-type {
