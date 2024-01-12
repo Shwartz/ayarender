@@ -397,14 +397,17 @@
   }
 
   .roundedImages {
-    max-width: 300px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    overflow: hidden;
     margin: auto;
+    padding: 2rem;
+    aspect-ratio: 1;
+    width: calc(300px + 2rem);
 
     img {
-
+      max-width: 300px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: auto;
     }
   }
 
