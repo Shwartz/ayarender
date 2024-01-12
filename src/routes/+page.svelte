@@ -1,6 +1,5 @@
 <script>
 	import { base } from '$app/paths';
-	import Logo from '/src/assets/icons/logo.svg?component';
 </script>
 
 <svelte:head>
@@ -8,7 +7,7 @@
 	<meta name='description' content='Converting interior designs in 2D and 3D visualisation' />
 </svelte:head>
 
-<section class='large vLine'>
+<section class='large vLine overflow'>
 	<div class='intro boxes'>
 		<div>
 			<div>
@@ -17,9 +16,9 @@
 					<dd>Interior Visualiser</dd>
 				</dl>
 				<p>Check out my areas of expertise below and how I can make your dreams come to life</p>
-				<p>
+				<p class='icnChevron'>
 					<a href='#whyHireMe'>
-						<img alt='Instagram'
+						<img alt=''
 								 src='/icons/chevron-double.svg'
 								 height='32' width='32'>
 					</a>
@@ -61,6 +60,7 @@
 				</ul>
 
 				<p>I am here to assist with all these challenges and more.</p>
+				<p><a class='animate' href='{base}/#easyFourStep'>Easy four step process</a></p>
 			</div>
 		</div>
 	</div>
@@ -181,14 +181,14 @@
 <section class='large vLine steps'>
 	<div>
 		<h1 class='boxTitle'>
-			<span>Easy four step process</span>
+			<span id='easyFourStep'>Easy four step process</span>
 		</h1>
 		<div class='boxes'>
 			<div class='light'>
 				<p>Step 1</p>
 				<h2>Free initial consultation</h2>
 				<p>To discuss a project, gather technical details and provide a written quotation for work.</p>
-				<p>Please use <a href='{base}/contact'>Contact Form</a> to get in touch.</p>
+				<p>Please use <a class='animate' href='{base}/contact'>Contact Form</a> to get in touch.</p>
 			</div>
 			<div>&nbsp;</div>
 		</div>
@@ -247,7 +247,7 @@
 	<div>
 		<div class='boxes'>
 			<div>
-				<div class='roundedImages'>
+				<div class='roundedImage'>
 					<img src='{base}/images/aija-svarcs-gallery.jpg' alt='Aija Svarcs' width='350'
 							 height='350'>
 				</div>
@@ -272,6 +272,24 @@
 
 
 <style lang='scss'>
+  @keyframes jumping {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    30% {
+      transform: translate3d(0, 0, 0);
+    }
+    50% {
+      transform: translate3d(0, 12px, 0);
+    }
+    70% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
   .intro {
     > div {
       padding: 0;
@@ -297,6 +315,11 @@
       div {
         text-align: center;
 
+        a {
+          display: inline-block;
+          animation: 3s jumping 7;
+        }
+
         img {
           width: 32px;
           height: 32px;
@@ -306,6 +329,10 @@
       p:first-of-type {
         padding: 2rem 0 0;
       }
+    }
+
+    .icnChevron {
+      margin-bottom: 1rem;
     }
   }
 
@@ -327,7 +354,7 @@
           text-align: right;
           align-items: end;
 
-          img {
+          a {
             margin-right: -8px;
           }
         }
@@ -369,15 +396,51 @@
     }
   }
 
-  .roundedImages {
-    max-width: 300px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    overflow: hidden;
+  .roundedImage {
+		--card-width: 300px;
+
+
+    @keyframes spinColors {
+      0% {
+        filter: hue-rotate(0deg);
+      }
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+
+    position: relative;
     margin: auto;
+    aspect-ratio: 1;
+    max-width: calc(var(--card-width) + 2rem);
+
+    &:before {
+      background: hsl(0, 30%, 50%);
+      animation: spinColors 5.5s linear infinite;
+
+			display: block;
+      position: absolute;
+
+      content: "";
+      top: 0;
+      left: 0;
+      z-index: 0;
+      max-height: var(--card-width);
+      max-width: var(--card-width);
+			width: 100%;
+			height: 100%;
+      border-radius: 50%;
+			transform: scale3d(1, 1, 2);
+			box-shadow: 0 0 9px 4px hsl(0, 30%, 50%);
+    }
 
     img {
-
+      position: relative;
+      margin: auto;
+      max-width: var(--card-width);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      overflow: hidden;
     }
   }
 
