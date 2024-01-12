@@ -1,6 +1,5 @@
 <script>
 	import { base } from '$app/paths';
-	import Logo from '/src/assets/icons/logo.svg?component';
 </script>
 
 <svelte:head>
@@ -61,6 +60,7 @@
 				</ul>
 
 				<p>I am here to assist with all these challenges and more.</p>
+				<p><a class='animate' href='{base}/#easyFourStep'>Easy four step process</a></p>
 			</div>
 		</div>
 	</div>
@@ -181,14 +181,14 @@
 <section class='large vLine steps'>
 	<div>
 		<h1 class='boxTitle'>
-			<span>Easy four step process</span>
+			<span id='easyFourStep'>Easy four step process</span>
 		</h1>
 		<div class='boxes'>
 			<div class='light'>
 				<p>Step 1</p>
 				<h2>Free initial consultation</h2>
 				<p>To discuss a project, gather technical details and provide a written quotation for work.</p>
-				<p>Please use <a href='{base}/contact'>Contact Form</a> to get in touch.</p>
+				<p>Please use <a class='animate' href='{base}/contact'>Contact Form</a> to get in touch.</p>
 			</div>
 			<div>&nbsp;</div>
 		</div>
@@ -317,7 +317,7 @@
 
 				a {
 					display: inline-block;
-					animation: 3s jumping infinite;
+					animation: 3s jumping 7;
 				}
 
         img {

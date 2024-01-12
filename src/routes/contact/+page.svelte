@@ -161,7 +161,7 @@
   }
 
   input, textarea {
-    border: 1px solid var(--cBlack5);
+    border: 1px solid var(--cBlack10);
     border-radius: 4px;
     padding: 4px;
     margin-top: 4px;
