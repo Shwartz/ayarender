@@ -7,7 +7,7 @@
 	<meta name='description' content='Converting interior designs in 2D and 3D visualisation' />
 </svelte:head>
 
-<section class='large vLine'>
+<section class='large vLine overflow'>
 	<div class='intro boxes'>
 		<div>
 			<div>
@@ -274,19 +274,19 @@
 <style lang='scss'>
   @keyframes jumping {
     0% {
-			transform: translate3d(0,0,0);
-		}
+      transform: translate3d(0, 0, 0);
+    }
     30% {
-      transform: translate3d(0,0,0);
+      transform: translate3d(0, 0, 0);
     }
     50% {
-      transform: translate3d(0,12px,0);
+      transform: translate3d(0, 12px, 0);
     }
     70% {
-      transform: translate3d(0,0,0);
+      transform: translate3d(0, 0, 0);
     }
     100% {
-      transform: translate3d(0,0,0);
+      transform: translate3d(0, 0, 0);
     }
   }
 
@@ -315,10 +315,10 @@
       div {
         text-align: center;
 
-				a {
-					display: inline-block;
-					animation: 3s jumping 7;
-				}
+        a {
+          display: inline-block;
+          animation: 3s jumping 7;
+        }
 
         img {
           width: 32px;
@@ -331,9 +331,9 @@
       }
     }
 
-		.icnChevron {
-			margin-bottom: 1rem;
-		}
+    .icnChevron {
+      margin-bottom: 1rem;
+    }
   }
 
   @media (min-width: 800px) {
@@ -354,9 +354,9 @@
           text-align: right;
           align-items: end;
 
-					a {
-						margin-right: -8px;
-					}
+          a {
+            margin-right: -8px;
+          }
         }
 
         p:first-of-type {

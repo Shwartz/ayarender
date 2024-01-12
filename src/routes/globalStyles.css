@@ -348,6 +348,9 @@ Boxes layout
 /**
 UTILITIES
  */
+.overflow {
+    overflow: hidden;
+}
 p, label {
     margin-top: 1rem;
 }
