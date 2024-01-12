@@ -247,7 +247,7 @@
 	<div>
 		<div class='boxes'>
 			<div>
-				<div class='roundedImages'>
+				<div class='roundedImage'>
 					<img src='{base}/images/aija-svarcs-gallery.jpg' alt='Aija Svarcs' width='350'
 							 height='350'>
 				</div>
@@ -396,18 +396,51 @@
     }
   }
 
-  .roundedImages {
+  .roundedImage {
+		--card-width: 300px;
+
+
+    @keyframes spinColors {
+      0% {
+        filter: hue-rotate(0deg);
+      }
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+
+    position: relative;
     margin: auto;
-    padding: 2rem;
     aspect-ratio: 1;
-    width: calc(300px + 2rem);
+    max-width: calc(var(--card-width) + 2rem);
+
+    &:before {
+      background: hsl(0, 30%, 50%);
+      animation: spinColors 5.5s linear infinite;
+
+			display: block;
+      position: absolute;
+
+      content: "";
+      top: 0;
+      left: 0;
+      z-index: 0;
+      max-height: var(--card-width);
+      max-width: var(--card-width);
+			width: 100%;
+			height: 100%;
+      border-radius: 50%;
+			transform: scale3d(1, 1, 2);
+			box-shadow: 0 0 9px 4px hsl(0, 30%, 50%);
+    }
 
     img {
-      max-width: 300px;
+      position: relative;
+      margin: auto;
+      max-width: var(--card-width);
       aspect-ratio: 1;
       border-radius: 50%;
       overflow: hidden;
-      margin: auto;
     }
   }
 
