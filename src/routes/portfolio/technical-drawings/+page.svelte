@@ -38,8 +38,13 @@
 </svelte:head>
 
 <section class='hero'>
-	<div>
-		<h1>Technical Drawings</h1>
+	<div class="hero">
+		<div>
+			<div class="jumbo"></div>
+		</div>
+		<h1 class="title">
+			Technical Drawings
+		</h1>
 	</div>
 </section>
 
@@ -53,24 +58,9 @@
 </section>
 
 <style lang='scss'>
-  .hero {
-    background: url('/images/hero-home.jpg') 50% 60% no-repeat;
-    background-size: cover;
-  }
-
-  @media (min-width: 1200px) {
-    .hero {
-      background-position: 50% 68%;
-    }
-  }
-
   .card {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-
-    img {
-      width: 200px;
-    }
   }
 </style>

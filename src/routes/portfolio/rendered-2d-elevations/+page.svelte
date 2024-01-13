@@ -35,9 +35,14 @@
   <meta name="description" content="Examples of the Rendered 2D Elevations" />
 </svelte:head>
 
-<section class="hero">
-  <div>
-    <h1>Rendered 2D Elevations</h1>
+<section class='hero'>
+  <div class="hero">
+    <div>
+      <div class="jumbo"></div>
+    </div>
+    <h1 class="title">
+      Rendered 2D Elevations
+    </h1>
   </div>
 </section>
 
@@ -51,16 +56,16 @@
 </section>
 
 <style lang="scss">
-  .hero {
+  /*.hero {
     background: url('/images/hero-home.jpg') 50% 60% no-repeat;
     background-size: cover;
-  }
-
+  }*/
+/*
   @media (min-width: 1200px) {
     .hero {
       background-position: 50% 68%;
     }
-  }
+  }*/
 
   .card {
     display: flex;
