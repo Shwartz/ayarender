@@ -47,6 +47,10 @@ em {
     font-weight: bold;
 }
 
+i {
+    font-style: italic;
+}
+
 /* removes spacing between cells in tables */
 table {
     border-collapse: collapse;
@@ -361,7 +365,7 @@ a.animate {
 
     background-size: 100% 0.1em, 0 0.1em;
     background:
-            linear-gradient(to right, var(--cBlack10), var(--cBlack10)) 100% 100% no-repeat,
+            linear-gradient(to right, var(--cBlack10), var(--cBlack5)) 100% 100% no-repeat,
             linear-gradient(to right, #063587, #f4db3f, #f34a41) 0 100% no-repeat;
     background-size: 100% 0.1rem, 0 0.1rem;
     transition: background-size 400ms;
@@ -380,26 +384,6 @@ li {
     line-height: 1.5;
     padding-left: 1.5rem;
     background: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iIzJhMmMzOCIgY2xhc3M9ImJpIGJpLWNoZWNrIiB2aWV3Qm94PSIwIDAgMTYgMTYiIGlkPSJpY29uLWNoZWNrLTE3Ij48cGF0aCBkPSJNMTAuOTcgNC45N2EuNzUuNzUgMCAwIDEgMS4wNyAxLjA1bC0zLjk5IDQuOTlhLjc1Ljc1IDAgMCAxLTEuMDguMDJMNC4zMjQgOC4zODRhLjc1Ljc1IDAgMSAxIDEuMDYtMS4wNmwyLjA5NCAyLjA5MyAzLjQ3My00LjQyNWEuMjY3LjI2NyAwIDAgMSAuMDItLjAyMnoiPjwvcGF0aD48L3N2Zz4=) no-repeat 0 0.3rem;
-}
-
-.py-2 {
-    padding: 2rem 0;
-}
-
-.largeTitle {
-    font-size: 2.5rem;
-}
-
-.mediumTitle {
-    font-size: 2rem;
-}
-
-.smallText {
-    font-size: 0.8rem;
-}
-
-.center {
-    text-align: center;
 }
 
 .btn-back, .btn-forward {
