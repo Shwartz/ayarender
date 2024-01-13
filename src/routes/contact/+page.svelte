@@ -29,7 +29,7 @@
 	</div>
 </section>
 
-<section class='large fullHeight'>
+<section class='large vLine'>
 	<div class='content'>
 		<div class='contactForm'>
 			<!--<SuperDebug data={$form} />-->
@@ -159,10 +159,5 @@
     form {
       padding: 2rem 3rem;
     }
-  }
-
-  .fullHeight {
-    /* full height - nav */
-    min-height: calc(100vh - 388px);
   }
 </style>
