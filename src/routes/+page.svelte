@@ -430,8 +430,7 @@
 			width: 100%;
 			height: 100%;
       border-radius: 50%;
-			transform: scale3d(1, 1, 2);
-			box-shadow: 0 0 9px 4px hsl(0, 30%, 50%);
+			box-shadow: 0 0 9px 3px hsl(0, 60%, 50%);
     }
 
     img {

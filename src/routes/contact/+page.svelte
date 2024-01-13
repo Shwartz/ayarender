@@ -133,16 +133,6 @@
     }
   }
 
-  i {
-    font-style: italic;
-    font-size: 1rem;
-  }
-
-  em {
-    /*font-family: var(--font-bold);*/
-    font-weight: 700;
-  }
-
   .send {
     display: flex;
     justify-content: space-between;
@@ -220,7 +210,5 @@
   .fullHeight {
     /* full height - nav */
     min-height: calc(100vh - 388px);
-    background: url('/images/bg-contacts.jpg') no-repeat 50%;
-    background-size: cover;
   }
 </style>

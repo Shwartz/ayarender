@@ -33,7 +33,7 @@
              src="/icons/instagram.svg"
              height="24" width="24"></a>
       </p>
-      <p>Created by <a href="https://shvarcs.com/">Shvarcs</a></p>
+      <p class='shvarcs'>Created by <a class='animate' href="https://shvarcs.com/">Shvarcs</a></p>
     </div>
   </footer>
 </div>
@@ -89,8 +89,6 @@
     }
   }
 
-
-
   footer {
     background: var(--cNight);
     color: var(--cWhite);
@@ -129,19 +127,15 @@
       }
     }
 
-    a {
-      text-decoration: underline;
-
-      &:hover {
-        color: var(--cWhite);
-      }
-    }
-
     @media (min-width: 800px) {
       div {
         flex-direction: row;
         justify-content: space-between;
       }
+    }
+
+    .shvarcs {
+      font-size: 0.8rem;
     }
   }
 </style>
