@@ -468,8 +468,10 @@ Hero
 .hero .title {
     display: flex;
     position: relative;
-    align-items: center;
-    font-size: clamp(4rem, 7vw, 5.5rem);
+    padding: 0 8px;
     color: white;
+    align-items: center;
+    text-align: center;
+    font-size: clamp(3.6rem, 7vw, 5.5rem);
     text-shadow: 0 0 8px black;
 }
