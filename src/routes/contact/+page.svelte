@@ -19,14 +19,13 @@
 </svelte:head>
 
 <section class='hero'>
-	<div>
-		<div class='videoContainer'>
-			<video preload autoplay loop muted playsinline>
-				<source src='{base}/video/hero-contacts.webm' type='video/webm' />
-				<source src='{base}/video/hero-contacts.mp4' type='video/mp4' />
-			</video>
+	<div class="hero">
+		<div>
+			<div class="jumbo"></div>
 		</div>
-		<h1>Contacts</h1>
+		<h1 class="title">
+			Contacts
+		</h1>
 	</div>
 </section>
 
@@ -77,7 +76,7 @@
 			{/if}
 		</div>
 		<div class='right'>
-			<p class='mediumTitle'>Hi, my name is Aija <br /><i>(pronounce as Aya or Ah-yah)</i></p>
+			<p class='mediumTitle'>Hi, my name is Aija <br /><i>(pronounce as I-ya)</i></p>
 			<p>There is a technical term for what I do<br /> - <em>Interior Design visualiser</em>, but I would like to call
 				myself <em>Spatial Magician</em>.</p>
 			<p>I can virtually transfer existing living space and show you images of the property that hasn't even been built
@@ -88,51 +87,6 @@
 </section>
 
 <style lang='scss'>
-  .hero {
-    background-size: cover;
-
-    > div {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 0;
-    }
-
-    h1 {
-      font-size: clamp(2rem, 3vw, 4rem);
-    }
-  }
-
-  .videoContainer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: rgb(63 32 33 / 40%);
-    }
-
-    video {
-      top: 0;
-      left: 0;
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-
   .send {
     display: flex;
     justify-content: space-between;
