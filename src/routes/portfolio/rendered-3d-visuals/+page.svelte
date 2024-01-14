@@ -18,11 +18,21 @@
     '/portfolio/rendered-3d-visuals/Office-parcel-and-letter-box-area-3D-model.jpg',
     '/portfolio/rendered-3d-visuals/Show-home-living-room-3D-model.jpg',
   ];
+
+  const title = "Rendered 3D Visuals | Portfolio | Ayarender";
+  const description = "Examples of the Rendered 3D Visuals";
 </script>
 
 <svelte:head>
-  <title>Rendered 3D Visuals | Portfolio | Ayarender</title>
-  <meta name="description" content="Examples of the Rendered 3D Visuals" />
+  <title>{title}</title>
+  <meta name="description" content="{description}"/>
+  <meta property="og:title" content="{title}"/>
+  <meta property="og:description" content="{description}"/>
+  <meta property="twitter:title" content="{title}"/>
+  <meta property="twitter:description" content="{description}"/>
+  <meta property="og:image" content="{base}/portfolio/rendered-3d-visuals/Show-home-living-room-3D-model.jpg"/>
+  <meta property="og:image:alt" content="Show home living room 3D model"/>
+  <meta name="robots" content="index,follow"/>
 </svelte:head>
 
 <section class='hero'>
