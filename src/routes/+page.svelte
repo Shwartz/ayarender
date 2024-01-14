@@ -444,6 +444,7 @@
 			height: 100%;
       border-radius: 50%;
 			box-shadow: 0 0 9px 3px hsl(0, 60%, 50%);
+      transform: translate3d(0,0,0);
     }
 
     img {
