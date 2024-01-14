@@ -12,10 +12,21 @@
 		taintedMessage: 'Are you sure you want leave?',
 		validators: contactSchema
 	});
+
+	const title = "Contacts | Ayarender";
+	const description = "Aija will help you with design Visualisation, 2D and 3D rendering and Technical drawings";
 </script>
 
 <svelte:head>
-	<meta name='description' content='Get in touch | Ayarender' />
+	<title>{title}</title>
+	<meta name="description" content="{description}"/>
+	<meta property="og:title" content="{title}"/>
+	<meta property="og:description" content="{description}"/>
+	<meta property="twitter:title" content="{title}"/>
+	<meta property="twitter:description" content="{description}"/>
+	<meta property="og:image" content="{base}/images/aija-svarcs-gallery.jpg"/>
+	<meta property="og:image:alt" content="Aija Svarcs holding colourful picture"/>
+	<meta name="robots" content="index,follow"/>
 </svelte:head>
 
 <section class='hero'>

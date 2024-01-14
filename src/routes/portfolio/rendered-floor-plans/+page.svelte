@@ -18,11 +18,21 @@
     '/portfolio/rendered-floor-plans/study-floorplan.jpg',
     '/portfolio/rendered-floor-plans/two-bedroom-flat-floorplan.jpg',
   ];
+
+  const title = "Rendered Floor Plans | Portfolio | Ayarender";
+  const description = "Examples of the Rendered Floor Plans";
 </script>
 
 <svelte:head>
-  <title>Rendered Floor Plans | Portfolio | Ayarender</title>
-  <meta name="description" content="Examples of the Rendered Floor Plans" />
+  <title>{title}</title>
+  <meta name="description" content="{description}"/>
+  <meta property="og:title" content="{title}"/>
+  <meta property="og:description" content="{description}"/>
+  <meta property="twitter:title" content="{title}"/>
+  <meta property="twitter:description" content="{description}"/>
+  <meta property="og:image" content="{base}/portfolio/rendered-floor-plans/rendered-floorplan.jpg"/>
+  <meta property="og:image:alt" content="Rendered Floor plans"/>
+  <meta name="robots" content="index,follow"/>
 </svelte:head>
 
 <section class='hero'>

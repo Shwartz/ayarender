@@ -28,11 +28,21 @@
     '/portfolio/rendered-2d-elevations/Kitchen-elevation.jpg',
     '/portfolio/rendered-2d-elevations/WC-and-juice-bar-elevation.jpg',
   ];
+
+  const title = "Rendered 2D Elevations | Portfolio | Ayarender";
+  const description = "Examples of the Rendered 2D Elevations";
 </script>
 
 <svelte:head>
-  <title>Rendered 2D Elevations | Portfolio | Ayarender</title>
-  <meta name="description" content="Examples of the Rendered 2D Elevations" />
+  <title>{title}</title>
+  <meta name="description" content="{description}"/>
+  <meta property="og:title" content="{title}"/>
+  <meta property="og:description" content="{description}"/>
+  <meta property="twitter:title" content="{title}"/>
+  <meta property="twitter:description" content="{description}"/>
+  <meta property="og:image" content="{base}/portfolio/rendered-2d-elevations/Japandi-inspired-kitchen-elevation.jpg"/>
+  <meta property="og:image:alt" content="Rendered 2D Elevations"/>
+  <meta name="robots" content="index,follow"/>
 </svelte:head>
 
 <section class='hero'>

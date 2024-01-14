@@ -30,11 +30,21 @@
 		'/portfolio/technical-drawing/Office-entrance-floorplan-interior-design-presentation.jpg',
 		'/portfolio/technical-drawing/Office-parcel-and-letter-box-area-interior-design-presentation.jpg'
 	];
+
+	const title = "Technical Drawings | Portfolio | Ayarender";
+	const description = "Examples of the Technical Drawings";
 </script>
 
 <svelte:head>
-	<title>Technical Drawings | Portfolio | Ayarender</title>
-	<meta name='description' content='Examples of the Technical Drawings' />
+	<title>{title}</title>
+	<meta name="description" content="{description}"/>
+	<meta property="og:title" content="{title}"/>
+	<meta property="og:description" content="{description}"/>
+	<meta property="twitter:title" content="{title}"/>
+	<meta property="twitter:description" content="{description}"/>
+	<meta property="og:image" content="{base}/portfolio/technical-drawing/Kitchen-dining-area-and-bar-elevation-interior-design-presentation.jpg"/>
+	<meta property="og:image:alt" content="Kitchen dining area and bar elevation interior design presentation"/>
+	<meta name="robots" content="index,follow"/>
 </svelte:head>
 
 <section class='hero'>
