@@ -192,6 +192,7 @@
 			</div>
 			<div>&nbsp;</div>
 		</div>
+
 		<div class='boxes reverse'>
 			<div class='light'>
 				<p>Step 2</p>
@@ -231,6 +232,7 @@
 			</div>
 			<div>&nbsp;</div>
 		</div>
+
 		<div class='boxes reverse'>
 			<div class='light'>
 				<p>Step 4</p>
@@ -265,7 +267,6 @@
 					<a class='btn-forward' href='{base}/contact'>Contact me</a>
 				</p>
 			</div>
-
 		</div>
 	</div>
 </section>
@@ -394,6 +395,9 @@
     .light {
       background: var(--cWhite);
     }
+		.boxes {
+			gap: 2px;
+		}
   }
 
   .roundedImage {
