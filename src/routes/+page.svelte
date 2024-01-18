@@ -264,14 +264,13 @@
 				</div>
 			</div>
 			<div>
-				<h1>
-					<span>Hi I'm Aija</span>
-				</h1>
-				<p>There is a technical term for what I do - Interior Design visualiser, but I would like to call myself Spatial
-					Magician. </p>
-				<p>I can virtually transfer existing living space and show you images of the property that hasn't even
-					been built yet.</p>
-				<p>I specialise in Technical Drawings, Rendered Floor Plans, Rendered 2D Elevations and Design Boards</p>
+				<h1 class='mediumTitle'>Hi, my name is Aija <br /><i>(pronounce as I-ya)</i></h1>
+				<p>There is a technical term for what I do <br>
+					- <em>Interior Design visualiser</em>,<br>
+					but I would like to call myself <em>Spatial
+						Magician</em>. </p>
+				<p>I can virtually transfer existing living space and show you images of the property that hasn't even been built yet.</p>
+				<p>I specialise in Technical Drawings, Rendered Floor Plans, Rendered 2D Elevations and 3D visuals.</p>
 				<p>
 					<a class='btn-forward' href='{base}/contact'>Contact me</a>
 				</p>
