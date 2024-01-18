@@ -13,28 +13,28 @@
 		validators: contactSchema
 	});
 
-	const title = "Contacts | Ayarender";
-	const description = "Aija will help you with design Visualisation, 2D and 3D rendering and Technical drawings";
+	const title = 'Contacts | Ayarender';
+	const description = 'Aija will help you with design Visualisation, 2D and 3D rendering and Technical drawings';
 </script>
 
 <svelte:head>
 	<title>{title}</title>
-	<meta name="description" content="{description}"/>
-	<meta property="og:title" content="{title}"/>
-	<meta property="og:description" content="{description}"/>
-	<meta property="twitter:title" content="{title}"/>
-	<meta property="twitter:description" content="{description}"/>
-	<meta property="og:image" content="{base}/images/aija-svarcs-gallery.jpg"/>
-	<meta property="og:image:alt" content="Aija Svarcs holding colourful picture"/>
-	<meta name="robots" content="index,follow"/>
+	<meta name='description' content='{description}' />
+	<meta property='og:title' content='{title}' />
+	<meta property='og:description' content='{description}' />
+	<meta property='twitter:title' content='{title}' />
+	<meta property='twitter:description' content='{description}' />
+	<meta property='og:image' content='{base}/images/aija-svarcs-gallery.jpg' />
+	<meta property='og:image:alt' content='Aija Svarcs holding colourful picture' />
+	<meta name='robots' content='index,follow' />
 </svelte:head>
 
 <section class='hero'>
-	<div class="hero">
+	<div class='hero'>
 		<div>
-			<div class="jumbo"></div>
+			<div class='jumbo'></div>
 		</div>
-		<h1 class="title">
+		<h1 class='title'>
 			Contacts
 		</h1>
 	</div>
@@ -88,11 +88,14 @@
 		</div>
 		<div class='right'>
 			<p class='mediumTitle'>Hi, my name is Aija <br /><i>(pronounce as I-ya)</i></p>
-			<p>There is a technical term for what I do<br /> - <em>Interior Design visualiser</em>, but I would like to call
-				myself <em>Spatial Magician</em>.</p>
-			<p>I can virtually transfer existing living space and show you images of the property that hasn't even been built
-				yet.</p>
-			<p>I specialise in Technical Drawings, Rendered Floor Plans, Rendered 2D Elevations and Design Boards</p>
+			<p>
+				Welcome, dear visitor, to a crossroads of creativity and expertise! As you've journeyed to this page, there are
+				just two possibilities. First, you might be an interior design connoisseur on a quest for inspiration, in which
+				case, your destination is our illustrious Portfolio.</p>
+			<p>Alternatively, you could be seeking the guiding light for
+				your design documentation and visualization needs. Whatever the case, your design aspirations find their home
+				here!
+			</p>
 		</div>
 	</div>
 </section>
