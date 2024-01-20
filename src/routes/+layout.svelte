@@ -26,6 +26,7 @@
   </section>
 
   <slot />
+
   <footer class="large section">
     <div>
       <p class="left">&copy; 2024 Ayarender | Follow on <a href="https://instagram.com/aya.render">
