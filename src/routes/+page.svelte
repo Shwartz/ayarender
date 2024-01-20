@@ -318,7 +318,6 @@
         font-size: clamp(3rem, 9vw, 3.7rem);
         line-height: clamp(4rem, 7vw, 6.25rem);
         margin-top: 2rem;
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       }
 
       div {
