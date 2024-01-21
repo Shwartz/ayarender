@@ -26,7 +26,6 @@
 					<dt>AIJA SVARCS</dt>
 					<dd>Interior Visualiser</dd>
 				</dl>
-				<p>scrollY {scrollY}, outerWidth {outerWidth}, outerHeight {outerHeight}</p>
 				<p>Check out my areas of expertise below and how I can make your dreams come to life</p>
 				<p class='icnChevron'>
 					<a href='#whyHireMe'>
