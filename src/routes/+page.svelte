@@ -2,6 +2,8 @@
 	import { base } from '$app/paths';
 	const title = "Interior Visualiser";
 	const description = "Converting interior designs in 2D and 3D visualisation";
+
+	let scrollY;
 </script>
 
 <svelte:head>
@@ -24,6 +26,7 @@
 					<dt>AIJA SVARCS</dt>
 					<dd>Interior Visualiser</dd>
 				</dl>
+				<p>scrollY {scrollY}, outerWidth {outerWidth}, outerHeight {outerHeight}</p>
 				<p>Check out my areas of expertise below and how I can make your dreams come to life</p>
 				<p class='icnChevron'>
 					<a href='#whyHireMe'>
@@ -279,6 +282,8 @@
 	</div>
 </section>
 
+<div style='transform: translate3d(0, {scrollY}px, 0)' id='animatedLine'></div>
+<svelte:window bind:scrollY={scrollY} />
 
 <style lang='scss'>
   @keyframes jumping {
@@ -380,7 +385,7 @@
       }
 
       div:nth-child(2) {
-        border-left: 4px solid var(--cBlack10);
+        /*border-left: 4px solid var(--cBlack10);*/
 
         img {
           margin-left: 2rem;
@@ -400,7 +405,7 @@
 
   .steps {
     .light {
-      background: var(--cWhite);
+      /*background: var(--cWhite);*/
     }
 		.boxes {
 			gap: 2px;
@@ -457,5 +462,20 @@
 
   .last {
     margin-bottom: 0;
+  }
+
+  @media (min-width: 800px) {
+    #animatedLine {
+      position: absolute;
+      top: 14vh;
+      left: calc(50% + 1px);
+      width: 4px;
+      height: 100vh;
+      max-height: calc(100vh - 20vh);
+      background: var(--cBlack10);
+      z-index: -1;
+      transform: translate3d(0, 0, 0);
+      transition: transform 200ms;
+    }
   }
 </style>
