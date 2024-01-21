@@ -249,9 +249,9 @@ Boxes layout
     padding: 1rem;
 }
 
-.boxes.light {
+/*.boxes.light {
     background-color: var(--cWhite);
-}
+}*/
 
 .boxes.dark {
     background-color: var(--cBlack10);
