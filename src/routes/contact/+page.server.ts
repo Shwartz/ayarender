@@ -28,7 +28,7 @@ export const actions = {
     }
 
     const subject = "Ayarender contact form";
-    const {communication, email} = form.data;
+    const {communication, email, name} = form.data;
     const html = `<h2>Ayarender Web Form!</h2><p>Email: ${email}</p><pre>${communication}</pre>`;
     const mailDetails = {
       from: GOOGLE_EMAIL,
@@ -38,7 +38,14 @@ export const actions = {
       html: html
     };
 
-    console.log('form.data.communication: ', communication, email);
+    console.log('form.data.communication: ', communication, email, name);
+    /* This is to catch spammers. Field 'name' is hidden and should not be filled
+    * if it is filled, we simply return without sending anything
+    **/
+    if (name?.length > 0) {
+      console.log('honeypot');
+      return message(form, {status: 'error', text: 'Hello, our AI detected spammer.'});
+    }
 
     try {
       const sendEmail = async (mailDetails: Email) => {
