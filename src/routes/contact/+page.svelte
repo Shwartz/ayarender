@@ -68,6 +68,17 @@
 					<small class='warning'>{$errors.email}</small>
 				{/if}
 
+				<!-- honeypot -->
+				<label class='name' for='name'>Name</label>
+				<input
+					type='text'
+					id='name'
+					name='name'
+					class='name'
+					placeholder='Enter your name'
+					bind:value={$form.name}
+				/>
+
 				<div class='send light'>
 					{#if $delayed}
 						<BarLoader color='#ffaa4d' />
@@ -154,6 +165,16 @@
   .warning {
     color: var(--cOrange10);
   }
+
+	.name {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    z-index: -1;
+	}
 
   @media (min-width: 800px) {
     .content {
