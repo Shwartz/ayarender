@@ -9,5 +9,12 @@ export default defineConfig({
 	],
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
+	},
+	css: {
+		preprocessorOptions: {
+			scss: {
+				api: 'modern-compiler' // or 'modern'
+			}
+		}
 	}
 });
