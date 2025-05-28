@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { page } from '$app/stores';
-	import Logo from '/src/assets/icons/logo.svg?component';
 	import './globalStyles.css';
 	interface Props {
 		children?: import('svelte').Snippet;
@@ -22,7 +21,7 @@
 			</div>
 			<div>
 				<a href="{base}/">
-					<Logo width="48" height="48" />
+					<img src="/src/assets/icons/logo.svg" alt="Ayarender Logo" width="48" height="48" />
 				</a>
 			</div>
 			<div>&nbsp;</div>
