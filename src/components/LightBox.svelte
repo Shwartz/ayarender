@@ -1,24 +1,22 @@
-<script>
+<script lang="ts">
   import { GalleryImage, GalleryThumbnail, LightboxGallery } from "svelte-lightbox";
-  export let thumbnails;
-  export let images;
+  let { thumbnails, images } = $props();
 
-  /*
-    Image size optimal 1600*1200
-    Thumb 300*225
-  */
+  
 </script>
 
 <LightboxGallery>
-  <svelte:fragment slot="thumbnail">
-    <div class="lightBox">
-      {#each thumbnails as thumb}
-        <GalleryThumbnail>
-          <img src="{thumb}" alt="{thumb}">
-        </GalleryThumbnail>
-      {/each}
-    </div>
-  </svelte:fragment>
+  {#snippet thumbnail()}
+  
+      <div class="lightBox">
+        {#each thumbnails as thumb}
+          <GalleryThumbnail>
+            <img src="{thumb}" alt="{thumb}">
+          </GalleryThumbnail>
+        {/each}
+      </div>
+    
+  {/snippet}
   {#each images as img}
     <GalleryImage>
       <img src="{img}" alt="{img}">

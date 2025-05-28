@@ -3,7 +3,7 @@
 	const title = 'Interior Visualiser';
 	const description = 'Converting interior designs in 2D and 3D visualisation';
 
-	let scrollY = 0;
+	let scrollY = $state(0);
 </script>
 
 <svelte:head>
@@ -358,7 +358,7 @@
 	</div>
 </section>
 
-<div style="transform: translate3d(0, {scrollY}px, 0)" id="animatedLine" />
+<div style="transform: translate3d(0, {scrollY}px, 0)" id="animatedLine"></div>
 <svelte:window bind:scrollY />
 
 <style lang="scss">

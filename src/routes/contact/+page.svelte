@@ -6,7 +6,11 @@
 	import { BarLoader } from 'svelte-loading-spinners';
 	import { base } from '$app/paths';
 
-	export let data: PageData;
+	interface Props {
+		data: PageData;
+	}
+
+	let { data }: Props = $props();
 
 	const { form, errors, enhance, message, delayed } = superForm(data.form, {
 		taintedMessage: 'Are you sure you want leave?',

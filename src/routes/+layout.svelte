@@ -1,10 +1,15 @@
-<script>
+<script lang="ts">
 	import { base } from '$app/paths';
 	import { page } from '$app/stores';
 	import Logo from '/src/assets/icons/logo.svg?component';
 	import './globalStyles.css';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
 
-	$: url = $page.url.pathname.split('/')[1];
+	let { children }: Props = $props();
+
+	let url = $derived($page.url.pathname.split('/')[1]);
 </script>
 
 <div class="page">
@@ -24,7 +29,7 @@
 		</div>
 	</section>
 
-	<slot />
+	{@render children?.()}
 
 	<footer class="large section">
 		<div>
