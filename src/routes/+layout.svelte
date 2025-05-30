@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import './globalStyles.css';
 	interface Props {
 		children?: import('svelte').Snippet;
@@ -8,7 +8,7 @@
 
 	let { children }: Props = $props();
 
-	let url = $derived($page.url.pathname.split('/')[1]);
+	let url = $derived(page.url.pathname.split('/')[1]);
 </script>
 
 <div class="page">
