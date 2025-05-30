@@ -1,7 +1,9 @@
 import { GOOGLE_EMAIL, RECIPIENT_EMAIL } from "$env/static/private";
 import transporter from "$lib/emailSetup.server.js";
-import { superValidate, message } from "sveltekit-superforms/server"
+import { superValidate, message, type SuperValidated } from "sveltekit-superforms/server"
 import { contactSchema } from '$lib/contactSchema';
+import { zod } from 'sveltekit-superforms/adapters';
+import type { z } from 'zod';
 
 interface Message { status: 'error' | 'success'; text: string }
 
@@ -13,23 +15,24 @@ interface Email {
   html: string;
 }
 
-export const load = async (event) => {
-  const form = await superValidate(event, contactSchema);
-  return {
-    form
-  };
+type ContactForm = z.infer<typeof contactSchema>;
+
+export const load = async () => {
+  const form = await superValidate(zod(contactSchema));
+  return { form };
 };
+
 export const actions = {
-  contactForm: async (event) => {
-    const form = await superValidate<typeof contactSchema, Message>(event, contactSchema);
+  contactForm: async ({ request }) => {
+    const form = await superValidate(request, zod(contactSchema));
 
     if (!form.valid) {
-      return message(form, {status: 'error', text: 'Sorry, I can\'t send the form. There might be missing info for some fields.'});
+      return message(form, { status: 'error', text: 'Sorry, I can\'t send the form. There might be missing info for some fields.' });
     }
 
     const subject = "Ayarender contact form";
-    const {communication, email, name} = form.data;
-    const html = `<h2>Ayarender Web Form!</h2><p>Email: ${email}</p><pre>${communication}</pre>`;
+    const { communication, email, name } = form.data as ContactForm;
+    const html = `<h2>Ayarender Web Form!</h2><p>Client's Email: ${email}</p><div style='max-width: 600px'>${communication}</div>`;
     const mailDetails = {
       from: GOOGLE_EMAIL,
       to: RECIPIENT_EMAIL,
@@ -42,9 +45,9 @@ export const actions = {
     /* This is to catch spammers. Field 'name' is hidden and should not be filled
     * if it is filled, we simply return without sending anything
     **/
-    if (name?.length > 0) {
+    if ((name?.length ?? 0) > 0) {
       console.log('honeypot');
-      return message(form, {status: 'error', text: 'Hello, our AI detected spammer.'});
+      return message(form, { status: 'error', text: 'Hello, our AI detected spammer.' });
     }
 
     try {
@@ -64,9 +67,9 @@ export const actions = {
       };
 
       await sendEmail(mailDetails);
-      return message(form, {status: 'success', text: "Thanks, I'll get back to you soon!"});
+      return message(form, { status: 'success', text: "Thanks, I'll get back to you soon!" });
     } catch (error) {
-      return message(form, {status: 'error', text: "Sorry, can't send for at the moment. Please try later"});
+      return message(form, { status: 'error', text: "Sorry, can't send for at the moment. Please try later" });
     }
   }
 }

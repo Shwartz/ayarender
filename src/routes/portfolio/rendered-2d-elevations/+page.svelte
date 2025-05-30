@@ -59,7 +59,7 @@
 <section class="large">
   <div class="card">
     <p class='light'>
-      <a class="btn-back" href="{base}/#rendered2dElevations">Back</a>
+      <a class="btn-back" href="{base}/">Back</a>
     </p>
     <LightBox thumbnails={thumbnails} images={images}  />
   </div>
