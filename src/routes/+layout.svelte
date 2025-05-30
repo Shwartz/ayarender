@@ -19,11 +19,9 @@
 				<a class:active={url === 'contact'} href="{base}/contact">Contact</a>
 				<!--<li><a class:active={url === 'portfolio'} href="{base}/portfolio">Portfolio</a></li>-->
 			</div>
-			<div>
-				<a href="{base}/">
-					<img src="/src/assets/icons/logo.svg" alt="Ayarender Logo" width="48" height="48" />
-				</a>
-			</div>
+			<a class="logo" href="{base}/">
+				<img src="/icons/logo.svg" alt="Ayarender Logo" />
+			</a>
 			<div>&nbsp;</div>
 		</div>
 	</section>
@@ -46,6 +44,7 @@
 	.nav {
 		display: flex;
 		flex-direction: column-reverse;
+    align-items: center;
 		max-width: 900px;
 
 		> div {
@@ -79,7 +78,7 @@
 
 		@media (min-width: 800px) {
 			display: grid;
-			grid-template-columns: 1fr 64px 1fr;
+			grid-template-columns: 1fr 48px 1fr;
 
 			div:nth-child(1) {
 				display: flex;
@@ -91,6 +90,14 @@
 				display: block;
 			}
 		}
+	}
+
+	.logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 48px;
+		height: 48px;
 	}
 
 	footer {
