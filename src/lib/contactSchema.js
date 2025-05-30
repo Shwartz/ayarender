@@ -1,7 +1,7 @@
-import { z } from "zod";
+import { optional, z } from "zod";
 
 export const contactSchema = z.object({
-  communication: z.string().min(10),
+  communication: z.string().min(1).max(5000),
   email: z.string().email(),
-  name: z.string().max(100),
+  name: z.string().optional()
 });

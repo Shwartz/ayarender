@@ -1,6 +1,11 @@
 import nodemailer from "nodemailer";
 import { GOOGLE_EMAIL, GOOGLE_EMAIL_PASSWORD } from "$env/static/private";
 
+// Ensure that the environment variables are set
+if (!GOOGLE_EMAIL || !GOOGLE_EMAIL_PASSWORD) {
+  throw new Error("GOOGLE_EMAIL and GOOGLE_EMAIL_PASSWORD must be set in environment variables.");
+}
+
 let transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 587,
