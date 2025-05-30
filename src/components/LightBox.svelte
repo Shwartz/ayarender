@@ -1,13 +1,16 @@
 <script lang="ts">
   import { GalleryImage, GalleryThumbnail, LightboxGallery } from "svelte-lightbox";
-  let { thumbnails, images } = $props();
 
-  
+  type Props = {
+    thumbnails: string[];
+    images: string[];
+  };
+
+  let { thumbnails, images }: Props = $props();
 </script>
 
 <LightboxGallery>
   {#snippet thumbnail()}
-  
       <div class="lightBox">
         {#each thumbnails as thumb}
           <GalleryThumbnail>
@@ -15,8 +18,8 @@
           </GalleryThumbnail>
         {/each}
       </div>
-    
   {/snippet}
+
   {#each images as img}
     <GalleryImage>
       <img src="{img}" alt="{img}">
