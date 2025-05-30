@@ -32,7 +32,7 @@ export const actions = {
 
     const subject = "Ayarender contact form";
     const { communication, email, name } = form.data as ContactForm;
-    const html = `<h2>Ayarender Web Form!</h2><p>Email: ${email}</p><pre>${communication}</pre>`;
+    const html = `<h2>Ayarender Web Form!</h2><p>Client's Email: ${email}</p><div style='max-width: 600px'>${communication}</div>`;
     const mailDetails = {
       from: GOOGLE_EMAIL,
       to: RECIPIENT_EMAIL,
