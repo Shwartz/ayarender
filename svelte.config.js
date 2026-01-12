@@ -6,13 +6,14 @@ const config = {
   // Consult https://svelte.dev/docs/kit/integrations
   // for more information about preprocessors
   preprocess: vitePreprocess(),
-  kit: { adapter: adapter({
-      // Routes that should be excluded from prerendering
+  kit: {
+    adapter: adapter({
       routes: {
         include: ['/*'],
-        exclude: ['<all>']
+        exclude: ['/_app/*', '/images/*', '/portfolio/*', '/fonts/*', '/icons/*']
       }
-    }) }
+    })
+  }
 };
 
 export default config;
