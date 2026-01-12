@@ -9,12 +9,12 @@
 		'/portfolio/technical-drawing/lighting-plan-thumb.jpg',
 		'/portfolio/technical-drawing/technical-elevation-thumb.jpg',
 		'/portfolio/technical-drawing/technical-floor-plan-thumb.jpg',
-		'/portfolio/technical-drawing/Cloakroom-and-Juice-bar-interior-design-presentation-thumb.jpg',
-		'/portfolio/technical-drawing/Juice-bar-and-cloakroom-floorplan-interior-design-presentation-thumb.jpg',
-		'/portfolio/technical-drawing/Kitchen-floor-plan-and-elevation-interior-design-presentation-thumb.jpg',
-		'/portfolio/technical-drawing/Kitchen-dining-area-and-bar-elevation-interior-design-presentation-thumb.jpg',
-		'/portfolio/technical-drawing/Office-entrance-floorplan-interior-design-presentation-thumb.jpg',
-		'/portfolio/technical-drawing/Office-parcel-and-letter-box-area-interior-design-presentation-thumb.jpg'
+		'/portfolio/technical-drawing/cloakroom-juice-bar-presentation-thumb.jpg',
+		'/portfolio/technical-drawing/juice-bar-cloakroom-floorplan-thumb.jpg',
+		'/portfolio/technical-drawing/kitchen-floorplan-elevation-thumb.jpg',
+		'/portfolio/technical-drawing/kitchen-dining-bar-elevation-thumb.jpg',
+		'/portfolio/technical-drawing/office-entrance-floorplan-thumb.jpg',
+		'/portfolio/technical-drawing/office-parcel-letterbox-area-thumb.jpg'
 	];
 	const images = [
 		'/portfolio/technical-drawing/bespoke-furniture.jpg',
@@ -23,12 +23,12 @@
 		'/portfolio/technical-drawing/lighting-plan.jpg',
 		'/portfolio/technical-drawing/technical-elevation.jpg',
 		'/portfolio/technical-drawing/technical-floor-plan.jpg',
-		'/portfolio/technical-drawing/Cloakroom-and-Juice-bar-interior-design-presentation.jpg',
-		'/portfolio/technical-drawing/Juice-bar-and-cloakroom-floorplan-interior-design-presentation.jpg',
-		'/portfolio/technical-drawing/Kitchen-floor-plan-and-elevation-interior-design-presentation.jpg',
-		'/portfolio/technical-drawing/Kitchen-dining-area-and-bar-elevation-interior-design-presentation.jpg',
-		'/portfolio/technical-drawing/Office-entrance-floorplan-interior-design-presentation.jpg',
-		'/portfolio/technical-drawing/Office-parcel-and-letter-box-area-interior-design-presentation.jpg'
+		'/portfolio/technical-drawing/cloakroom-juice-bar-presentation.jpg',
+		'/portfolio/technical-drawing/juice-bar-cloakroom-floorplan.jpg',
+		'/portfolio/technical-drawing/kitchen-floorplan-elevation.jpg',
+		'/portfolio/technical-drawing/kitchen-dining-bar-elevation.jpg',
+		'/portfolio/technical-drawing/office-entrance-floorplan.jpg',
+		'/portfolio/technical-drawing/office-parcel-letterbox-area.jpg'
 	];
 
 	const title = "Technical Drawings | Portfolio | Ayarender";
@@ -42,7 +42,7 @@
 	<meta property="og:description" content="{description}"/>
 	<meta property="twitter:title" content="{title}"/>
 	<meta property="twitter:description" content="{description}"/>
-	<meta property="og:image" content="{base}/portfolio/technical-drawing/Kitchen-dining-area-and-bar-elevation-interior-design-presentation.jpg"/>
+	<meta property="og:image" content="{base}/portfolio/technical-drawing/kitchen-dining-bar-elevation.jpg"/>
 	<meta property="og:image:alt" content="Kitchen dining area and bar elevation interior design presentation"/>
 	<meta name="robots" content="index,follow"/>
 </svelte:head>
