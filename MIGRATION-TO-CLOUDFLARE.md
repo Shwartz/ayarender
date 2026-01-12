@@ -30,12 +30,6 @@ RECIPIENT_EMAIL
 2. Navigate to Settings → Environment Variables
 3. Add the variables for both Production and Preview environments
 
-**Or use Wrangler CLI:**
-```bash
-npx wrangler secret put GOOGLE_EMAIL
-npx wrangler secret put GOOGLE_EMAIL_PASSWORD
-npx wrangler secret put RECIPIENT_EMAIL
-```
 
 ### 3. Test Locally
 
