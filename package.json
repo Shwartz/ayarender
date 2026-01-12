@@ -32,7 +32,6 @@
 		"svelte": "^5.33.4",
 		"svelte-check": "^4.0.0",
 		"svelte-lightbox": "^1.1.2",
-		"svelte-loading-spinners": "^0.3.4",
 		"sveltekit-superforms": "^2.25.0",
 		"svgo": "^3.3.2",
 		"tslib": "^2.4.1",
@@ -47,6 +46,7 @@
 		"node": ">=20.0.0 <23.0.0"
 	},
 	"dependencies": {
-		"resend": "^4.8.0"
-	}
+		"resend": "^4.8.0",
+    "svelte-loading-spinners": "^0.3.4"
+  }
 }

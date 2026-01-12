@@ -1,9 +1,9 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { superForm } from 'sveltekit-superforms/client';
 	// import SuperDebug from 'sveltekit-superforms/client/SuperDebug.svelte';
-	import type { PageData } from './$types';
 	import { BarLoader } from 'svelte-loading-spinners';
-	import { base } from '$app/paths';
+	import type { PageData } from './$types';
 
 	interface Props {
 		data: PageData;
@@ -45,7 +45,7 @@
 	<div class="content">
 		<div class="contactForm">
 			<!-- <SuperDebug data={$form} /> -->
-			<form method="POST" use:enhance action="?/contactForm">
+			<form method="POST" action="?/contactForm" use:enhance>
 				<label class="smallText" for="communication">Your Message</label>
 				<textarea
 					placeholder="Please email me with details of your project and I will get in touch with you in one working day."
@@ -71,13 +71,14 @@
 				{/if}
 
 				<!-- honeypot -->
-				<label class="name" for="name">Name</label>
+				<label class="name" for="name">Name (optional)</label>
 				<input
 					type="text"
 					id="name"
 					name="name"
 					class="name"
 					placeholder="Enter your name"
+          tabindex="-1"
 					bind:value={$form.name}
 				/>
 

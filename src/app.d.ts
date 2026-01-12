@@ -5,7 +5,13 @@ declare global {
 		// interface Error {}
 		// interface Locals {}
 		// interface PageData {}
-		// interface Platform {}
+		interface Platform {
+			env?: {
+				RESEND_API_KEY?: string;
+				SENDER_EMAIL?: string;
+				RECIPIENT_EMAIL?: string;
+			};
+		}
 	}
 }
 

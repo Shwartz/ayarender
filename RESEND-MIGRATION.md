@@ -35,7 +35,7 @@ Replace the email sending logic:
 
 ```typescript
 import { SENDER_EMAIL, RECIPIENT_EMAIL } from "$env/static/private";
-import { resend } from "$lib/emailSetup.server.js";
+import { resend } from "$lib/emailSetup.server.ts";
 import { superValidate, message, type SuperValidated } from "sveltekit-superforms/server"
 import { contactSchema } from '$lib/contactSchema';
 import { zod } from 'sveltekit-superforms/adapters';
