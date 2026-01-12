@@ -2,7 +2,6 @@
 node_modules
 /build
 /.svelte-kit
-/.vercel
 /package
 .env
 .env.*
@@ -12,3 +11,5 @@ vite.config.ts.timestamp-*
 .idea
 /temp
 .vscode
+.wrangler
+.dev.vars
