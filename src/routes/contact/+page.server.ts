@@ -23,7 +23,7 @@ export const actions: Actions = {
 
     const { communication, email, name } = form.data as ContactForm;
 
-    console.log('form.data.communication: ', communication, email, name);
+    // console.log('form.data.communication: ', communication, email, name);
     /* This is to catch spammers. Field 'name' is hidden and should not be filled
     * if it is filled, we simply return without sending anything
     **/

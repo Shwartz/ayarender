@@ -17,3 +17,11 @@ const config = {
 };
 
 export default config;
+
+/**
+ * ••What exclude actually does
+ * In _routes.json, include defines which paths invoke your Pages Function, and exclude defines which paths must not invoke it.
+ *
+ * Excluded paths are served directly from Cloudflare Pages’ static hosting layer,
+ * so they are “just static files” from the platform’s point of view (faster, no function cost).
+ * */
