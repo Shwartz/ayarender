@@ -112,6 +112,7 @@
 				Alternatively, you could be seeking the guiding light for your design documentation and
 				visualization needs. Whatever the case, your design aspirations find their home here!
 			</p>
+      <p style="font-size: 8px; color: #f2f2f2">Migration successful</p>
 		</div>
 	</div>
 </section>
