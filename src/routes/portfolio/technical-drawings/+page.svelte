@@ -3,32 +3,32 @@
 	import { base } from '$app/paths';
 
 	const thumbnails = [
-		'/portfolio/technical-drawing/bespoke-furniture-thumb.jpg',
-		'/portfolio/technical-drawing/built-in-furniture-thumb.jpg',
-		'/portfolio/technical-drawing/floor-plan-thumb.jpg',
-		'/portfolio/technical-drawing/lighting-plan-thumb.jpg',
-		'/portfolio/technical-drawing/technical-elevation-thumb.jpg',
-		'/portfolio/technical-drawing/technical-floor-plan-thumb.jpg',
-		'/portfolio/technical-drawing/cloakroom-juice-bar-presentation-thumb.jpg',
-		'/portfolio/technical-drawing/juice-bar-cloakroom-floorplan-thumb.jpg',
-		'/portfolio/technical-drawing/kitchen-floorplan-elevation-thumb.jpg',
-		'/portfolio/technical-drawing/kitchen-dining-bar-elevation-thumb.jpg',
-		'/portfolio/technical-drawing/office-entrance-floorplan-thumb.jpg',
-		'/portfolio/technical-drawing/office-parcel-letterbox-area-thumb.jpg'
+		'/assets/portfolio/technical-drawing/bespoke-furniture-thumb.jpg',
+		'/assets/portfolio/technical-drawing/built-in-furniture-thumb.jpg',
+		'/assets/portfolio/technical-drawing/floor-plan-thumb.jpg',
+		'/assets/portfolio/technical-drawing/lighting-plan-thumb.jpg',
+		'/assets/portfolio/technical-drawing/technical-elevation-thumb.jpg',
+		'/assets/portfolio/technical-drawing/technical-floor-plan-thumb.jpg',
+		'/assets/portfolio/technical-drawing/cloakroom-juice-bar-presentation-thumb.jpg',
+		'/assets/portfolio/technical-drawing/juice-bar-cloakroom-floorplan-thumb.jpg',
+		'/assets/portfolio/technical-drawing/kitchen-floorplan-elevation-thumb.jpg',
+		'/assets/portfolio/technical-drawing/kitchen-dining-bar-elevation-thumb.jpg',
+		'/assets/portfolio/technical-drawing/office-entrance-floorplan-thumb.jpg',
+		'/assets/portfolio/technical-drawing/office-parcel-letterbox-area-thumb.jpg'
 	];
 	const images = [
-		'/portfolio/technical-drawing/bespoke-furniture.jpg',
-		'/portfolio/technical-drawing/built-in-furniture.jpg',
-		'/portfolio/technical-drawing/floor-plan.jpg',
-		'/portfolio/technical-drawing/lighting-plan.jpg',
-		'/portfolio/technical-drawing/technical-elevation.jpg',
-		'/portfolio/technical-drawing/technical-floor-plan.jpg',
-		'/portfolio/technical-drawing/cloakroom-juice-bar-presentation.jpg',
-		'/portfolio/technical-drawing/juice-bar-cloakroom-floorplan.jpg',
-		'/portfolio/technical-drawing/kitchen-floorplan-elevation.jpg',
-		'/portfolio/technical-drawing/kitchen-dining-bar-elevation.jpg',
-		'/portfolio/technical-drawing/office-entrance-floorplan.jpg',
-		'/portfolio/technical-drawing/office-parcel-letterbox-area.jpg'
+		'/assets/portfolio/technical-drawing/bespoke-furniture.jpg',
+		'/assets/portfolio/technical-drawing/built-in-furniture.jpg',
+		'/assets/portfolio/technical-drawing/floor-plan.jpg',
+		'/assets/portfolio/technical-drawing/lighting-plan.jpg',
+		'/assets/portfolio/technical-drawing/technical-elevation.jpg',
+		'/assets/portfolio/technical-drawing/technical-floor-plan.jpg',
+		'/assets/portfolio/technical-drawing/cloakroom-juice-bar-presentation.jpg',
+		'/assets/portfolio/technical-drawing/juice-bar-cloakroom-floorplan.jpg',
+		'/assets/portfolio/technical-drawing/kitchen-floorplan-elevation.jpg',
+		'/assets/portfolio/technical-drawing/kitchen-dining-bar-elevation.jpg',
+		'/assets/portfolio/technical-drawing/office-entrance-floorplan.jpg',
+		'/assets/portfolio/technical-drawing/office-parcel-letterbox-area.jpg'
 	];
 
 	const title = "Technical Drawings | Portfolio | Ayarender";
@@ -42,7 +42,7 @@
 	<meta property="og:description" content="{description}"/>
 	<meta property="twitter:title" content="{title}"/>
 	<meta property="twitter:description" content="{description}"/>
-	<meta property="og:image" content="{base}/portfolio/technical-drawing/kitchen-dining-bar-elevation.jpg"/>
+	<meta property="og:image" content="{base}/assets/portfolio/technical-drawing/kitchen-dining-bar-elevation.jpg"/>
 	<meta property="og:image:alt" content="Kitchen dining area and bar elevation interior design presentation"/>
 	<meta name="robots" content="index,follow"/>
 </svelte:head>

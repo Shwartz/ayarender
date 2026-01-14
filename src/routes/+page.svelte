@@ -54,7 +54,7 @@
 			<div>
 				<img
 					class="boxImage"
-					src="{base}/portfolio/rendered-2d-elevations/Japandi-inspired-kitchen-elevation-800.jpg"
+					src="{base}/assets/portfolio/rendered-2d-elevations/Japandi-inspired-kitchen-elevation-800.jpg"
 					alt="Japandi inspired kitchen elevation"
 					width="487"
 					height="334"
@@ -547,6 +547,6 @@
 			z-index: -1;
 			transform: translate3d(0, 0, 0);
 			transition: transform 200ms;
-		}	
+		}
 	}
 </style>

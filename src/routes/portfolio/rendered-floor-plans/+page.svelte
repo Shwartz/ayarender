@@ -3,20 +3,20 @@
   import { base } from "$app/paths";
 
   const thumbnails = [
-    '/portfolio/rendered-floor-plans/Juice-bar-and-cloakroom-floorplan-thumb.jpg',
-    '/portfolio/rendered-floor-plans/kitchen-floor-plan-thumb.jpg',
-    '/portfolio/rendered-floor-plans/PhResidence-floorplan-thumb.jpg',
-    '/portfolio/rendered-floor-plans/rendered-floorplan-thumb.jpg',
-    '/portfolio/rendered-floor-plans/study-floorplan-thumb.jpg',
-    '/portfolio/rendered-floor-plans/two-bedroom-flat-floorplan-thumb.jpg',
+    '/assets/portfolio/rendered-floor-plans/Juice-bar-and-cloakroom-floorplan-thumb.jpg',
+    '/assets/portfolio/rendered-floor-plans/kitchen-floor-plan-thumb.jpg',
+    '/assets/portfolio/rendered-floor-plans/PhResidence-floorplan-thumb.jpg',
+    '/assets/portfolio/rendered-floor-plans/rendered-floorplan-thumb.jpg',
+    '/assets/portfolio/rendered-floor-plans/study-floorplan-thumb.jpg',
+    '/assets/portfolio/rendered-floor-plans/two-bedroom-flat-floorplan-thumb.jpg',
   ];
   const images = [
-    '/portfolio/rendered-floor-plans/Juice-bar-and-cloakroom-floorplan.jpg',
-    '/portfolio/rendered-floor-plans/kitchen-floor-plan.jpg',
-    '/portfolio/rendered-floor-plans/PhResidence-floorplan.jpg',
-    '/portfolio/rendered-floor-plans/rendered-floorplan.jpg',
-    '/portfolio/rendered-floor-plans/study-floorplan.jpg',
-    '/portfolio/rendered-floor-plans/two-bedroom-flat-floorplan.jpg',
+    '/assets/portfolio/rendered-floor-plans/Juice-bar-and-cloakroom-floorplan.jpg',
+    '/assets/portfolio/rendered-floor-plans/kitchen-floor-plan.jpg',
+    '/assets/portfolio/rendered-floor-plans/PhResidence-floorplan.jpg',
+    '/assets/portfolio/rendered-floor-plans/rendered-floorplan.jpg',
+    '/assets/portfolio/rendered-floor-plans/study-floorplan.jpg',
+    '/assets/portfolio/rendered-floor-plans/two-bedroom-flat-floorplan.jpg',
   ];
 
   const title = "Rendered Floor Plans | Portfolio | Ayarender";
@@ -30,7 +30,7 @@
   <meta property="og:description" content="{description}"/>
   <meta property="twitter:title" content="{title}"/>
   <meta property="twitter:description" content="{description}"/>
-  <meta property="og:image" content="{base}/portfolio/rendered-floor-plans/rendered-floorplan.jpg"/>
+  <meta property="og:image" content="{base}/assets/portfolio/rendered-floor-plans/rendered-floorplan.jpg"/>
   <meta property="og:image:alt" content="Rendered Floor plans"/>
   <meta name="robots" content="index,follow"/>
 </svelte:head>

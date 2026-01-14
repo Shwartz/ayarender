@@ -10,7 +10,7 @@ const config = {
     adapter: adapter({
       routes: {
         include: ['/*'],
-        exclude: ['/_app/*', '/images/*', '/portfolio/*', '/fonts/*', '/icons/*']
+        exclude: ['/_app/*', '/images/*', '/assets/*', '/fonts/*', '/icons/*']
       }
     })
   }
