@@ -3,30 +3,30 @@
   import { base } from "$app/paths";
 
   const thumbnails = [
-    '/portfolio/rendered-2d-elevations/Banana-leaves-cloakroom-elevation-thumb.jpg',
-    '/portfolio/rendered-2d-elevations/Biophilic-bathroom-elevation-thumb.jpg',
-    '/portfolio/rendered-2d-elevations/Blue-bathroom-elevation-thumb.jpg',
-    '/portfolio/rendered-2d-elevations/Cloakroom-elevation-thumb.jpg',
-    '/portfolio/rendered-2d-elevations/green-bedroom-elevation-thumb.jpg',
-    '/portfolio/rendered-2d-elevations/Japandi-inspired-kitchen-elevation-thumb.jpg',
-    '/portfolio/rendered-2d-elevations/Juice-bar-elevation-thumb.jpg',
-    '/portfolio/rendered-2d-elevations/Kitchen-and-bar-elevation-thumb.jpg',
-    '/portfolio/rendered-2d-elevations/Kitchen-and-dining-area-elevation-thumb.jpg',
-    '/portfolio/rendered-2d-elevations/Kitchen-elevation-thumb.jpg',
-    '/portfolio/rendered-2d-elevations/WC-and-juice-bar-elevation-thumb.jpg',
+    '/assets/portfolio/rendered-2d-elevations/Banana-leaves-cloakroom-elevation-thumb.jpg',
+    '/assets/portfolio/rendered-2d-elevations/Biophilic-bathroom-elevation-thumb.jpg',
+    '/assets/portfolio/rendered-2d-elevations/Blue-bathroom-elevation-thumb.jpg',
+    '/assets/portfolio/rendered-2d-elevations/Cloakroom-elevation-thumb.jpg',
+    '/assets/portfolio/rendered-2d-elevations/green-bedroom-elevation-thumb.jpg',
+    '/assets/portfolio/rendered-2d-elevations/Japandi-inspired-kitchen-elevation-thumb.jpg',
+    '/assets/portfolio/rendered-2d-elevations/Juice-bar-elevation-thumb.jpg',
+    '/assets/portfolio/rendered-2d-elevations/Kitchen-and-bar-elevation-thumb.jpg',
+    '/assets/portfolio/rendered-2d-elevations/Kitchen-and-dining-area-elevation-thumb.jpg',
+    '/assets/portfolio/rendered-2d-elevations/Kitchen-elevation-thumb.jpg',
+    '/assets/portfolio/rendered-2d-elevations/WC-and-juice-bar-elevation-thumb.jpg',
   ];
   const images = [
-    '/portfolio/rendered-2d-elevations/Banana-leaves-cloakroom-elevation.jpg',
-    '/portfolio/rendered-2d-elevations/Biophilic-bathroom-elevation.jpg',
-    '/portfolio/rendered-2d-elevations/Blue-bathroom-elevation.jpg',
-    '/portfolio/rendered-2d-elevations/Cloakroom-elevation.jpg',
-    '/portfolio/rendered-2d-elevations/green-bedroom-elevation.jpg',
-    '/portfolio/rendered-2d-elevations/Japandi-inspired-kitchen-elevation.jpg',
-    '/portfolio/rendered-2d-elevations/Juice-bar-elevation.jpg',
-    '/portfolio/rendered-2d-elevations/Kitchen-and-bar-elevation.jpg',
-    '/portfolio/rendered-2d-elevations/Kitchen-and-dining-area-elevation.jpg',
-    '/portfolio/rendered-2d-elevations/Kitchen-elevation.jpg',
-    '/portfolio/rendered-2d-elevations/WC-and-juice-bar-elevation.jpg',
+    '/assets/portfolio/rendered-2d-elevations/Banana-leaves-cloakroom-elevation.jpg',
+    '/assets/portfolio/rendered-2d-elevations/Biophilic-bathroom-elevation.jpg',
+    '/assets/portfolio/rendered-2d-elevations/Blue-bathroom-elevation.jpg',
+    '/assets/portfolio/rendered-2d-elevations/Cloakroom-elevation.jpg',
+    '/assets/portfolio/rendered-2d-elevations/green-bedroom-elevation.jpg',
+    '/assets/portfolio/rendered-2d-elevations/Japandi-inspired-kitchen-elevation.jpg',
+    '/assets/portfolio/rendered-2d-elevations/Juice-bar-elevation.jpg',
+    '/assets/portfolio/rendered-2d-elevations/Kitchen-and-bar-elevation.jpg',
+    '/assets/portfolio/rendered-2d-elevations/Kitchen-and-dining-area-elevation.jpg',
+    '/assets/portfolio/rendered-2d-elevations/Kitchen-elevation.jpg',
+    '/assets/portfolio/rendered-2d-elevations/WC-and-juice-bar-elevation.jpg',
   ];
 
   const title = "Rendered 2D Elevations | Portfolio | Ayarender";
@@ -40,7 +40,7 @@
   <meta property="og:description" content="{description}"/>
   <meta property="twitter:title" content="{title}"/>
   <meta property="twitter:description" content="{description}"/>
-  <meta property="og:image" content="{base}/portfolio/rendered-2d-elevations/Japandi-inspired-kitchen-elevation.jpg"/>
+  <meta property="og:image" content="{base}/assets/portfolio/rendered-2d-elevations/Japandi-inspired-kitchen-elevation.jpg"/>
   <meta property="og:image:alt" content="Rendered 2D Elevations"/>
   <meta name="robots" content="index,follow"/>
 </svelte:head>
