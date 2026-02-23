@@ -1,33 +1,33 @@
 import { env as svelteEnv } from '$env/dynamic/private';
 import { getResend } from "$lib/emailSetup.server";
-import { superValidate, message } from "sveltekit-superforms"
+import { superValidate, message } from "sveltekit-superforms";
 import { contactSchema } from '$lib/contactSchema';
 import { zod } from 'sveltekit-superforms/adapters';
 import type { Actions } from './$types';
-import type { z } from 'zod';
 
-type ContactForm = z.infer<typeof contactSchema>;
 
 export const load = async () => {
+  // @ts-expect-error - Type incompatibility between sveltekit-superforms and zod adapter
   const form = await superValidate(zod(contactSchema));
   return { form };
 };
 
 export const actions: Actions = {
   contactForm: async ({ request, platform }) => {
+    // @ts-expect-error - Type incompatibility between sveltekit-superforms and zod adapter
     const form = await superValidate(request, zod(contactSchema));
 
     if (!form.valid) {
       return message(form, { status: 'error', text: 'Sorry, I can\'t send the form. There might be missing info for some fields.' });
     }
 
-    const { communication, email, name } = form.data as ContactForm;
+    const { communication, email, name } = form.data as { communication: string; email: string; name: string };
 
     // console.log('form.data.communication: ', communication, email, name);
     /* This is to catch spammers. Field 'name' is hidden and should not be filled
     * if it is filled, we simply return without sending anything
     **/
-    if ((name?.length ?? 0) > 0) {
+    if (name.length > 0) {
       console.log('honeypot');
       return message(form, { status: 'success', text: 'Thank you for your message!' });
     }
