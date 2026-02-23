@@ -20,8 +20,8 @@
 		<div class="nav">
 			<div>
 				<a class:active={url === '' || url === 'portfolio'} href="{base}/">Home</a>
-				<a class:active={url === '' || url === 'visuals'} href="{base}/">Interior Visuals</a>
-				<a class:active={url === '' || url === 'price'} href="{base}/">Process &amp; Pricing</a>
+				<a class:active={url === 'visuals'} href="{base}/visuals/3d-interior-visuals">Interior Visuals</a>
+				<a class:active={url === 'price'} href="{base}/">Process &amp; Pricing</a>
 				<a class:active={url === 'contact'} href="{base}/contact">Contact</a>
 			</div>
 		</div>
@@ -63,9 +63,6 @@
 		height: 48px;
 	}
 
-  .nav {
-
-  }
 
 	footer {
 		background: var(--cNight);
