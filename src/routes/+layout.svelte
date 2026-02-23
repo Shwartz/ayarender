@@ -12,19 +12,20 @@
 </script>
 
 <div class="page">
-	<section>
+	<header class="main">
+    <a class="logo" href="{base}/">
+      <img src="/icons/logo.svg" alt="Ayarender Logo" />
+      <span>Aija Svarcs</span>
+    </a>
 		<div class="nav">
 			<div>
 				<a class:active={url === '' || url === 'portfolio'} href="{base}/">Home</a>
+				<a class:active={url === '' || url === 'visuals'} href="{base}/">Interior Visuals</a>
+				<a class:active={url === '' || url === 'price'} href="{base}/">Process &amp; Pricing</a>
 				<a class:active={url === 'contact'} href="{base}/contact">Contact</a>
-				<!--<li><a class:active={url === 'portfolio'} href="{base}/portfolio">Portfolio</a></li>-->
 			</div>
-			<a class="logo" href="{base}/">
-				<img src="/icons/logo.svg" alt="Ayarender Logo" />
-			</a>
-			<div>&nbsp;</div>
 		</div>
-	</section>
+	</header>
 
 	{@render children?.()}
 
@@ -41,64 +42,30 @@
 </div>
 
 <style lang="scss">
-	.nav {
-		display: flex;
-		flex-direction: column-reverse;
+  header.main {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-		max-width: 900px;
 
-		> div {
-			align-items: center;
-		}
+    max-width: 1200px;
+    margin-inline: auto; /* modern 'margin: 0 auto' */
+    padding: 1rem;
+  }
 
-		div:nth-child(1) {
-			margin-top: 1rem;
-			text-align: center;
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
 
-			a {
-				display: inline-block;
-				padding: 0.5rem 1.5rem;
-
-				&.active {
-					border-radius: 20px;
-					background: var(--cBlack10);
-					color: var(--cWhite);
-					font-weight: 700;
-				}
-			}
-		}
-
-		div:nth-child(2) {
-			text-align: center;
-		}
-
-		div:nth-child(3) {
-			display: none;
-		}
-
-		@media (min-width: 800px) {
-			display: grid;
-			grid-template-columns: 1fr 48px 1fr;
-
-			div:nth-child(1) {
-				display: flex;
-				margin: 0;
-				text-align: left;
-			}
-
-			div:nth-child(3) {
-				display: block;
-			}
-		}
-	}
-
-	.logo {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+	.logo img {
 		width: 48px;
 		height: 48px;
 	}
+
+  .nav {
+
+  }
 
 	footer {
 		background: var(--cNight);
