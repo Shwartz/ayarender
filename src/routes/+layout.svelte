@@ -13,15 +13,15 @@
 
 <div class="page">
 	<header class="main">
-    <a class="logo" href="{base}/">
+    <a class="logo" href="/">
       <img src="/icons/logo.svg" alt="Ayarender Logo" />
       <span>Aija Svarcs</span>
     </a>
 		<nav>
-				<a class:active={url === '' || url === 'portfolio'} href="{base}/">Home</a>
-				<a class:active={url === 'visuals'} href="{base}/visuals/3d-interior-visuals">Interior Visuals</a>
-				<a class:active={url === 'price'} href="{base}/">Process &amp; Pricing</a>
-				<a class:active={url === 'contact'} href="{base}/contact">Contact</a>
+				<a class:active={url === '' || url === 'portfolio'} href="/">Home</a>
+				<a class:active={url === 'visuals'} href="/visuals/3d-interior-visuals">Interior Visuals</a>
+				<a class:active={url === 'price'} href="/">Process &amp; Pricing</a>
+				<a class:active={url === 'contact'} href="/contact">Contact</a>
     </nav>
 	</header>
 

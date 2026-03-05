@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import { page } from '$app/state';
 
 	interface Props {
@@ -14,25 +13,25 @@
 <div class="visuals-layout">
 	<nav class="submenu">
 		<a
-			href="{base}/visuals/3d-interior-visuals"
+			href="/visuals/3d-interior-visuals"
 			class:active={currentPath.includes('3d-interior-visuals')}
 		>
 			3D Interior Visuals
 		</a>
 		<a
-			href="{base}/visuals/rendered-floor-plans"
+			href="/visuals/rendered-floor-plans"
 			class:active={currentPath.includes('rendered-floor-plans')}
 		>
 			Rendered Floor Plans
 		</a>
 		<a
-			href="{base}/visuals/rendered-elevations"
+			href="/visuals/rendered-elevations"
 			class:active={currentPath.includes('rendered-elevations')}
 		>
 			Rendered Elevations
 		</a>
 		<a
-			href="{base}/visuals/technical-drawings"
+			href="/visuals/technical-drawings"
 			class:active={currentPath.includes('technical-drawings')}
 		>
 			Technical Drawings
