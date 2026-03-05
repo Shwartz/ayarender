@@ -17,14 +17,12 @@
       <img src="/icons/logo.svg" alt="Ayarender Logo" />
       <span>Aija Svarcs</span>
     </a>
-		<div class="nav">
-			<div>
+		<nav>
 				<a class:active={url === '' || url === 'portfolio'} href="{base}/">Home</a>
 				<a class:active={url === 'visuals'} href="{base}/visuals/3d-interior-visuals">Interior Visuals</a>
 				<a class:active={url === 'price'} href="{base}/">Process &amp; Pricing</a>
 				<a class:active={url === 'contact'} href="{base}/contact">Contact</a>
-			</div>
-		</div>
+    </nav>
 	</header>
 
 	{@render children?.()}
@@ -63,9 +61,34 @@
 		height: 48px;
 	}
 
+  nav {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--cNight);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 300ms;
+
+    border: 1px solid red;
+
+    &.active {
+      background-color: var(--cNight);
+      color: var(--cWhite);
+    }
+
+    &:not(.active):hover {
+      background-color: var(--cNight);
+      color: var(--cWhite);
+    }
+  }
 
 	footer {
-		background: var(--cNight);
+		background: var(--aya-dark);
 		color: var(--cWhite);
 		min-height: 12rem;
 

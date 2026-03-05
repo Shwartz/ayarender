@@ -5,6 +5,9 @@ export default defineConfig({
 	plugins: [
 		sveltekit(),
 	],
+  server: {
+    port: 5200,
+  },
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
 	},

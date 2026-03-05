@@ -17,8 +17,19 @@
 </svelte:head>
 
 <section class="large overflow">
-	<div class="boxes">
+
+	<div>
     <h1>Home page</h1>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
   </div>
 </section>
 
