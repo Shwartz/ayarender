@@ -1,5 +1,4 @@
 <script lang='ts'>
-  import { base } from '$app/paths';
   import { page } from '$app/state';
   import './globalStyles.css';
 
@@ -10,7 +9,24 @@
   let { children }: Props = $props();
 
   let url = $derived(page.url.pathname.split('/')[1]);
+  let mobileMenuOpen = $state(false);
+
+  function toggleMobileMenu() {
+    mobileMenuOpen = !mobileMenuOpen;
+  }
+
+  function closeMobileMenu() {
+    mobileMenuOpen = false;
+  }
+
+  function handleKeydown(event: KeyboardEvent) {
+    if (event.key === 'Escape' && mobileMenuOpen) {
+      closeMobileMenu();
+    }
+  }
 </script>
+
+<svelte:window onkeydown={handleKeydown} />
 
 <div class='page'>
   <div class='wrap'>
@@ -19,13 +35,93 @@
         <img src='/icons/logo.svg' alt='Ayarender Logo' />
         <span>AYARENDER</span>
       </a>
-      <nav>
+      <nav class='desktop-nav'>
         <a class:active={url === 'visuals'} href='/visuals/3d-interior-visuals'>Interior Visuals</a>
         <a class:active={url === 'price'} href='/price'>Process &amp; Pricing</a>
         <a class:active={url === 'contact'} href='/contact'>Contact</a>
       </nav>
-      <a class='btn booking' href='/contact'>Book a project</a>
+      <a class='btn booking desktop-cta' href='/contact'>Book a project</a>
+
+      <!-- Hamburger Button (Mobile Only) -->
+      <button
+        class='hamburger'
+        onclick={toggleMobileMenu}
+        aria-label='Toggle menu'
+        aria-expanded={mobileMenuOpen}
+      >
+        <span class:open={mobileMenuOpen}></span>
+        <span class:open={mobileMenuOpen}></span>
+        <span class:open={mobileMenuOpen}></span>
+      </button>
     </header>
+
+    <!-- Mobile Menu Panel -->
+    {#if mobileMenuOpen}
+      <div class='mobile-menu-panel'>
+        <nav class='mobile-nav'>
+          <div class='nav-section'>
+            <span class='parent-item'>Interior Visuals</span>
+            <a
+              class='sub-item'
+              href='/visuals/3d-interior-visuals'
+              onclick={closeMobileMenu}
+            >
+              3D Interior Visuals
+            </a>
+            <a
+              class='sub-item'
+              href='/visuals/rendered-floor-plans'
+              onclick={closeMobileMenu}
+            >
+              Rendered Floor Plans
+            </a>
+            <a
+              class='sub-item'
+              href='/visuals/rendered-elevations'
+              onclick={closeMobileMenu}
+            >
+              Rendered Elevations
+            </a>
+            <a
+              class='sub-item'
+              href='/visuals/technical-drawings'
+              onclick={closeMobileMenu}
+            >
+              Technical Drawings
+            </a>
+          </div>
+
+          <a
+            class:active={url === 'price'}
+            href='/price'
+            onclick={closeMobileMenu}
+          >
+            Process &amp; Pricing
+          </a>
+          <a
+            class:active={url === 'contact'}
+            href='/contact'
+            onclick={closeMobileMenu}
+          >
+            Contact
+          </a>
+
+          <a class='btn booking mobile-cta' href='/contact' onclick={closeMobileMenu}>
+            Book a project
+          </a>
+        </nav>
+      </div>
+
+      <!-- Backdrop Overlay -->
+      <div
+        class='backdrop'
+        onclick={closeMobileMenu}
+        onkeydown={(e) => e.key === 'Enter' && closeMobileMenu()}
+        role='button'
+        tabindex='-1'
+        aria-label='Close menu'
+      ></div>
+    {/if}
 
     {@render children?.()}
 
@@ -96,6 +192,171 @@
 
     &:not(.active):hover {
       color: var(--aya-navy-500);
+    }
+  }
+
+  /* Hamburger Button Styles */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+
+    span {
+      width: 30px;
+      height: 3px;
+      background: var(--aya-white);
+      border-radius: 2px;
+      transition: all 0.3s ease-in-out;
+      transform-origin: center;
+    }
+
+    span.open:nth-child(1) {
+      transform: translateY(7.5px) rotate(45deg);
+    }
+
+    span.open:nth-child(2) {
+      opacity: 0;
+    }
+
+    span.open:nth-child(3) {
+      transform: translateY(-8.5px) rotate(-45deg);
+    }
+  }
+
+  /* Mobile Menu Panel */
+  .mobile-menu-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(280px, 80vw);
+    height: 100vh;
+    background: var(--aya-navy-900);
+    z-index: 1000;
+    padding: 6rem 2rem 2rem;
+    animation: slideIn 0.3s ease-in-out;
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    a {
+      text-decoration: none;
+      color: var(--aya-white);
+      font-weight: 500;
+      padding: 0.75rem 0;
+      transition: color 300ms;
+      font-size: 1.1rem;
+
+      &.active {
+        color: var(--aya-navy-500);
+      }
+
+      &:hover {
+        color: var(--aya-navy-500);
+      }
+    }
+  }
+
+  .nav-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .parent-item {
+    color: var(--aya-white);
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.75rem 0;
+  }
+
+  .sub-item {
+    padding-left: 1.5rem !important;
+    font-size: 0.95rem !important;
+    opacity: 0.9;
+    border-left: 2px solid rgba(255, 255, 255, 0.3);
+    margin-left: 0.5rem;
+
+    &:hover {
+      opacity: 1;
+      border-left-color: var(--aya-navy-500);
+    }
+  }
+
+  .mobile-cta {
+    margin-top: 1rem;
+    text-align: center;
+    display: block;
+  }
+
+  /* Backdrop Overlay */
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    animation: fadeIn 0.3s ease-in-out;
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+
+  /* Mobile Styles (<800px) */
+  @media (max-width: 799px) {
+    .desktop-nav {
+      display: none;
+    }
+
+    .desktop-cta {
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+  }
+
+  /* Desktop Styles (≥800px) */
+  @media (min-width: 800px) {
+    .hamburger {
+      display: none;
+    }
+
+    .mobile-menu-panel {
+      display: none;
+    }
+
+    .backdrop {
+      display: none;
     }
   }
 

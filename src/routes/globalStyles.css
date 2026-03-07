@@ -29,6 +29,13 @@ a, button {
   cursor: revert;
 }
 
+button:focus,
+a:focus {
+  outline: 1px solid var(--aya-white);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
 /* Remove list styles (bullets/numbers) */
 ol, ul, menu {
   list-style: none;
