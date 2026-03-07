@@ -11,7 +11,7 @@
 </script>
 
 <div class="visuals-layout">
-	<nav class="submenu">
+	<nav class="submenu" aria-label="Interior Visuals submenu">
 		<a
 			href="/visuals/3d-interior-visuals"
 			class:active={currentPath.includes('3d-interior-visuals')}
@@ -68,5 +68,12 @@
 	.submenu a.active {
 		border-bottom-color: #000;
 		font-weight: bold;
+	}
+
+	/* Hide submenu on mobile - navigation handled by hamburger menu */
+	@media (max-width: 799px) {
+		.submenu {
+			display: none;
+		}
 	}
 </style>

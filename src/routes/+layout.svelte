@@ -10,9 +10,16 @@
 
   let url = $derived(page.url.pathname.split('/')[1]);
   let mobileMenuOpen = $state(false);
+  let mobileMenuPanel: HTMLDivElement | undefined = $state();
 
   function toggleMobileMenu() {
     mobileMenuOpen = !mobileMenuOpen;
+    // Focus the mobile menu panel when opened for keyboard navigation
+    if (mobileMenuOpen) {
+      setTimeout(() => {
+        mobileMenuPanel?.focus();
+      }, 50);
+    }
   }
 
   function closeMobileMenu() {
@@ -35,7 +42,7 @@
         <img src='/icons/logo.svg' alt='Ayarender Logo' />
         <span>AYARENDER</span>
       </a>
-      <nav class='desktop-nav'>
+      <nav class='desktop-nav' aria-label='Main navigation'>
         <a class:active={url === 'visuals'} href='/visuals/3d-interior-visuals'>Interior Visuals</a>
         <a class:active={url === 'price'} href='/price'>Process &amp; Pricing</a>
         <a class:active={url === 'contact'} href='/contact'>Contact</a>
@@ -57,12 +64,28 @@
 
     <!-- Mobile Menu Panel -->
     {#if mobileMenuOpen}
-      <div class='mobile-menu-panel'>
-        <nav class='mobile-nav'>
-          <div class='nav-section'>
-            <span class='parent-item'>Interior Visuals</span>
+      <div
+        bind:this={mobileMenuPanel}
+        class='mobile-menu-panel'
+        role='dialog'
+        aria-modal='true'
+        aria-label='Mobile navigation menu'
+        tabindex='-1'
+      >
+        <nav class='mobile-nav' aria-label='Main navigation'>
+          <a
+            class:active={url === ''}
+            href='/'
+            onclick={closeMobileMenu}
+          >
+            Home
+          </a>
+
+          <div class='nav-section' role='group' aria-label='Interior Visuals submenu'>
+            <p class='parent-item'>Interior Visuals</p>
             <a
               class='sub-item'
+              class:active={page.url.pathname.includes('3d-interior-visuals')}
               href='/visuals/3d-interior-visuals'
               onclick={closeMobileMenu}
             >
@@ -70,6 +93,7 @@
             </a>
             <a
               class='sub-item'
+              class:active={page.url.pathname.includes('rendered-floor-plans')}
               href='/visuals/rendered-floor-plans'
               onclick={closeMobileMenu}
             >
@@ -77,6 +101,7 @@
             </a>
             <a
               class='sub-item'
+              class:active={page.url.pathname.includes('rendered-elevations')}
               href='/visuals/rendered-elevations'
               onclick={closeMobileMenu}
             >
@@ -84,6 +109,7 @@
             </a>
             <a
               class='sub-item'
+              class:active={page.url.pathname.includes('technical-drawings')}
               href='/visuals/technical-drawings'
               onclick={closeMobileMenu}
             >
@@ -186,7 +212,7 @@
     padding: 0.5rem;
     transition: color 300ms;
 
-    &.active {
+    &.active:not(.mobile-nav a) {
       border-bottom: 2px solid var(--aya-white);
     }
 
@@ -242,6 +268,11 @@
     padding: 6rem 2rem 2rem;
     animation: slideIn 0.3s ease-in-out;
 
+    /* Remove focus outline since this is programmatically focused for accessibility */
+    &:focus {
+      outline: none;
+    }
+
     @keyframes slideIn {
       from {
         transform: translateX(100%);
@@ -288,6 +319,7 @@
     font-weight: 600;
     font-size: 1.1rem;
     padding: 0.75rem 0;
+    margin: 0; /* Reset paragraph margin */
   }
 
   .sub-item {
@@ -296,6 +328,13 @@
     opacity: 0.9;
     border-left: 2px solid rgba(255, 255, 255, 0.3);
     margin-left: 0.5rem;
+
+    &.active {
+      opacity: 1;
+      color: var(--aya-navy-500);
+      border-left-color: var(--aya-white);
+      font-weight: 600;
+    }
 
     &:hover {
       opacity: 1;
