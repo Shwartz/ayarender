@@ -17,14 +17,14 @@
     <header class='main'>
       <a class='logo' href='/'>
         <img src='/icons/logo.svg' alt='Ayarender Logo' />
-        <span>Aija Svarcs</span>
+        <span>AYARENDER</span>
       </a>
       <nav>
-        <a class:active={url === '' || url === 'portfolio'} href='/'>Home</a>
         <a class:active={url === 'visuals'} href='/visuals/3d-interior-visuals'>Interior Visuals</a>
-        <a class:active={url === 'price'} href='/'>Process &amp; Pricing</a>
+        <a class:active={url === 'price'} href='/price'>Process &amp; Pricing</a>
         <a class:active={url === 'contact'} href='/contact'>Contact</a>
       </nav>
+      <a class='btn booking' href='/contact'>Book a project</a>
     </header>
 
     {@render children?.()}
@@ -43,20 +43,12 @@
 </div>
 
 <style lang='scss'>
-  header.main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    width: 100%;
-  }
-
   .wrap {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 
-    background: #fff;
+    background: var(--aya-white);
     margin: 0 1rem;
     margin-inline: auto;
     max-width: 1280px;
@@ -64,14 +56,21 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
-  footer {
-    margin-top: auto;
+  header.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem  2rem;
+    background: var(--aya-navy-900);
+
+    width: 100%;
   }
 
   .logo {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.2rem;
+    color: var(--aya-white);
   }
 
   .logo img {
@@ -86,27 +85,23 @@
 
   nav a {
     text-decoration: none;
-    color: var(--cNight);
+    color: var(--aya-white);
     font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background-color 300ms;
-
-    border: 1px solid red;
+    padding: 0.5rem;
+    transition: color 300ms;
 
     &.active {
-      background-color: var(--cNight);
-      color: var(--cWhite);
+      border-bottom: 2px solid var(--aya-white);
     }
 
     &:not(.active):hover {
-      background-color: var(--cNight);
-      color: var(--cWhite);
+      color: var(--aya-navy-500);
     }
   }
 
   footer {
     min-height: 2rem;
+    margin-top: auto;
 
     div {
       display: flex;
