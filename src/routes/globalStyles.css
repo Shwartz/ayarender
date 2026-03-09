@@ -214,8 +214,14 @@ section > div,
 }
 
 
-section.dark {
+section.hero {
+  background: var(--aya-navy-900);
+  color: var(--aya-white);
+  border-top: 1px solid var(--aya-navy-700);
+}
 
+section.grey {
+  background: var(--aya-sand-50);
 }
 
 /**
