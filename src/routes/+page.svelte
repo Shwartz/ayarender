@@ -40,7 +40,18 @@
       <li>
         <a href='/visuals/3d-interior-visuals' class='service-card' aria-label='View 3D interior visuals examples'>
           <div class='card-image'>
-            <img src='/images/3d-render.jpg' alt='3D interior visual example' />
+            <img
+              src='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/6e7acef0-ee5e-4fdf-4b3c-f6270c649900/768w'
+              srcset='
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/6e7acef0-ee5e-4fdf-4b3c-f6270c649900/320w 320w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/6e7acef0-ee5e-4fdf-4b3c-f6270c649900/640w 640w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/6e7acef0-ee5e-4fdf-4b3c-f6270c649900/768w 768w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/6e7acef0-ee5e-4fdf-4b3c-f6270c649900/1024w 1024w
+              '
+              sizes='(max-width: 799px) 100vw, (max-width: 1199px) 50vw, 600px'
+              alt='3D interior visual example'
+              loading='lazy'
+            />
           </div>
           <h3>3D interior visuals</h3>
           <p>Photorealistic 3D visuals that help you sell concepts, avoid misunderstandings and reduce costly revisions.</p>
@@ -51,7 +62,18 @@
       <li>
         <a href='/visuals/rendered-floor-plans' class='service-card' aria-label='View rendered floor plans examples'>
           <div class='card-image'>
-            <img src='/images/rendered-floor-plan.jpg' alt='Rendered floor plan example' />
+            <img
+              src='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/768w'
+              srcset='
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/320w 320w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/640w 640w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/768w 768w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/1024w 1024w
+              '
+              sizes='(max-width: 799px) 100vw, (max-width: 1199px) 50vw, 600px'
+              alt='Rendered floor plan example'
+              loading='lazy'
+            />
           </div>
           <h3>Rendered Floor Plans</h3>
           <p>Colour-rendered floor plans that make layouts and zoning instantly clear for your clients.</p>
@@ -62,7 +84,18 @@
       <li>
         <a href='/visuals/technical-drawings' class='service-card' aria-label='View technical drawings examples'>
           <div class='card-image'>
-            <img src='/images/technical-drawing.jpg' alt='Technical drawing example' />
+            <img
+              src='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/1e747d20-c932-4c22-07ec-b05970cd8500/768w'
+              srcset='
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/1e747d20-c932-4c22-07ec-b05970cd8500/320w 320w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/1e747d20-c932-4c22-07ec-b05970cd8500/640w 640w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/1e747d20-c932-4c22-07ec-b05970cd8500/768w 768w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/1e747d20-c932-4c22-07ec-b05970cd8500/1024w 1024w
+              '
+              sizes='(max-width: 799px) 100vw, (max-width: 1199px) 50vw, 600px'
+              alt='Technical drawing example'
+              loading='lazy'
+            />
           </div>
           <h3>Technical drawings & layouts</h3>
           <p>Plans, lighting and electrical layouts, and joinery drawings, branded for your studio if needed.</p>
@@ -73,7 +106,18 @@
       <li>
         <a href='/visuals/rendered-elevations' class='service-card' aria-label='View rendered elevations examples'>
           <div class='card-image'>
-            <img src='/images/rendered-2d-elevation.jpg' alt='Rendered elevation example' />
+            <img
+              src='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/768w'
+              srcset='
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/320w 320w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/640w 640w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/768w 768w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/1024w 1024w
+              '
+              sizes='(max-width: 799px) 100vw, (max-width: 1199px) 50vw, 600px'
+              alt='Rendered elevation example'
+              loading='lazy'
+            />
           </div>
           <h3>Rendered Elevations</h3>
           <p>Interior elevations that highlight finishes, joinery and key design details in a client-friendly way.</p>
