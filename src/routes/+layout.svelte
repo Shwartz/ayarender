@@ -175,7 +175,7 @@
     margin-inline: auto;
     max-width: 1280px;
     width: 100%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
 
   header.main {
