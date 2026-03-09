@@ -158,9 +158,13 @@
           <h2>Have a project coming up?</h2>
           <p>Share your brief, moodboard or plans, and I’ll let you know what’s possible and how soon you can have
             client‑ready visuals.</p>
-          <p>
-            <a href='/contact'>Discuss your project</a>
-            <a href='/price'>Learn more about the process &amp; pricing</a>
+          <p class='links'>
+            <span>
+              <a class='btn' href='/contact'>Discuss your project</a>
+            </span>
+            <span>
+              <a href='/price'>Learn more about the process &amp; pricing</a>
+            </span>
           </p>
         </div>
 
@@ -170,7 +174,7 @@
             <img alt='Instagram' src='/icons/instagram.svg' height='24' width='24' /></a
           >
           </p>
-          <p class='shvarcs'>Created by <a class='animate' href='https://shvarcs.com/'>Shvarcs</a></p>
+          <p class='shvarcs'>Created by <a href='https://shvarcs.com/'>Shvarcs</a></p>
         </div>
 
       </div>
@@ -423,7 +427,7 @@
       display: flex;
       justify-content: space-around;
       flex-direction: column;
-      padding: 6rem 2rem;
+      padding: 6rem 2rem 3rem;
       max-width: 600px;
       margin: auto;
     }
@@ -437,6 +441,27 @@
       gap: 0.5rem;
       max-width: 800px;
       margin-inline: auto;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      a:not(.btn) {
+        text-decoration: underline;
+        transition: color 0.2s;
+
+        &:hover {
+          color: var(--aya-navy-500);
+        }
+      }
+
+      @media (min-width: 600px) {
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+      }
     }
 
     .left {
@@ -464,6 +489,11 @@
 
     .shvarcs {
       font-size: 0.8rem;
+      color: var(--aya-navy-500);
+
+      a {
+        text-decoration: underline;
+      }
     }
   }
 </style>

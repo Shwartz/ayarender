@@ -30,7 +30,7 @@ a, button {
 }
 
 button:focus,
-a:focus {
+a:focus-visible {
   outline: 1px solid var(--aya-white);
   outline-offset: 4px;
   border-radius: 4px;

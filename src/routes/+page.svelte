@@ -366,7 +366,7 @@
 
       // Larger screens: increase gap
       @media (min-width: 1200px) {
-        gap: 3rem;
+        gap: 2.5rem;
       }
     }
   }
