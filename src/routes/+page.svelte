@@ -37,40 +37,48 @@
     <p>Interior visuals tailored to how you present designs to your clients.</p>
 
     <ul class='services-grid'>
-      <li class='service-card'>
-        <div class='card-image'>
-          <img src='/images/3d-render.jpg' alt='3D interior visual example' />
-        </div>
-        <h3>3D interior visuals</h3>
-        <p>Photorealistic 3D visuals that help you sell concepts, avoid misunderstandings and reduce costly revisions.</p>
-        <span class='link'>See Examples</span>
+      <li>
+        <a href='/visuals/3d-interior-visuals' class='service-card' aria-label='View 3D interior visuals examples'>
+          <div class='card-image'>
+            <img src='/images/3d-render.jpg' alt='3D interior visual example' />
+          </div>
+          <h3>3D interior visuals</h3>
+          <p>Photorealistic 3D visuals that help you sell concepts, avoid misunderstandings and reduce costly revisions.</p>
+          <span class='link'>See Examples</span>
+        </a>
       </li>
 
-      <li class='service-card'>
-        <div class='card-image'>
-          <img src='/images/rendered-floor-plan.jpg' alt='Rendered floor plan example' />
-        </div>
-        <h3>Rendered Floor Plans</h3>
-        <p>Colour-rendered floor plans that make layouts and zoning instantly clear for your clients.</p>
-        <span class='link'>See Examples</span>
+      <li>
+        <a href='/visuals/rendered-floor-plans' class='service-card' aria-label='View rendered floor plans examples'>
+          <div class='card-image'>
+            <img src='/images/rendered-floor-plan.jpg' alt='Rendered floor plan example' />
+          </div>
+          <h3>Rendered Floor Plans</h3>
+          <p>Colour-rendered floor plans that make layouts and zoning instantly clear for your clients.</p>
+          <span class='link'>See Examples</span>
+        </a>
       </li>
 
-      <li class='service-card'>
-        <div class='card-image'>
-          <img src='/images/technical-drawing.jpg' alt='Technical drawing example' />
-        </div>
-        <h3>Technical drawings & layouts</h3>
-        <p>Plans, lighting and electrical layouts, and joinery drawings, branded for your studio if needed.</p>
-        <span class='link'>See Examples</span>
+      <li>
+        <a href='/visuals/technical-drawings' class='service-card' aria-label='View technical drawings examples'>
+          <div class='card-image'>
+            <img src='/images/technical-drawing.jpg' alt='Technical drawing example' />
+          </div>
+          <h3>Technical drawings & layouts</h3>
+          <p>Plans, lighting and electrical layouts, and joinery drawings, branded for your studio if needed.</p>
+          <span class='link'>See Examples</span>
+        </a>
       </li>
 
-      <li class='service-card'>
-        <div class='card-image'>
-          <img src='/images/rendered-2d-elevation.jpg' alt='Rendered elevation example' />
-        </div>
-        <h3>Rendered Elevations</h3>
-        <p>Interior elevations that highlight finishes, joinery and key design details in a client-friendly way.</p>
-        <span class='link'>See Examples</span>
+      <li>
+        <a href='/visuals/rendered-elevations' class='service-card' aria-label='View rendered elevations examples'>
+          <div class='card-image'>
+            <img src='/images/rendered-2d-elevation.jpg' alt='Rendered elevation example' />
+          </div>
+          <h3>Rendered Elevations</h3>
+          <p>Interior elevations that highlight finishes, joinery and key design details in a client-friendly way.</p>
+          <span class='link'>See Examples</span>
+        </a>
       </li>
     </ul>
   </div>
@@ -156,17 +164,30 @@
       grid-template-columns: 1fr;
       gap: 2rem;
 
-      .service-card {
+      li {
+        list-style: none;
         padding: 0;
-        background: white;
+      }
+
+      .service-card {
+        display: block;
+        height: 100%;
+        background: var(--aya-white);
         border-radius: 0.5rem;
         overflow: hidden;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         transition: transform 0.2s ease, box-shadow 0.2s ease;
+        text-decoration: none;
+        color: inherit;
 
         &:hover {
           transform: translateY(-4px);
           box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        &:focus {
+          outline: 2px solid var(--aya-navy-500);
+          outline-offset: 2px;
         }
 
         .card-image {
