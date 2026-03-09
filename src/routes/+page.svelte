@@ -24,8 +24,16 @@
     </div>
     <div class='visual'>
       <img
-        src="/images/3d-visualisation-from-above.jpg"
-        alt="Example of 2D elevation"
+        src='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/3b2ca792-4a3b-43ed-53b8-0b7b2022b500/1024w'
+        srcset='
+          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/3b2ca792-4a3b-43ed-53b8-0b7b2022b500/640w 640w,
+          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/3b2ca792-4a3b-43ed-53b8-0b7b2022b500/1024w 1024w,
+          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/3b2ca792-4a3b-43ed-53b8-0b7b2022b500/1280w 1280w,
+          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/3b2ca792-4a3b-43ed-53b8-0b7b2022b500/1920w 1920w
+        '
+        sizes='(max-width: 799px) 100vw, 50vw'
+        alt='Example of 3D elevation'
+        loading='eager'
       />
     </div>
   </div>
@@ -54,7 +62,8 @@
             />
           </div>
           <h3>3D interior visuals</h3>
-          <p>Photorealistic 3D visuals that help you sell concepts, avoid misunderstandings and reduce costly revisions.</p>
+          <p>Photorealistic 3D visuals that help you sell concepts, avoid misunderstandings and reduce costly
+            revisions.</p>
           <span class='link'>See Examples</span>
         </a>
       </li>
@@ -125,6 +134,19 @@
         </a>
       </li>
     </ul>
+
+    <div class='service-description'>
+      <p>
+        Interior visuals turn your drawings and ideas into client‑ready images that are easy to understand and easy to
+        present.</p>
+
+      <p>From colour floor plans and elevations to full 3D visuals, I help you show space, finishes and details clearly
+        so you can avoid misunderstandings and move projects forward faster.
+        These services are tailored for interior designers, studios and architects who need clear, professional visuals
+        without hiring in‑house support.
+      </p>
+    </div>
+
   </div>
 </section>
 
@@ -219,7 +241,7 @@
         background: var(--aya-white);
         border-radius: 0.5rem;
         overflow: hidden;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        /*box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);*/
         transition: transform 0.2s ease, box-shadow 0.2s ease;
         text-decoration: none;
         color: inherit;
@@ -227,6 +249,10 @@
         &:hover {
           transform: translateY(-4px);
           box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+
+          .link:after {
+            transform: scaleX(0.8);
+          }
         }
 
         &:focus {
@@ -256,15 +282,14 @@
           font-size: 1rem;
           line-height: 1.6;
           margin: 0 1.5rem 1.5rem;
-          color: #666;
+          color: var(--aya-navy-900);
         }
 
         .link {
           display: inline-block;
           margin: 0 1.5rem 1.5rem;
-          color: #333;
+          color: var(--aya-navy-900);
           text-decoration: none;
-          font-weight: 600;
           position: relative;
           cursor: pointer;
 
@@ -278,10 +303,6 @@
             background: currentColor;
             transform: scaleX(1);
             transition: transform 0.2s ease;
-          }
-
-          &:hover:after {
-            transform: scaleX(0.8);
           }
         }
       }
@@ -305,6 +326,12 @@
         gap: 3rem;
       }
     }
+  }
+
+  .service-description {
+    margin-top: 3rem;
+    max-width: 600px;
+    margin-inline: auto;
   }
 
 </style>

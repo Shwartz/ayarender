@@ -285,3 +285,10 @@ h1 {
   font-weight: 300;
   line-height: 1.2;
 }
+
+p {
+  /*font-size: clamp(1rem, 0.875rem + 0.5vw, 1.125rem);*/
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
