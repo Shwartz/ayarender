@@ -146,7 +146,50 @@
         without hiring in‑house support.
       </p>
     </div>
+  </div>
+</section>
 
+<section class='white'>
+  <div>
+    <h1>Our Process</h1>
+
+    <ul class='process-grid'>
+      <li>
+        <div class='process-step'>
+          <span class='step-number'>Step 1</span>
+          <h3>Free initial consultation</h3>
+          <p>Let's discuss your project, clarify the scope and agree on a clear quote.</p>
+        </div>
+      </li>
+
+      <li>
+        <div class='process-step'>
+          <span class='step-number'>Step 2</span>
+          <h3>Booking the project</h3>
+          <p>Once you're ready, we book the project, confirm the timeline and any deposit.</p>
+        </div>
+      </li>
+
+      <li>
+        <div class='process-step'>
+          <span class='step-number'>Step 3</span>
+          <h3>Design and revision</h3>
+          <p>I create the first visuals and send them for your feedback.</p>
+        </div>
+      </li>
+
+      <li>
+        <div class='process-step'>
+          <span class='step-number'>Step 4</span>
+          <h3>Final design</h3>
+          <p>I refine the visuals if needed and deliver the final images plus invoice.</p>
+        </div>
+      </li>
+    </ul>
+    <div class='process-description'>
+      <p>
+        From first conversation to final visuals, most projects take 2 - 4 days depending on scope</p>
+    </div>
   </div>
 </section>
 
@@ -328,10 +371,86 @@
     }
   }
 
-  .service-description {
+  .service-description,
+  .process-description{
     margin-top: 3rem;
     max-width: 600px;
     margin-inline: auto;
+  }
+
+  .white {
+    .process-grid {
+      list-style: none;
+      padding: 0;
+      margin: 3rem 0 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+
+      li {
+        position: relative;
+        list-style: none;
+        padding: 0;
+      }
+
+      .process-step {
+        background: var(--aya-sand-50);
+        border-radius: 0.5rem;
+        padding: 3rem 1rem 2rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-number {
+          position: absolute;
+          left: -4px;
+          top: -4px;
+          display: inline-block;
+          background: var(--aya-navy-700);
+          color: var(--aya-white);
+          padding: 0.5rem 1rem;
+          border-radius: 0.25rem;
+          font-size: 0.875rem;
+          font-weight: 300;
+          margin-bottom: 1.5rem;
+          width: fit-content;
+        }
+
+        h3 {
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+          color: var(--aya-navy-900);
+        }
+
+        p {
+          font-size: 1rem;
+          line-height: 1.6;
+          margin: 0;
+          color: var(--aya-navy-700);
+        }
+      }
+
+      // Tablet: 2-column grid
+      @media (min-width: 500px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      // Desktop: 4-column grid
+      @media (min-width: 800px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      // Larger screens: adjust gap
+      @media (min-width: 1200px) {
+        gap: 2.5rem;
+      }
+    }
   }
 
 </style>

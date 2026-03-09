@@ -151,14 +151,28 @@
 
     {@render children?.()}
 
-    <footer class='large section'>
+    <footer class='blue'>
       <div>
-        <p class='left'>
-          &copy; 2025 Ayarender | Follow on <a href='https://instagram.com/aya.render'>
-          <img alt='Instagram' src='/icons/instagram.svg' height='24' width='24' /></a
-        >
-        </p>
-        <p class='shvarcs'>Created by <a class='animate' href='https://shvarcs.com/'>Shvarcs</a></p>
+
+        <div class='container'>
+          <h2>Have a project coming up?</h2>
+          <p>Share your brief, moodboard or plans, and I’ll let you know what’s possible and how soon you can have
+            client‑ready visuals.</p>
+          <p>
+            <a href='/contact'>Discuss your project</a>
+            <a href='/price'>Learn more about the process &amp; pricing</a>
+          </p>
+        </div>
+
+        <div class='footer-bottom'>
+          <p class='left'>
+            &copy; 2026 Ayarender | Follow on <a href='https://instagram.com/aya.render'>
+            <img alt='Instagram' src='/icons/instagram.svg' height='24' width='24' /></a
+          >
+          </p>
+          <p class='shvarcs'>Created by <a class='animate' href='https://shvarcs.com/'>Shvarcs</a></p>
+        </div>
+
       </div>
     </footer>
   </div>
@@ -182,7 +196,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem  2rem;
+    padding: 1rem 2rem;
     background: var(--aya-navy-900);
 
     width: 100%;
@@ -402,21 +416,27 @@
   footer {
     min-height: 2rem;
     margin-top: auto;
+    color: var(--aya-white);
+    background: var(--aya-navy-900);
 
-    div {
+    .container {
       display: flex;
       justify-content: space-around;
       flex-direction: column;
-      align-items: center;
-      padding: 1rem;
-      max-width: 800px;
+      padding: 6rem 2rem;
+      max-width: 600px;
       margin: auto;
     }
 
-    p {
-      font-size: 1rem;
-      margin: 0;
-      line-height: 1.5rem;
+    .footer-bottom {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      gap: 0.5rem;
+      max-width: 800px;
+      margin-inline: auto;
     }
 
     .left {
@@ -436,10 +456,9 @@
       }
     }
 
-    @media (min-width: 800px) {
-      div {
+    @media (min-width: 600px) {
+      .footer-bottom {
         flex-direction: row;
-        justify-content: space-between;
       }
     }
 
