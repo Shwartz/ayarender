@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { superForm } from 'sveltekit-superforms/client';
-	// import SuperDebug from 'sveltekit-superforms/client/SuperDebug.svelte';
+	//import SuperDebug from 'sveltekit-superforms/client/SuperDebug.svelte';
 	import { BarLoader } from 'svelte-loading-spinners';
 	import type { PageData } from './$types';
 
@@ -44,55 +44,117 @@
 <section class="large vLine">
 	<div class="content">
 		<div class="contactForm">
-			<!-- <SuperDebug data={$form} /> -->
-			<form method="POST" action="?/contactForm" use:enhance>
-				<label class="smallText" for="communication">Your Message</label>
-				<textarea
-					placeholder="Please email me with details of your project and I will get in touch with you in one working day."
-					id="communication"
-					name="communication"
-					bind:value={$form.communication}
-				></textarea>
-				{#if $errors.communication}
-					<small class="warning">{$errors.communication}</small>
-				{/if}
+      <div class="form-intro">
+        <p class="intro-text">Share your project details and I'll get back to you with next steps and a clear quote.</p>
+        <p class="intro-subtext">I usually reply within 1 business day.</p>
+      </div>
 
-				<label class="smallText" for="email">Email</label>
-				<input
-					required
-					type="email"
-					id="email"
-					name="email"
-					placeholder="Enter your email"
-					bind:value={$form.email}
-				/>
-				{#if $errors.email}
-					<small class="warning">{$errors.email}</small>
-				{/if}
+			<form method="POST" action="?/contactForm" use:enhance>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="firstName">Name</label>
+            <input
+              required
+              type="text"
+              id="firstName"
+              name="firstName"
+              placeholder="Name"
+              bind:value={$form.firstName}
+            />
+            {#if $errors.firstName}
+              <small class="error">{$errors.firstName}</small>
+            {/if}
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input
+              required
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              bind:value={$form.email}
+            />
+            {#if $errors.email}
+              <small class="error">{$errors.email}</small>
+            {/if}
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="company">Studio/Company</label>
+            <input
+              type="text"
+              id="company"
+              name="company"
+              placeholder="Studio/Company"
+              bind:value={$form.company}
+            />
+            {#if $errors.company}
+              <small class="error">{$errors.company}</small>
+            {/if}
+          </div>
+
+          <div class="form-field">
+            <label for="projectType">Project Type</label>
+            <select
+              required
+              id="projectType"
+              name="projectType"
+              bind:value={$form.projectType}
+            >
+              <option value="">Select project type</option>
+              <option value="general">General enquiry</option>
+              <option value="3d-visuals">3D visuals</option>
+              <option value="layouts-drawings">Layouts and Technical drawings</option>
+              <option value="floor-plans">Rendered Floor plans</option>
+              <option value="elevations">Rendered Elevations</option>
+            </select>
+            {#if $errors.projectType}
+              <small class="error">{$errors.projectType}</small>
+            {/if}
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="communication">Please send me details of your project and I will get in touch with you in one working day.</label>
+          <textarea
+            placeholder="Message details..."
+            id="communication"
+            name="communication"
+            rows="6"
+            bind:value={$form.communication}
+          ></textarea>
+          {#if $errors.communication}
+            <small class="error">{$errors.communication}</small>
+          {/if}
+        </div>
 
 				<!-- honeypot -->
-				<label class="name" for="name">Name (optional)</label>
+				<label class="honeypot" for="name">Name (optional)</label>
 				<input
 					type="text"
 					id="name"
 					name="name"
-					class="name"
+					class="honeypot"
 					placeholder="Enter your name"
           tabindex="-1"
 					bind:value={$form.name}
 				/>
 
-				<div class="send light">
+				<div class="form-actions">
 					{#if $delayed}
-						<BarLoader color="#ffaa4d" />
+						<BarLoader color="#af696e" />
 					{/if}
-					<button class="btn-forward" type="submit">Send</button>
+					<button class="btn-submit" type="submit">Send</button>
 				</div>
 			</form>
 
 			{#if $message}
 				<div
-					class="mt-1"
+					class="message-box"
 					class:success={$message.status === 'success'}
 					class:error={$message.status === 'error'}
 				>
@@ -101,20 +163,38 @@
 			{/if}
 		</div>
 		<div class="right">
-			<p class="mediumTitle">Hi, my name is Aija <br /><i>(pronounce as I-ya)</i></p>
-			<p>
-				Welcome, dear visitor, to a crossroads of creativity and expertise! As you've journeyed to
-				this page, there are just two possibilities. First, you might be an interior design
-				connoisseur on a quest for inspiration, in which case, your destination is our illustrious
-				Portfolio.
-			</p>
-			<p>
-				Alternatively, you could be seeking the guiding light for your design documentation and
-				visualization needs. Whatever the case, your design aspirations find their home here!
-			</p>
-      <p style="font-size: 8px; color: #f2f2f2">Migration successful</p>
+      <div class='visual'>
+        <img
+          src='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/9525d600-f655-486b-97c6-9f3ce5d86700/1024w'
+          srcset='
+          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/9525d600-f655-486b-97c6-9f3ce5d86700/640w 640w,
+          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/9525d600-f655-486b-97c6-9f3ce5d86700/1024w 1024w,
+          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/9525d600-f655-486b-97c6-9f3ce5d86700/1280w 1280w,
+          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/9525d600-f655-486b-97c6-9f3ce5d86700/1920w 1920w
+        '
+          sizes='(max-width: 799px) 100vw, 50vw'
+          alt='Example of 3D elevation'
+          loading='eager'
+        />
+      </div>
 		</div>
 	</div>
+</section>
+
+<section>
+  <div>
+    <p class="mediumTitle">Hi, my name is Aija <br /><i>(pronounce as I-ya)</i></p>
+    <p>
+      Welcome, dear visitor, to a crossroads of creativity and expertise! As you've journeyed to
+      this page, there are just two possibilities. First, you might be an interior design
+      connoisseur on a quest for inspiration, in which case, your destination is our illustrious
+      Portfolio.
+    </p>
+    <p>
+      Alternatively, you could be seeking the guiding light for your design documentation and
+      visualization needs. Whatever the case, your design aspirations find their home here!
+    </p>
+  </div>
 </section>
 
 <style lang="scss">
@@ -144,62 +224,189 @@
     }
   }
 
-	.send {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-top: 1rem;
-	}
+  .visual {
+    order: -1;
+    width: 100%;
+    overflow: hidden;
+    padding: 2rem;
+    max-height: 500px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 0.5rem;
+    }
+  }
+
+  .right {
+    margin-top: 3rem;
+  }
+
+  // Desktop: two-column layout at 800px
+  @media (min-width: 800px) {
+    .visual {
+      order: 0;
+      padding: 0;
+      flex: 1;
+      display: flex;
+      align-items: stretch;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0.5rem;
+      }
+    }
+
+    .contactForm {
+      padding-right: 0;
+    }
+  }
+
+  // Form styling
+  .form-intro {
+    margin-bottom: 2rem;
+
+    .intro-text {
+      font-size: 1.1rem;
+      color: var(--aya-navy-900);
+      margin-bottom: 0.5rem;
+      line-height: 1.5;
+    }
+
+    .intro-subtext {
+      font-size: 0.95rem;
+      color: var(--aya-navy-700);
+      font-weight: 300;
+    }
+  }
 
 	form {
 		display: flex;
 		flex-direction: column;
-		padding: 2rem 1rem;
-		backdrop-filter: blur(3px);
-		border: 1px solid var(--cSand5);
-		border-radius: 8px;
-		background: rgba(255, 255, 255, 0.4);
+		gap: 1.5rem;
 	}
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  label {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--aya-navy-900);
+  }
 
 	input,
+  select,
 	textarea {
-		border: 1px solid var(--cBlack10);
-		border-radius: 4px;
-		padding: 4px;
-		margin-top: 4px;
-		background: var(--cWhite);
+		border: 1px solid var(--aya-navy-500);
+		border-radius: 0.25rem;
+		padding: 0.75rem;
+		font-size: 1rem;
+		background: var(--aya-white);
+    color: var(--aya-navy-900);
+    font-family: var(--font-body);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:focus {
+      outline: none;
+      border-color: var(--aya-navy-900);
+      box-shadow: 0 0 0 3px rgba(13, 27, 42, 0.1);
+    }
+
+    &::placeholder {
+      color: var(--aya-navy-500);
+      font-size: 1rem;
+      opacity: 0.7;
+    }
 	}
+
+  select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23415A77' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    padding-right: 2.5rem;
+  }
 
 	textarea {
-		height: 12rem;
+		resize: vertical;
+    min-height: 120px;
 	}
 
-	button {
-		cursor: pointer;
-		margin-right: auto;
+  .form-actions {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 1rem;
 	}
 
-	.mt-1 {
-		margin-top: 1rem;
+	button.btn-submit {
+    padding: 0.875rem 2.5rem;
+    background: var(--aya-rose-700);
+    color: var(--aya-white);
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+      background: var(--aya-rose-500);
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+
+    &:focus {
+      outline: 2px solid var(--aya-navy-900);
+      outline-offset: 2px;
+    }
 	}
 
-	.right {
-		margin-top: 3rem;
-	}
+  .message-box {
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    border-radius: 0.25rem;
+    font-size: 0.95rem;
+    font-weight: 400;
+  }
 
 	.error {
-		color: var(--cBrick10);
+		color: #c1292e;
+    font-size: 0.875rem;
+    font-weight: 400;
 	}
 
 	.success {
-		color: var(--cGreen10);
+		background: #d4edda;
+    border: 1px solid #c3e6cb;
+		color: #155724;
 	}
 
-	.warning {
-		color: var(--cOrange10);
+  .message-box.error {
+		background: #f8d7da;
+    border: 1px solid #f5c6cb;
+		color: #721c24;
 	}
 
-	.name {
+	.honeypot {
 		opacity: 0;
 		position: absolute;
 		top: 0;
@@ -209,10 +416,16 @@
 		z-index: -1;
 	}
 
+  @media (min-width: 600px) {
+    .form-row {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
 	@media (min-width: 800px) {
 		.content {
 			display: flex;
-			align-items: center;
+			align-items: stretch;
 			gap: 3rem;
 
 			> div {
@@ -222,10 +435,8 @@
 
 		.right {
 			margin-top: 0;
-		}
-
-		form {
-			padding: 2rem 3rem;
+			display: flex;
+			flex-direction: column;
 		}
 	}
 </style>

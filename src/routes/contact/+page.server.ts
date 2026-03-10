@@ -21,9 +21,16 @@ export const actions: Actions = {
       return message(form, { status: 'error', text: 'Sorry, I can\'t send the form. There might be missing info for some fields.' });
     }
 
-    const { communication, email, name } = form.data as { communication: string; email: string; name: string };
+    const { communication, email, name, firstName, company, projectType } = form.data as {
+      communication: string;
+      email: string;
+      name: string;
+      firstName: string;
+      company?: string;
+      projectType: string;
+    };
 
-    // console.log('form.data.communication: ', communication, email, name);
+    // console.log('form.data: ', firstName, email, company, projectType, communication);
     /* This is to catch spammers. Field 'name' is hidden and should not be filled
     * if it is filled, we simply return without sending anything
     **/
@@ -58,10 +65,36 @@ export const actions: Actions = {
         subject: "Ayarender contact form",
         replyTo: email,
         html: `
-          <h2>Ayarender Web Form!</h2>
-          <p><strong>Client's Email:</strong> ${email}</p>
-          <div style='max-width: 600px'>
-            ${communication}
+          <h2>New Contact Form Submission</h2>
+          <table style="border-collapse: collapse; margin: 20px 0;">
+            <tr>
+              <td style="padding: 8px 16px 8px 0; font-weight: bold; vertical-align: top;">Name:</td>
+              <td style="padding: 8px 0;">${firstName}</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 16px 8px 0; font-weight: bold; vertical-align: top;">Email:</td>
+              <td style="padding: 8px 0;">${email}</td>
+            </tr>
+            ${company ? `
+            <tr>
+              <td style="padding: 8px 16px 8px 0; font-weight: bold; vertical-align: top;">Company:</td>
+              <td style="padding: 8px 0;">${company}</td>
+            </tr>
+            ` : ''}
+            <tr>
+              <td style="padding: 8px 16px 8px 0; font-weight: bold; vertical-align: top;">Project Type:</td>
+              <td style="padding: 8px 0;">${projectType === 'general' ? 'General enquiry' : 
+                projectType === '3d-visuals' ? '3D visuals' : 
+                projectType === 'layouts-drawings' ? 'Layouts and Technical drawings' : 
+                projectType === 'floor-plans' ? 'Rendered Floor plans' : 
+                'Rendered Elevations'}</td>
+            </tr>
+          </table>
+          <div style="margin-top: 20px;">
+            <strong>Message:</strong>
+            <div style="margin-top: 8px; padding: 16px; background: #f5f5f5; border-radius: 4px; max-width: 600px;">
+              ${communication}
+            </div>
           </div>
         `,
       });
