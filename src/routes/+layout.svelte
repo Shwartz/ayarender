@@ -439,7 +439,6 @@
       align-items: center;
       padding: 1rem 2rem;
       gap: 0.5rem;
-      max-width: 800px;
       margin-inline: auto;
     }
 
