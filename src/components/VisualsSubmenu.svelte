@@ -29,7 +29,7 @@
     display: flex;
     gap: 1rem;
     margin-bottom: 2rem;
-    padding: 1rem;
+    padding: 1rem 0.4rem;
     background: var(--aya-sand-50);
     border-radius: 0.5rem;
   }
@@ -40,7 +40,7 @@
     color: var(--aya-navy-700);
     border-bottom: 2px solid transparent;
     transition: color 0.2s ease, border-color 0.2s ease;
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.5;
   }
 
@@ -58,6 +58,16 @@
   @media (max-width: 799px) {
     .submenu {
       display: none;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .submenu {
+      padding: 1rem;
+
+      a {
+        font-size: 1rem;
+      }
     }
   }
 </style>
