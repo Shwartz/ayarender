@@ -42,11 +42,11 @@
 </section>
 
 <section class="large vLine">
+  <div>
 	<div class="content">
 		<div class="contactForm">
       <div class="form-intro">
         <p class="intro-text">Share your project details and I'll get back to you with next steps and a clear quote.</p>
-        <p class="intro-subtext">I usually reply within 1 business day.</p>
       </div>
 
 			<form method="POST" action="?/contactForm" use:enhance>
@@ -179,6 +179,7 @@
       </div>
 		</div>
 	</div>
+  </div>
 </section>
 
 <section>
@@ -229,7 +230,7 @@
     width: 100%;
     overflow: hidden;
     padding: 2rem;
-    max-height: 500px;
+    /*max-height: 500px;*/
 
     img {
       width: 100%;
@@ -244,8 +245,17 @@
     margin-top: 3rem;
   }
 
+  .contactForm {
+    padding: 1rem;
+    max-width: 800px;
+    margin-inline: auto;
+  }
+
+  .visual {
+    display: none;
+  }
   // Desktop: two-column layout at 800px
-  @media (min-width: 800px) {
+  @media (min-width: 1200px) {
     .visual {
       order: 0;
       padding: 0;
@@ -259,10 +269,6 @@
         object-fit: cover;
         border-radius: 0.5rem;
       }
-    }
-
-    .contactForm {
-      padding-right: 0;
     }
   }
 
@@ -287,7 +293,7 @@
 	form {
 		display: flex;
 		flex-direction: column;
-		gap: 1.5rem;
+		gap: 1.8rem;
 	}
 
   .form-row {
@@ -299,7 +305,9 @@
   .form-field {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.2rem;
+    min-width: 0;
+    max-width: 100%;
   }
 
   label {
@@ -311,6 +319,7 @@
 	input,
   select,
 	textarea {
+		width: 100%;
 		border: 1px solid var(--aya-navy-500);
 		border-radius: 0.25rem;
 		padding: 0.75rem;
@@ -422,7 +431,13 @@
     }
   }
 
-	@media (min-width: 800px) {
+  .content {
+    padding: 1rem;
+    background: var(--aya-sand-50);
+    border-radius: 1rem;
+  }
+
+	@media (min-width: 1200px) {
 		.content {
 			display: flex;
 			align-items: stretch;
