@@ -152,7 +152,7 @@
     .jumbo {
       position: absolute;
       inset: 0;
-      background-image: url('/images/presentation-board.jpg');
+      background-image: url('https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/270843b5-f467-4ca4-8ed7-d551f198a200/1920w');
       background-size: cover;
       background-position: center;
       opacity: 0.3;

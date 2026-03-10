@@ -32,13 +32,13 @@
 	<meta name="robots" content="index,follow" />
 </svelte:head>
 
-<section class="hero">
-	<div class="hero">
-		<div>
-			<div class="jumbo"></div>
-		</div>
-		<h1 class="title">Contacts</h1>
-	</div>
+<section class='hero'>
+  <div class='hero'>
+    <div>
+      <div class='jumbo'></div>
+    </div>
+    <h1 class='title'>Contact</h1>
+  </div>
 </section>
 
 <section class="large vLine">
@@ -118,6 +118,32 @@
 </section>
 
 <style lang="scss">
+  .hero {
+    position: relative;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--aya-navy-900) 0%, var(--aya-navy-700) 100%);
+
+    .jumbo {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/11442fc7-4dd6-4559-7822-39b381ebbd00/1920w');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.3;
+    }
+
+    .title {
+      position: relative;
+      z-index: 1;
+      color: var(--aya-white);
+      font-size: 3rem;
+      margin: 0;
+    }
+  }
+
 	.send {
 		display: flex;
 		justify-content: space-between;
