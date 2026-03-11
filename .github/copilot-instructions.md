@@ -79,10 +79,26 @@
 - **Redirect Rule:** www.ayarender.com redirects to ayarender.com (configured in Cloudflare dashboard)
 
 ### Key Dependencies
-- `resend` - Email service for contact form
+- `resend` - Email service for contact form (HTTP API, works perfectly with Cloudflare Workers)
 - `sveltekit-superforms` - Form handling with validation
 - `zod` - Schema validation
 - `svelte-loading-spinners` - Loading indicators for async operations
+
+### Environment Variables
+**Dual Environment Pattern** (works in both local dev and Cloudflare Pages):
+- Local dev: Uses `.env` file via `$env/dynamic/private`
+- Cloudflare Pages: Uses `platform.env` object from request context
+- Pattern: `const value = platform?.env?.VAR || svelteEnv.VAR;`
+
+**Required Variables:**
+- `RESEND_API_KEY` - Resend API key for sending emails
+- `SENDER_EMAIL` - Verified sender email (must be verified domain in Resend)
+- `RECIPIENT_EMAIL` - Where contact form submissions are sent
+
+**Email Setup:**
+- Uses lazy initialization pattern with `getResend(apiKey)` function
+- Caches Resend instances by API key to avoid recreating
+- Server-side only (in `emailSetup.server.ts`)
 
 ### Reusable Components
 - `VisualsSubmenu.svelte` - Navigation submenu for visual services pages (automatically highlights current page)
@@ -114,10 +130,12 @@
 - Nested layout in `/visuals/+layout.svelte` (submenu for visual services)
 - Component-scoped SCSS styles using Sass nesting
 - Form validation using Zod schemas
-- Email sending via Resend API (server-side only)
+- Email sending via Resend API (server-side only with lazy initialization)
+- Honeypot spam protection (hidden `name` field that should remain empty)
 - Grid-based card layouts with hover animations
 - Semantic HTML with lists (`<ul>`, `<li>`) for card grids
 - Links wrapping entire cards for better UX and accessibility
+- Dual environment variable access (platform.env for Cloudflare, svelteEnv for local)
 
 ## Layout Patterns
 - **Service Cards** (home page):
