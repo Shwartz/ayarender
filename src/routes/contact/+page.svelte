@@ -46,8 +46,7 @@
     <div class='content'>
       <div class='contactForm'>
         <div class='form-intro'>
-          <p class='intro-text'>Share your project details and I'll get back to you with next steps and a clear
-            quote.</p>
+          <h2>Get in touch</h2>
         </div>
 
         <form method='POST' action='?/contactForm' use:enhance>
@@ -164,7 +163,7 @@
           </div>
         {/if}
       </div>
-      <div class='right'>
+      <!--<div class='right'>
         <div class='visual'>
           <img
             src='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/9525d600-f655-486b-97c6-9f3ce5d86700/1024w'
@@ -179,7 +178,7 @@
             loading='eager'
           />
         </div>
-      </div>
+      </div>-->
     </div>
   </div>
 </section>
@@ -190,7 +189,7 @@
     <h2>Who you'll be working with</h2>
 
     <img
-      src='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/c75b3463-bb78-4426-37fa-c183eb452e00/640w'
+      src='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/b6f4f46d-8853-4647-00c3-2a487a851b00/1024w'
       alt='Aija Svarcs holding colourful picture'
       loading='lazy'
       class='aija-image'
