@@ -205,6 +205,16 @@
 
     <p>I understand the ebb and flow of studio life – some months are packed, others are quiet – so my support is
       flexible, project‑based and designed to fit around your workload rather than add to it.</p>
+    <br style='clear:both'/>
+    <div class='standout-note'>
+      <h3>Quick facts</h3>
+      <ul class='list'>
+        <li>Based in Surrey, working with UK and international clients.</li>
+        <li>Background in [interior design / related] uni</li>
+        <li>Experienced with [software you want designers to know you use]</li>
+        <li>Comfortable working from sketches, CAD or existing 3D models</li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -465,6 +475,8 @@
       flex-direction: column;
     }
   }
+
+
 
   .aija-image {
     width: 100%;

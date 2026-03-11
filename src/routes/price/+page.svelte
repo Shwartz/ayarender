@@ -119,7 +119,7 @@
       </table>
     </div>
 
-    <div class='pricing-note'>
+    <div class='standout-note'>
       <p><strong>*These starting prices are a guide based on standard-sized rooms and typical levels of detail.</strong> For larger or more complex projects, I'll provide a tailored quote after our initial consultation.</p>
     </div>
 
@@ -299,25 +299,6 @@
         tbody td {
           padding: 0.75rem 0.5rem;
           font-size: 0.9rem;
-        }
-      }
-    }
-
-    .pricing-note {
-      margin: 2rem 0;
-      padding: 1.5rem;
-      background: var(--aya-sand-50);
-      border-left: 4px solid var(--aya-navy-700);
-      border-radius: 0.25rem;
-
-      p {
-        margin-bottom: 0;
-        color: var(--aya-navy-700);
-        font-size: 0.95rem;
-
-        strong {
-          color: var(--aya-navy-900);
-          font-weight: 600;
         }
       }
     }
