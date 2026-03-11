@@ -1,5 +1,5 @@
 <script lang='ts'>
-  import { base } from '$app/paths';
+  import PageHead from '$components/PageHead.svelte';
   import { superForm } from 'sveltekit-superforms/client';
   //import SuperDebug from 'sveltekit-superforms/client/SuperDebug.svelte';
   import { BarLoader } from 'svelte-loading-spinners';
@@ -14,23 +14,15 @@
   const { form, errors, enhance, message, delayed } = superForm(data.form, {
     taintedMessage: 'Are you sure you want leave?'
   });
-
-  const title = 'Contacts | Ayarender';
-  const description =
-    'Aija will help you with design Visualisation, 2D and 3D rendering and Technical drawings';
 </script>
 
-<svelte:head>
-  <title>{title}</title>
-  <meta name='description' content={description} />
-  <meta property='og:title' content={title} />
-  <meta property='og:description' content={description} />
-  <meta property='twitter:title' content={title} />
-  <meta property='twitter:description' content={description} />
-  <meta property='og:image' content='{base}/images/aija-svarcs-gallery.jpg' />
-  <meta property='og:image:alt' content='Aija Svarcs holding colourful picture' />
-  <meta name='robots' content='index,follow' />
-</svelte:head>
+<PageHead
+  title="Contact"
+  description="Aija will help you with design Visualisation, 2D and 3D rendering and Technical drawings"
+  path="/contact"
+  image="/images/aija-svarcs-gallery.jpg"
+  imageAlt="Aija Svarcs holding colourful picture"
+/>
 
 <section class='hero'>
   <div class='hero'>

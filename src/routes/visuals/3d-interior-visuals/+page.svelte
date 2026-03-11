@@ -1,5 +1,14 @@
 <script>
+  import PageHead from '$components/PageHead.svelte';
 </script>
+
+<PageHead
+  title="3D Interior Visuals"
+  description="Photorealistic 3D visuals that help you sell concepts, avoid misunderstandings and reduce costly revisions."
+  path="/visuals/3d-interior-visuals"
+  image="/images/3d-render.jpg"
+  imageAlt="3D interior visual example"
+/>
 
 <div class='page-content'>
   <h1>3D Interior Visuals</h1>

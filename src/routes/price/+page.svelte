@@ -1,21 +1,14 @@
 <script>
-  import { base } from '$app/paths';
-
-  const title = 'Process & Pricing | Ayarender';
-  const description = 'Learn about our interior visualization process and pricing for 2D and 3D rendering services';
+  import PageHead from '$components/PageHead.svelte';
 </script>
 
-<svelte:head>
-  <title>{title}</title>
-  <meta name='description' content={description} />
-  <meta property='og:title' content={title} />
-  <meta property='og:description' content={description} />
-  <meta property='twitter:title' content={title} />
-  <meta property='twitter:description' content={description} />
-  <meta property='og:image' content='{base}/images/3d-render.jpg' />
-  <meta property='og:image:alt' content='3D interior rendering example' />
-  <meta name='robots' content='index,follow' />
-</svelte:head>
+<PageHead
+  title="Process & Pricing"
+  description="Learn about our interior visualization process and pricing for 2D and 3D rendering services"
+  path="/price"
+  image="/images/3d-render.jpg"
+  imageAlt="3D interior rendering example"
+/>
 
 <section class='hero'>
   <div class='hero'>

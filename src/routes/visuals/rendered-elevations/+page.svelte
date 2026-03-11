@@ -1,5 +1,14 @@
 <script>
+  import PageHead from '$components/PageHead.svelte';
 </script>
+
+<PageHead
+  title="Rendered Elevations"
+  description="Interior elevations that highlight finishes, joinery and key design details in a client-friendly way."
+  path="/visuals/rendered-elevations"
+  image="/images/rendered-2d-elevation.jpg"
+  imageAlt="Rendered elevation example"
+/>
 
 <div class='page-content'>
   <h1>Rendered Elevations</h1>

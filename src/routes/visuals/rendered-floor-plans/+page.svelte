@@ -1,5 +1,14 @@
 <script>
+  import PageHead from '$components/PageHead.svelte';
 </script>
+
+<PageHead
+  title="Rendered Floor Plans"
+  description="Colour-rendered floor plans that make layouts and zoning instantly clear for your clients."
+  path="/visuals/rendered-floor-plans"
+  image="/images/rendered-floor-plan.jpg"
+  imageAlt="Rendered floor plan example"
+/>
 
 <div class='page-content'>
   <h1>Rendered Floor Plans</h1>

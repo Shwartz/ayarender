@@ -1,5 +1,14 @@
 <script>
+  import PageHead from '$components/PageHead.svelte';
 </script>
+
+<PageHead
+  title="Technical Drawings"
+  description="Plans, lighting and electrical layouts, and joinery drawings, branded for your studio if needed."
+  path="/visuals/technical-drawings"
+  image="/images/technical-drawing.jpg"
+  imageAlt="Technical drawing example"
+/>
 
 <div class='page-content'>
   <h1>Technical Drawings</h1>

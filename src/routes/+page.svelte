@@ -1,19 +1,14 @@
 <script>
-  const title = 'Interior Visualiser';
-  const description = 'Converting interior designs in 2D and 3D visualisation';
+  import PageHead from '$components/PageHead.svelte';
 </script>
 
-<svelte:head>
-  <title>{title}</title>
-  <meta name='description' content={description} />
-  <meta property='og:title' content={title} />
-  <meta property='og:description' content={description} />
-  <meta property='twitter:title' content={title} />
-  <meta property='twitter:description' content={description} />
-  <meta property='og:image' content='/images/rendered-2d-elevation.jpg' />
-  <meta property='og:image:alt' content='Example of 2D elevation' />
-  <meta name='robots' content='index,follow' />
-</svelte:head>
+<PageHead
+  title="Interior Visualiser"
+  description="Converting interior designs in 2D and 3D visualisation"
+  path="/"
+  image="/images/rendered-2d-elevation.jpg"
+  imageAlt="Example of 2D elevation"
+/>
 
 <section class='hero'>
   <div>
