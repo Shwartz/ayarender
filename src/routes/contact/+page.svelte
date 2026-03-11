@@ -468,42 +468,18 @@
 
   .aija-image {
     width: 100%;
-    max-width: 400px;
     border-radius: 0.5rem;
-    margin: 0.5rem 0  0 2rem;
     display: block;
-    float: right;
+    margin-bottom: 1rem;
   }
 
   @media (min-width: 400px) {
     .aija-image {
-      width: 100%;
-      max-width: 150px;
-      border-radius: 0.5rem;
-      margin: 4px 0 0 2rem;
-      display: block;
-      float: right;
-    }
-  }
 
-  @media (min-width: 600px) {
-    .aija-image {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 0.5rem;
-      margin: 4px 0 0 2rem;
-      display: block;
-      float: right;
-    }
-  }
+      max-width: clamp(150px, 37.5vw, 400px);
 
-  @media (min-width: 800px) {
-    .aija-image {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 0.5rem;
-      margin: 4px 0 0 2rem;
-      display: block;
+      margin: clamp(0.25rem, 1vw, 0.5rem) 0 0 clamp(1rem, 3vw, 2rem);
+
       float: right;
     }
   }
