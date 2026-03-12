@@ -4,10 +4,10 @@
 
 <PageHead
   title="Process & Pricing"
-  description="Learn about our interior visualization process and pricing for 2D and 3D rendering services"
+  description="Clear, transparent pricing for 2D floor plans, rendered elevations and 3D interior visualisations — no hidden fees."
   path="/price"
-  image="/images/3d-render.jpg"
-  imageAlt="3D interior rendering example"
+  image="https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/9b383bd5-d547-4812-97b4-1732a0061300/1200x630"
+  imageAlt="AyaRender – a clear pricing table displayed on a blue branded background"
 />
 
 <section class='hero'>

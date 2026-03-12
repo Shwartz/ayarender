@@ -6,8 +6,8 @@
   title="Rendered Elevations"
   description="Interior elevations that highlight finishes, joinery and key design details in a client-friendly way."
   path="/visuals/rendered-elevations"
-  image="/images/rendered-2d-elevation.jpg"
-  imageAlt="Rendered elevation example"
+  image="https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/6dce8f79-247d-4efa-c7bc-1b3b30161600/1200x630"
+  imageAlt="AyaRender – detailed interior elevation renders showing joinery, finishes and design details on a branded background"
 />
 
 <div class='page-content'>

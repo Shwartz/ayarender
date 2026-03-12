@@ -3,11 +3,11 @@
 </script>
 
 <PageHead
-  title="Technical Drawings"
-  description="Plans, lighting and electrical layouts, and joinery drawings, branded for your studio if needed."
-  path="/visuals/technical-drawings"
-  image="/images/technical-drawing.jpg"
-  imageAlt="Technical drawing example"
+  title='Technical Drawings'
+  description='Plans, lighting and electrical layouts, and joinery drawings, branded for your studio if needed.'
+  path='/visuals/technical-drawings'
+  image='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/b7c7c0cc-3b29-46b2-cc4d-0e0f422ee300/1200x630'
+  imageAlt='AyaRender - detailed technical drawings including plans, lighting layouts and joinery details, displayed on a branded blue background'
 />
 
 <div class='page-content'>

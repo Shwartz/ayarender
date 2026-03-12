@@ -4,10 +4,10 @@
 
 <PageHead
   title="Interior Visualiser"
-  description="Converting interior designs in 2D and 3D visualisation"
+  description="High-quality 2D floor plans and 3D interior renders, crafted to impress clients and win more projects."
   path="/"
-  image="/images/rendered-2d-elevation.jpg"
-  imageAlt="Example of 2D elevation"
+  image="https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f1880d59-5f2e-46f8-5880-2a498c5e7400/1200x630"
+  imageAlt="AyaRender – 2D floor plans and interior elevation renders displayed on a blue branded background"
 />
 
 <section class='hero'>

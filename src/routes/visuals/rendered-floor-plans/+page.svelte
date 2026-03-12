@@ -4,10 +4,10 @@
 
 <PageHead
   title="Rendered Floor Plans"
-  description="Colour-rendered floor plans that make layouts and zoning instantly clear for your clients."
+  description="AyaRender - Colour-rendered floor plans that make layouts and zoning instantly clear for your clients."
   path="/visuals/rendered-floor-plans"
-  image="/images/rendered-floor-plan.jpg"
-  imageAlt="Rendered floor plan example"
+  image="https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f1880d59-5f2e-46f8-5880-2a498c5e7400/1200x630"
+  imageAlt="AyaRender – 2D floor plans and interior elevation renders displayed on a blue branded background"
 />
 
 <div class='page-content'>

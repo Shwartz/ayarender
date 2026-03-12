@@ -4,10 +4,10 @@
 
 <PageHead
   title="3D Interior Visuals"
-  description="Photorealistic 3D visuals that help you sell concepts, avoid misunderstandings and reduce costly revisions."
+  description="3D visuals that help you sell concepts, avoid misunderstandings and reduce costly revisions."
   path="/visuals/3d-interior-visuals"
-  image="/images/3d-render.jpg"
-  imageAlt="3D interior visual example"
+  image="https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f1880d59-5f2e-46f8-5880-2a498c5e7400/1200x630"
+  imageAlt="AyaRender – 2D floor plans and interior elevation renders displayed on a blue branded background"
 />
 
 <div class='page-content'>
