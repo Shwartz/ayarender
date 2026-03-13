@@ -16,7 +16,7 @@
     <p>Interior elevations that highlight finishes, joinery and key design details in a client-friendly way.
       Perfect for showcasing wall treatments, built-in furniture, and material specifications.
     </p>
-    <p>Elevations usually start at £100 per view, with final costs depending on detail and complexity.</p>
+    <p>Elevations usually start at £100 per view, with final costs depending on the level of detail and complexity.</p>
   </div>
 
   <ul class='gallery'>

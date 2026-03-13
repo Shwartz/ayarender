@@ -3,22 +3,20 @@
 </script>
 
 <PageHead
-  title="3D Interior Visuals"
-  description="3D visuals that help you sell concepts, avoid misunderstandings and reduce costly revisions."
-  path="/visuals/3d-interior-visuals"
-  image="https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f1880d59-5f2e-46f8-5880-2a498c5e7400/1200x630"
-  imageAlt="AyaRender – 2D floor plans and interior elevation renders displayed on a blue branded background"
+  title='3D Interior Visuals'
+  description='3D visuals that help you sell concepts, avoid misunderstandings and reduce costly revisions.'
+  path='/visuals/3d-interior-visuals'
+  image='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f1880d59-5f2e-46f8-5880-2a498c5e7400/1200x630'
+  imageAlt='AyaRender – 2D floor plans and interior elevation renders displayed on a blue branded background'
 />
 
 <div class='page-content'>
   <h1>3D Interior Visuals</h1>
   <div class='text'>
-    <p>Colour‑rendered floor plans make it easy for clients to distinguish zones, furniture and circulation at a glance.
-      They’re ideal for presentations, concept boards and marketing materials when you need to communicate layout
-      quickly
-      and clearly.
-    </p>
-    <p>Floor plans usually start at £80 per plan, with final costs depending on size and complexity.</p>
+    <p>Interior visuals turn your drawings and ideas into client‑ready images that are easy to understand and easy to
+      present.</p>
+    <p>From colour floor plans and elevations to full 3D visuals, I help you show space, finishes and details clearly so
+      you can avoid misunderstandings and move projects forward faster.</p>
   </div>
 
   <ul class='gallery'>
