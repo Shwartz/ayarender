@@ -306,6 +306,16 @@ p {
   margin-bottom: 1.2rem;
 }
 
+p a:not(footer a) {
+  color: var(--aya-navy-900);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--aya-navy-500);
+  }
+}
+
 .list {
   list-style: disc;
   padding-left: 1.5rem;

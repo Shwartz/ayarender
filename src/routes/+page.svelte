@@ -3,11 +3,11 @@
 </script>
 
 <PageHead
-  title="Interior Visualiser"
-  description="High-quality 2D floor plans and 3D interior renders, crafted to impress clients and win more projects."
-  path="/"
-  image="https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f1880d59-5f2e-46f8-5880-2a498c5e7400/1200x630"
-  imageAlt="AyaRender – 2D floor plans and interior elevation renders displayed on a blue branded background"
+  title='Interior Visualiser'
+  description='High-quality 2D floor plans and 3D interior renders, crafted to impress clients and win more projects.'
+  path='/'
+  image='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f1880d59-5f2e-46f8-5880-2a498c5e7400/1200x630'
+  imageAlt='AyaRender – 2D floor plans and interior elevation renders displayed on a blue branded background'
 />
 
 <section class='hero'>
@@ -86,28 +86,6 @@
       </li>
 
       <li>
-        <a href='/visuals/technical-drawings' class='service-card' aria-label='View technical drawings examples'>
-          <div class='card-image'>
-            <img
-              src='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/1e747d20-c932-4c22-07ec-b05970cd8500/768w'
-              srcset='
-                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/1e747d20-c932-4c22-07ec-b05970cd8500/320w 320w,
-                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/1e747d20-c932-4c22-07ec-b05970cd8500/640w 640w,
-                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/1e747d20-c932-4c22-07ec-b05970cd8500/768w 768w,
-                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/1e747d20-c932-4c22-07ec-b05970cd8500/1024w 1024w
-              '
-              sizes='(max-width: 799px) 100vw, (max-width: 1199px) 50vw, 600px'
-              alt='Technical drawing example'
-              loading='lazy'
-            />
-          </div>
-          <h3>Technical drawings & layouts</h3>
-          <p>Plans, lighting and electrical layouts, and joinery drawings, branded for your studio if needed.</p>
-          <span class='link'>See Examples</span>
-        </a>
-      </li>
-
-      <li>
         <a href='/visuals/rendered-elevations' class='service-card' aria-label='View rendered elevations examples'>
           <div class='card-image'>
             <img
@@ -125,6 +103,28 @@
           </div>
           <h3>Rendered Elevations</h3>
           <p>Interior elevations that highlight finishes, joinery and key design details in a client-friendly way.</p>
+          <span class='link'>See Examples</span>
+        </a>
+      </li>
+
+      <li>
+        <a href='/visuals/technical-drawings' class='service-card' aria-label='View technical drawings examples'>
+          <div class='card-image'>
+            <img
+              src='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/1e747d20-c932-4c22-07ec-b05970cd8500/768w'
+              srcset='
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/1e747d20-c932-4c22-07ec-b05970cd8500/320w 320w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/1e747d20-c932-4c22-07ec-b05970cd8500/640w 640w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/1e747d20-c932-4c22-07ec-b05970cd8500/768w 768w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/1e747d20-c932-4c22-07ec-b05970cd8500/1024w 1024w
+              '
+              sizes='(max-width: 799px) 100vw, (max-width: 1199px) 50vw, 600px'
+              alt='Technical drawing example'
+              loading='lazy'
+            />
+          </div>
+          <h3>Technical drawings & layouts</h3>
+          <p>Plans, lighting and electrical layouts, and joinery drawings, branded for your studio if needed.</p>
           <span class='link'>See Examples</span>
         </a>
       </li>
@@ -183,7 +183,8 @@
     </ul>
     <div class='process-description'>
       <p>
-        From first conversation to final visuals, most projects take 2 - 4 days depending on scope</p>
+        From the first conversation to the final visuals, most projects take 2 - 4 days, depending on the scope. Read
+        more about the <a href='/price'>process here</a>.</p>
     </div>
   </div>
 </section>
@@ -367,7 +368,7 @@
   }
 
   .service-description,
-  .process-description{
+  .process-description {
     margin-top: 3rem;
     max-width: 600px;
     margin-inline: auto;
