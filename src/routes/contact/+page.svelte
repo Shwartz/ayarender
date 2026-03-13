@@ -12,16 +12,17 @@
   let { data }: Props = $props();
 
   const { form, errors, enhance, message, delayed } = superForm(data.form, {
-    taintedMessage: 'Are you sure you want leave?'
+    taintedMessage: 'Are you sure you want to leave?'
   });
 </script>
 
 <PageHead
-  title="Contact"
-  description="Aija will help you with design Visualisation, 2D and 3D rendering and Technical drawings"
-  path="/contact"
-  image="/images/aija-svarcs-gallery.jpg"
-  imageAlt="Aija Svarcs holding colourful picture"
+  title='Contact'
+  description="Ready to visualise your interior design project? Contact AyaRender for a friendly chat about your 2D
+  and 3D rendering needs."
+path="/contact"
+image="https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/17bf10fa-cf14-4015-1034-bff368c96000/1200x630"
+imageAlt="AyaRender – interior renders alongside the tagline 'Have a project in mind? Let's talk.' on a blue branded background"
 />
 
 <section class='hero'>
@@ -155,22 +156,6 @@
           </div>
         {/if}
       </div>
-      <!--<div class='right'>
-        <div class='visual'>
-          <img
-            src='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/9525d600-f655-486b-97c6-9f3ce5d86700/1024w'
-            srcset='
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/9525d600-f655-486b-97c6-9f3ce5d86700/640w 640w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/9525d600-f655-486b-97c6-9f3ce5d86700/1024w 1024w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/9525d600-f655-486b-97c6-9f3ce5d86700/1280w 1280w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/9525d600-f655-486b-97c6-9f3ce5d86700/1920w 1920w
-        '
-            sizes='(max-width: 799px) 100vw, 50vw'
-            alt='Example of 3D elevation'
-            loading='eager'
-          />
-        </div>
-      </div>-->
     </div>
   </div>
 </section>
@@ -182,7 +167,7 @@
 
     <img
       src='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/b6f4f46d-8853-4647-00c3-2a487a851b00/1024w'
-      alt='Aija Svarcs holding colourful picture'
+      alt='Aija Svarcs holding colourful painting'
       loading='lazy'
       class='aija-image'
     />
@@ -196,7 +181,7 @@
 
     <p>I understand the ebb and flow of studio life – some months are packed, others are quiet – so my support is
       flexible, project‑based and designed to fit around your workload rather than add to it.</p>
-    <br style='clear:both'/>
+    <br style='clear:both' />
     <div class='standout-note'>
       <h3>Quick facts</h3>
       <ul class='list'>
@@ -236,70 +221,10 @@
     }
   }
 
-  .visual {
-    order: -1;
-    width: 100%;
-    overflow: hidden;
-    padding: 2rem;
-    /*max-height: 500px;*/
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      border-radius: 0.5rem;
-    }
-  }
-
-  .right {
-    margin-top: 3rem;
-  }
-
   .contactForm {
     padding: 1rem;
     max-width: 800px;
     margin-inline: auto;
-  }
-
-  .visual {
-    display: none;
-  }
-
-  // Desktop: two-column layout at 800px
-  @media (min-width: 1200px) {
-    .visual {
-      order: 0;
-      padding: 0;
-      flex: 1;
-      display: flex;
-      align-items: stretch;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 0.5rem;
-      }
-    }
-  }
-
-  // Form styling
-  .form-intro {
-    margin-bottom: 2rem;
-
-    .intro-text {
-      font-size: 1.1rem;
-      color: var(--aya-navy-900);
-      margin-bottom: 0.5rem;
-      line-height: 1.5;
-    }
-
-    .intro-subtext {
-      font-size: 0.95rem;
-      color: var(--aya-navy-700);
-      font-weight: 300;
-    }
   }
 
   form {
@@ -338,7 +263,7 @@
     font-size: 1rem;
     background: var(--aya-white);
     color: var(--aya-navy-900);
-    font-family: var(--font-body);
+    font-family: var(--font-body),serif;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
     &:focus {
@@ -459,14 +384,7 @@
         width: 50%;
       }
     }
-
-    .right {
-      margin-top: 0;
-      display: flex;
-      flex-direction: column;
-    }
   }
-
 
 
   .aija-image {
