@@ -306,13 +306,37 @@ p {
   margin-bottom: 1.2rem;
 }
 
-p a:not(footer a) {
+p a:not(.btn):not(:has(> img:only-child)) {
   color: var(--aya-navy-900);
-  text-decoration: underline;
-  transition: color 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease;
+
+  /* Animated underline similar to "See Examples" */
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    transform: scaleX(1);
+    transition: transform 0.2s ease;
+  }
 
   &:hover {
     color: var(--aya-navy-500);
+
+    &:after {
+      transform: scaleX(0.8);
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--aya-navy-500);
+    outline-offset: 4px;
+    border-radius: 4px;
   }
 }
 

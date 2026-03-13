@@ -423,6 +423,15 @@
     color: var(--aya-white);
     background: var(--aya-navy-900);
 
+    /* Override global p a styles for footer - keep white color */
+    p a:not(.btn):not(:has(> img:only-child)) {
+      color: var(--aya-white);
+
+      &:hover {
+        color: var(--aya-sand-100);
+      }
+    }
+
     .container {
       display: flex;
       justify-content: space-around;
@@ -448,7 +457,6 @@
       gap: 1rem;
 
       a:not(.btn) {
-        text-decoration: underline;
         transition: color 0.2s;
 
         &:hover {
@@ -489,10 +497,6 @@
     .shvarcs {
       font-size: 0.8rem;
       color: var(--aya-navy-500);
-
-      a {
-        text-decoration: underline;
-      }
     }
   }
 </style>
