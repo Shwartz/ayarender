@@ -1,5 +1,6 @@
 <script>
   import PageHead from '$components/PageHead.svelte';
+  import Image from '$components/Image.svelte';
 </script>
 
 <PageHead
@@ -22,59 +23,31 @@
 
   <ul class='gallery'>
     <li>
-      <img
-        src='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/1024w'
-        srcset='
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/640w 640w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/768w 768w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/1024w 1024w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/1280w 1280w
-        '
-        sizes='(max-width: 799px) 100vw, 1216px'
+      <Image
+        imgId='f7d623ac-b786-43af-1049-9dc7503ea300'
         alt='Rendered floor plan example'
-        loading='lazy'
+        expandable={true}
       />
     </li>
     <li>
-      <img
-        src='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/1024w'
-        srcset='
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/640w 640w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/768w 768w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/1024w 1024w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/1280w 1280w
-        '
-        sizes='(max-width: 799px) 100vw, 1216px'
+      <Image
+        imgId='f7d623ac-b786-43af-1049-9dc7503ea300'
         alt='Rendered floor plan example'
-        loading='lazy'
+        expandable={true}
       />
     </li>
     <li>
-      <img
-        src='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/1024w'
-        srcset='
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/640w 640w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/768w 768w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/1024w 1024w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/1280w 1280w
-        '
-        sizes='(max-width: 799px) 100vw, 1216px'
+      <Image
+        imgId='f7d623ac-b786-43af-1049-9dc7503ea300'
         alt='Rendered floor plan example'
-        loading='lazy'
+        expandable={true}
       />
     </li>
     <li>
-      <img
-        src='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/1024w'
-        srcset='
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/640w 640w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/768w 768w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/1024w 1024w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/1280w 1280w
-        '
-        sizes='(max-width: 799px) 100vw, 1216px'
+      <Image
+        imgId='f7d623ac-b786-43af-1049-9dc7503ea300'
         alt='Rendered floor plan example'
-        loading='lazy'
+        expandable={true}
       />
     </li>
   </ul>
@@ -115,14 +88,6 @@
       list-style: none;
       padding: 0;
       width: 100%;
-
-      img {
-        display: block;
-        width: 100%;
-        height: auto;
-        border-radius: 0.5rem;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      }
     }
   }
 

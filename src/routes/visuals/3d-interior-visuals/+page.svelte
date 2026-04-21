@@ -23,28 +23,35 @@
   <ul class='gallery'>
     <li>
       <Image
-        imgId='6e7acef0-ee5e-4fdf-4b3c-f6270c649900'
+        imgId='0d0b4b0c-fada-4740-cc9d-7deb69767100'
         alt='3D interior visual example'
         expandable={true}
       />
     </li>
     <li>
       <Image
-        imgId='6e7acef0-ee5e-4fdf-4b3c-f6270c649900'
+        imgId='69749870-3878-4a15-db96-6d641a6ac100'
         alt='3D interior visual example'
         expandable={true}
       />
     </li>
     <li>
       <Image
-        imgId='6e7acef0-ee5e-4fdf-4b3c-f6270c649900'
+        imgId='47529d87-998d-4b22-41cf-4f7984dc2b00'
         alt='3D interior visual example'
         expandable={true}
       />
     </li>
     <li>
       <Image
-        imgId='6e7acef0-ee5e-4fdf-4b3c-f6270c649900'
+        imgId='d8168f5c-517b-49aa-5953-f68220b84200'
+        alt='3D interior visual example'
+        expandable={true}
+      />
+    </li>
+    <li>
+      <Image
+        imgId='89cb666e-ac06-4c19-8d33-d4c5dd8f2800'
         alt='3D interior visual example'
         expandable={true}
       />

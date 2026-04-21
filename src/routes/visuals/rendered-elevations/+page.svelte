@@ -1,5 +1,6 @@
 <script>
   import PageHead from '$components/PageHead.svelte';
+  import Image from '$components/Image.svelte';
 </script>
 
 <PageHead
@@ -21,59 +22,31 @@
 
   <ul class='gallery'>
     <li>
-      <img
-        src='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/1024w'
-        srcset='
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/640w 640w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/768w 768w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/1024w 1024w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/1280w 1280w
-        '
-        sizes='(max-width: 799px) 100vw, 1216px'
+      <Image
+        imgId='89483a8a-eb10-4ac3-c047-f56d166f1200'
         alt='Rendered elevation example'
-        loading='lazy'
+        expandable={true}
       />
     </li>
     <li>
-      <img
-        src='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/1024w'
-        srcset='
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/640w 640w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/768w 768w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/1024w 1024w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/1280w 1280w
-        '
-        sizes='(max-width: 799px) 100vw, 1216px'
+      <Image
+        imgId='89483a8a-eb10-4ac3-c047-f56d166f1200'
         alt='Rendered elevation example'
-        loading='lazy'
+        expandable={true}
       />
     </li>
     <li>
-      <img
-        src='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/1024w'
-        srcset='
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/640w 640w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/768w 768w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/1024w 1024w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/1280w 1280w
-        '
-        sizes='(max-width: 799px) 100vw, 1216px'
+      <Image
+        imgId='89483a8a-eb10-4ac3-c047-f56d166f1200'
         alt='Rendered elevation example'
-        loading='lazy'
+        expandable={true}
       />
     </li>
     <li>
-      <img
-        src='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/1024w'
-        srcset='
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/640w 640w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/768w 768w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/1024w 1024w,
-          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/1280w 1280w
-        '
-        sizes='(max-width: 799px) 100vw, 1216px'
+      <Image
+        imgId='89483a8a-eb10-4ac3-c047-f56d166f1200'
         alt='Rendered elevation example'
-        loading='lazy'
+        expandable={true}
       />
     </li>
   </ul>
@@ -114,14 +87,6 @@
       list-style: none;
       padding: 0;
       width: 100%;
-
-      img {
-        display: block;
-        width: 100%;
-        height: auto;
-        border-radius: 0.5rem;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      }
     }
   }
 
