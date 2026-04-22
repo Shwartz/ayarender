@@ -83,21 +83,6 @@
     }
   }
 
-  .gallery {
-    list-style: none;
-    padding: 0;
-    margin: 3rem 0 0 0;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-
-    li {
-      list-style: none;
-      padding: 0;
-      width: 100%;
-    }
-  }
-
   .cta-section {
     margin-top: 4rem;
     padding: 3rem 2rem;
