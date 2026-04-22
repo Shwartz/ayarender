@@ -24,28 +24,39 @@
   <ul class='gallery'>
     <li>
       <Image
-        imgId='f7d623ac-b786-43af-1049-9dc7503ea300'
+        imgId='fda5bd9e-0554-4e3f-762f-960e2dce6200'
         alt='Rendered floor plan example'
         expandable={true}
       />
     </li>
     <li>
       <Image
-        imgId='f7d623ac-b786-43af-1049-9dc7503ea300'
+        imgId='8755a61c-7a0a-4db9-a0fa-27e498b40200'
+        alt='Rendered floor plan example'
+        expandable={true}
+      />
+      <Image
+        imgId='8238adb4-57bd-406f-b380-57738ded5f00'
         alt='Rendered floor plan example'
         expandable={true}
       />
     </li>
     <li>
       <Image
-        imgId='f7d623ac-b786-43af-1049-9dc7503ea300'
+        imgId='e4c9d314-19aa-4509-6e94-d8f24e474d00'
         alt='Rendered floor plan example'
         expandable={true}
       />
     </li>
+
     <li>
       <Image
-        imgId='f7d623ac-b786-43af-1049-9dc7503ea300'
+        imgId='91ff6223-654e-4e5b-b60b-46b6c3a34e00'
+        alt='Rendered floor plan example'
+        expandable={true}
+      />
+      <Image
+        imgId='610fc09a-3f47-43d0-e113-f8e7dbc51800'
         alt='Rendered floor plan example'
         expandable={true}
       />

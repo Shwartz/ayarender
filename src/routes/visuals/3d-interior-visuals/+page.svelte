@@ -41,8 +41,6 @@
         alt='3D interior visual example'
         expandable={true}
       />
-    </li>
-    <li>
       <Image
         imgId='d8168f5c-517b-49aa-5953-f68220b84200'
         alt='3D interior visual example'

@@ -23,32 +23,39 @@
   <ul class='gallery'>
     <li>
       <Image
-        imgId='89483a8a-eb10-4ac3-c047-f56d166f1200'
+        imgId='31f9e377-04fa-4fb8-70dc-d344300cb100'
+        alt='Rendered elevation example'
+        expandable={true}
+      />
+      <Image
+        imgId='c7bb5c41-fca7-4298-7ea2-b7daddac0100'
         alt='Rendered elevation example'
         expandable={true}
       />
     </li>
     <li>
       <Image
-        imgId='89483a8a-eb10-4ac3-c047-f56d166f1200'
+        imgId='d6e4987f-7c4f-4465-e23a-b0c0fc8b7100'
         alt='Rendered elevation example'
         expandable={true}
       />
     </li>
     <li>
       <Image
-        imgId='89483a8a-eb10-4ac3-c047-f56d166f1200'
+        imgId='037e8602-b402-4174-f1e6-22ed72006a00'
+        alt='Rendered elevation example'
+        expandable={true}
+      />
+      <Image
+        imgId='d45eb81c-2298-4c51-81b1-4d9684466700'
         alt='Rendered elevation example'
         expandable={true}
       />
     </li>
     <li>
-      <Image
-        imgId='89483a8a-eb10-4ac3-c047-f56d166f1200'
-        alt='Rendered elevation example'
-        expandable={true}
-      />
+
     </li>
+
   </ul>
 
   <div class='cta-section'>

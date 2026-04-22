@@ -369,3 +369,12 @@ p a:not(.btn):not(:has(> img:only-child)) {
     }
   }
 }
+
+.gallery {
+  @media (min-width: 800px) {
+    li {
+      display: flex;
+      gap: 1.5rem;
+    }
+  }
+}
