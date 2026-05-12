@@ -26,11 +26,13 @@
         imgId='31f9e377-04fa-4fb8-70dc-d344300cb100'
         alt='Rendered elevation example'
         expandable={true}
+        aspectRatio='16/18'
       />
       <Image
         imgId='c7bb5c41-fca7-4298-7ea2-b7daddac0100'
         alt='Rendered elevation example'
         expandable={true}
+        aspectRatio='16/18'
       />
     </li>
     <li>
@@ -38,6 +40,7 @@
         imgId='d6e4987f-7c4f-4465-e23a-b0c0fc8b7100'
         alt='Rendered elevation example'
         expandable={true}
+        aspectRatio='16/16'
       />
     </li>
     <li>
@@ -45,11 +48,13 @@
         imgId='037e8602-b402-4174-f1e6-22ed72006a00'
         alt='Rendered elevation example'
         expandable={true}
+        aspectRatio='3/2'
       />
       <Image
         imgId='d45eb81c-2298-4c51-81b1-4d9684466700'
         alt='Rendered elevation example'
         expandable={true}
+        aspectRatio='4/3'
       />
     </li>
     <li>

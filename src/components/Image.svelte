@@ -7,9 +7,11 @@
     className?: string;
     // Expandable lightbox: click to zoom (desktop only)
     expandable?: boolean;
+    // Aspect ratio to prevent layout shift (e.g., "16/9", "3/2", "4/3")
+    aspectRatio?: string;
   }
 
-  const { imgId, className, alt, expandable = false }: ImageProps = $props();
+  const { imgId, className, alt, expandable = false, aspectRatio = '3/2' }: ImageProps = $props();
 
   const url = 'https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA';
 
@@ -97,7 +99,11 @@
   />
 {/snippet}
 
-<div class="image-wrapper" class:expandable={expandable && supportsLightbox}>
+<div
+  class="image-wrapper"
+  class:expandable={expandable && supportsLightbox}
+  style="--aspect-ratio: {aspectRatio.replace('/', ' / ')}; background-image: url('{url}/{imgId}/blur'); background-size: cover; background-position: center;"
+>
   {#if expandable && supportsLightbox}
     <button
       class="image-button"
@@ -133,8 +139,19 @@
 
 <style lang="scss">
   .image-wrapper {
-    display: inline-block;
+    display: block;
     width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background-color: var(--aya-sand-50); // Fallback if blur doesn't load
+
+    // Reserve space based on aspect ratio to prevent layout shift
+    &::before {
+      content: '';
+      display: block;
+      padding-bottom: calc(100% / (var(--aspect-ratio, 1.5))); // fallback to 3:2
+    }
 
     &.expandable {
       // Only show zoom cursor on desktop
@@ -157,8 +174,11 @@
   .image-button {
     // Reset button styles to make it look like a div
     all: unset;
-    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
     padding: 0;
     border: none;
     background: none;
@@ -166,10 +186,15 @@
 
     // Ensure image fills button
     img {
-      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
+      height: 100%;
+      object-fit: cover;
       border-radius: 0.5rem;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      animation: fadeInImage 0.4s ease-in;
     }
 
     // Focus outline for keyboard navigation
@@ -180,12 +205,27 @@
     }
   }
 
-  img {
-    display: block;
+  // Generic img styles for non-button images (when expandable is false)
+  // Scoped to .image-wrapper to not affect lightbox images
+  .image-wrapper > img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     border-radius: 0.5rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInImage 0.2s ease-in;
+  }
+
+  @keyframes fadeInImage {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   .lightbox-overlay {

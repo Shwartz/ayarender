@@ -48,9 +48,26 @@
 - **Cloudflare Images** for all service/portfolio images
 - Base URL: `https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/`
 - Format: `{baseURL}/{imageId}/{variant}`
-- Available variants: `320w`, `640w`, `768w`, `1024w`, `1280w`, `1920w`
-- **Always use responsive images** with `srcset` and `sizes` attributes
-- Example pattern for service cards (768w max):
+- Available variants: `320w`, `640w`, `768w`, `1024w`, `1280w`, `1920w`, `blur` (LQIP)
+- **Use the `Image.svelte` component** for portfolio/visual pages - it handles responsive srcset, layout shift prevention, and optional lightbox
+- **Image Component Features:**
+  - Automatic responsive srcset generation
+  - Aspect ratio reservation to prevent layout shift
+  - LQIP (blur variant) as background placeholder
+  - Optional expandable lightbox (desktop only, with keyboard navigation)
+  - Smooth fade-in animation
+  - Device detection (lightbox only on hover-capable devices)
+- **Image Component Usage:**
+  ```svelte
+  <Image
+    imgId="cloudflare-image-id"
+    alt="Descriptive alt text"
+    expandable={true}
+    aspectRatio="16/9"
+  />
+  ```
+- **Common aspect ratios:** `16/9` (widescreen), `3/2` (default), `4/3` (traditional), `1/1` (square)
+- For hero/service cards that don't need lightbox, you can use raw `<img>` with srcset:
   ```html
   <img
     src="https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/{id}/768w"
@@ -62,7 +79,6 @@
     alt="Descriptive alt text"
   />
   ```
-- Example for hero images (1920w max): use larger variants with appropriate srcset
 
 ### Static Assets
 - Located in `/static` folder
@@ -101,6 +117,8 @@
 - Server-side only (in `emailSetup.server.ts`)
 
 ### Reusable Components
+- `Image.svelte` - Sophisticated image component with responsive srcset, layout shift prevention, LQIP blur placeholder, and optional expandable lightbox (desktop only)
+- `PageHead.svelte` - SEO meta tags component for consistent page metadata
 - `VisualsSubmenu.svelte` - Navigation submenu for visual services pages (automatically highlights current page)
 
 ## Development Workflow
@@ -118,9 +136,9 @@
 4. **SvelteKit 2.x / Svelte 5.x:** Follow modern SvelteKit patterns (not React/Next.js)
 5. **TypeScript:** Use proper TypeScript types
 6. **Responsive Design:** Mobile-first approach, test layouts at breakpoints: 600px (tablet), 800px (desktop)
-7. **Images:** Use Cloudflare Images with responsive srcset and appropriate variants
-8. **Performance:** Optimize for Cloudflare Pages edge deployment
-9. **Accessibility:** Include proper alt text, ARIA labels, focus states
+7. **Images:** Use the `Image.svelte` component for portfolio/gallery images. Always specify `aspectRatio` to prevent layout shift. Use Cloudflare Images variants.
+8. **Performance:** Optimize for Cloudflare Pages edge deployment. Image component prevents layout shift and uses LQIP.
+9. **Accessibility:** Include proper alt text, ARIA labels, focus states. Image component has full keyboard navigation support.
 10. **Testing:** Run `npm run check` after significant changes
 
 ## Common Patterns in This Project
@@ -136,6 +154,12 @@
 - Semantic HTML with lists (`<ul>`, `<li>`) for card grids
 - Links wrapping entire cards for better UX and accessibility
 - Dual environment variable access (platform.env for Cloudflare, svelteEnv for local)
+- **Image component usage:**
+  - Always specify `aspectRatio` to prevent layout shift
+  - Use `expandable={true}` for portfolio/gallery images
+  - Blur placeholder loads first (< 2KB), then sharp image fades in
+  - Lightbox keyboard navigation: ESC to close, click outside to close
+  - Device detection ensures lightbox only on desktop (hover + fine pointer)
 
 ## Layout Patterns
 - **Service Cards** (home page):
@@ -153,7 +177,9 @@
 - **Visual Services Pages**:
   - Full-width images (max 1216px container width)
   - Submenu navigation at top
-  - Simple scrolling layout (no lightbox/gallery)
+  - Gallery layout using `<ul>` with `<li>` containing Image components
+  - Expandable lightbox on images (desktop only - click to zoom, ESC to close)
+  - Layout shift prevention via aspect ratio reservation and blur placeholders
   - Description text at top, CTA button at bottom
 
 - **Pricing Table**:
@@ -164,6 +190,9 @@
 ## Known Considerations
 - WWW to root domain redirection handled by Cloudflare (not in code)
 - Cloudflare Images provide automatic optimization and multiple sizes
-- No lightbox/gallery needed for visual services pages - simple scrolling approach
+- Image component uses aspect ratio + blur placeholder for zero layout shift
+- Lightbox functionality is desktop-only (devices with hover capability and fine pointer)
+- Mobile devices use native pinch-zoom instead of lightbox
 - Submenu component handles active state automatically via `$page.url.pathname`
+- All visual services pages use consistent Image component with expandable lightbox
 

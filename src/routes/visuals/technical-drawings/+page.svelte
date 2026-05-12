@@ -26,6 +26,7 @@
         imgId='bdbebf15-8688-40b8-d698-c0e6bd4f3500'
         alt='Technical drawing example'
         expandable={true}
+        aspectRatio='4/3'
       />
     </li>
     <li>
@@ -33,11 +34,13 @@
         imgId='e9a9d411-c405-4a34-2ea2-ba71adc6e600'
         alt='Technical drawing example'
         expandable={true}
+        aspectRatio='3/2'
       />
       <Image
         imgId='5803e021-9087-46ec-4c67-1a931f7d7c00'
         alt='Technical drawing example'
         expandable={true}
+        aspectRatio='3/2'
       />
     </li>
     <li>
@@ -48,6 +51,7 @@
         imgId='82a4acc4-7f3c-4698-4081-4c640e65f500'
         alt='Technical drawing example'
         expandable={true}
+        aspectRatio='5/7'
       />
     </li>
     <li>
@@ -55,6 +59,7 @@
         imgId='2f1268da-cdab-4cf7-2fa1-e2671a704400'
         alt='Technical drawing example'
         expandable={true}
+        aspectRatio='4/3'
       />
     </li>
   </ul>
