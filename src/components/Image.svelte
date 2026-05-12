@@ -29,6 +29,8 @@
   );
 
   let isExpanded = $state(false);
+  let isImageCached = $state(false);
+  let imgElement: HTMLImageElement | null = $state(null);
 
   // Detect if device supports lightbox (desktop with fine pointer)
   let supportsLightbox = $state(true);
@@ -53,6 +55,13 @@
       desktopQuery.removeEventListener('change', updateSupport);
       widthQuery.removeEventListener('change', updateSupport);
     };
+  });
+
+  // Check if image is cached when element is bound
+  $effect(() => {
+    if (imgElement && imgElement.complete && imgElement.naturalHeight !== 0) {
+      isImageCached = true;
+    }
   });
 
   // Handle image click - only expand on desktop devices
@@ -90,11 +99,13 @@
 
 {#snippet imageElement()}
   <img
+    bind:this={imgElement}
     src="{url}/{imgId}/1024w"
     {srcset}
     {sizes}
     {alt}
     class={className}
+    class:cached={isImageCached}
     loading="lazy"
   />
 {/snippet}
@@ -195,6 +206,11 @@
       border-radius: 0.5rem;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       animation: fadeInImage 0.4s ease-in;
+
+      // Much faster animation for cached images
+      &.cached {
+        animation-duration: 0.05s;
+      }
     }
 
     // Focus outline for keyboard navigation
@@ -217,6 +233,11 @@
     border-radius: 0.5rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     animation: fadeInImage 0.2s ease-in;
+
+    // Much faster animation for cached images
+    &.cached {
+      animation-duration: 0.05s;
+    }
   }
 
   @keyframes fadeInImage {
