@@ -212,6 +212,7 @@
           object-fit: cover;
           display: block;
           border-radius: 1rem;
+          aspect-ratio: 3 / 4;
         }
       }
 
