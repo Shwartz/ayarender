@@ -1,552 +1,453 @@
 <script>
-	import { base } from '$app/paths';
-	const title = 'Interior Visualiser';
-	const description = 'Converting interior designs in 2D and 3D visualisation';
-
-	let scrollY = $state(0);
+  import PageHead from '$components/PageHead.svelte';
 </script>
 
-<svelte:head>
-	<title>{title}</title>
-	<meta name="description" content={description} />
-	<meta property="og:title" content={title} />
-	<meta property="og:description" content={description} />
-	<meta property="twitter:title" content={title} />
-	<meta property="twitter:description" content={description} />
-	<meta property="og:image" content="{base}/images/rendered-2d-elevation.jpg" />
-	<meta property="og:image:alt" content="Example of 2D elevation" />
-	<meta name="robots" content="index,follow" />
-</svelte:head>
+<PageHead
+  title='Interior Visualiser'
+  description='High-quality 2D floor plans and 3D interior renders, crafted to impress clients and win more projects.'
+  path='/'
+  image='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f1880d59-5f2e-46f8-5880-2a498c5e7400/1200x630'
+  imageAlt='AyaRender – 2D floor plans and interior elevation renders displayed on a blue branded background'
+/>
 
-<section class="large vLine overflow">
-	<div class="intro boxes">
-		<div>
-			<div>
-				<dl>
-					<dt>AIJA SVARCS</dt>
-					<dd>Interior Visualiser</dd>
-				</dl>
-				<p>Check out my areas of expertise below and how I can make your dreams come to life</p>
-				<p class="icnChevron">
-					<a href="#whyHireMe">
-						<img alt="" src="/icons/chevron-double.svg" height="32" width="32" />
-					</a>
-				</p>
-			</div>
-		</div>
-		<div>
-			<img
-				src="{base}/images/Japandi-kitchen-3D-render-and-black-and-white.jpg"
-				alt="Example of Japandi Kithen render"
-				width="630"
-				height="460"
-			/>
-		</div>
-	</div>
+<section class='hero'>
+  <div>
+    <div class='content'>
+      <h1>For interior designers, studios and architects who need client-ready visuals</h1>
+      <p>3D interior visualisations that help interior designers win approvals faster and sell concepts with less
+        back-and-forth.</p>
+    </div>
+    <div class='visual'>
+      <img
+        src='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/3b2ca792-4a3b-43ed-53b8-0b7b2022b500/1024w'
+        srcset='
+          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/3b2ca792-4a3b-43ed-53b8-0b7b2022b500/640w 640w,
+          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/3b2ca792-4a3b-43ed-53b8-0b7b2022b500/1024w 1024w,
+          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/3b2ca792-4a3b-43ed-53b8-0b7b2022b500/1280w 1280w,
+          https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/3b2ca792-4a3b-43ed-53b8-0b7b2022b500/1920w 1920w
+        '
+        sizes='(max-width: 799px) 100vw, 50vw'
+        alt='Example of 3D elevation'
+        loading='eager'
+      />
+    </div>
+  </div>
 </section>
 
-<section class="large vLine">
-	<div>
-		<h1 class="boxTitle">
-			<span id="whyHireMe">Why hire me?</span>
-		</h1>
-		<div class="boxes vLine light">
-			<div>
-				<img
-					class="boxImage"
-					src="{base}/assets/portfolio/rendered-2d-elevations/Japandi-inspired-kitchen-elevation-800.jpg"
-					alt="Japandi inspired kitchen elevation"
-					width="487"
-					height="334"
-				/>
-			</div>
-			<div>
-				<h2>Visualisation for Interior Designers</h2>
-				<p>
-					My design support service is tailored to meet your unique needs. I understand the ebb and
-					flow of the industry; some months are a whirlwind of activity, while others are more
-					tranquil.
-				</p>
-				<p>
-					My approach is designed to complement your workflow seamlessly. There are no lengthy
-					commitments and no concerns about the overhead of hiring a design assistant or junior
-					designer.
-				</p>
+<section class='grey'>
+  <div>
+    <h1>What I can create for you</h1>
+    <p>Interior visuals tailored to how you present designs to your clients.</p>
 
-				<p><em>Why should you consider hiring me?</em></p>
-				<ul>
-					<li>
-						You want to enhance your presentations and create professional-looking deliverables for
-						your clients and contractors.
-					</li>
-					<li>You are swamped with projects and need assistance with specific tasks.</li>
-					<li>You prefer to avoid design drafting.</li>
-					<li>You need to gain skills in CAD software.</li>
-				</ul>
+    <ul class='services-grid'>
+      <li>
+        <a href='/visuals/3d-interior-visuals' class='service-card' aria-label='View 3D interior visuals examples'>
+          <div class='card-image'>
+            <img
+              src='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/6e7acef0-ee5e-4fdf-4b3c-f6270c649900/768w'
+              srcset='
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/6e7acef0-ee5e-4fdf-4b3c-f6270c649900/320w 320w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/6e7acef0-ee5e-4fdf-4b3c-f6270c649900/640w 640w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/6e7acef0-ee5e-4fdf-4b3c-f6270c649900/768w 768w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/6e7acef0-ee5e-4fdf-4b3c-f6270c649900/1024w 1024w
+              '
+              sizes='(max-width: 799px) 100vw, (max-width: 1199px) 50vw, 600px'
+              alt='3D interior visual example'
+              loading='lazy'
+            />
+          </div>
+          <h3>3D interior visuals</h3>
+          <p>Photorealistic 3D visuals that help you sell concepts, avoid misunderstandings and reduce costly
+            revisions.</p>
+          <span class='link'>See Examples</span>
+        </a>
+      </li>
 
-				<p>I am here to assist with all these challenges and more.</p>
-				<p><a class="animate" href="{base}/#easyFourStep">Easy four step process</a></p>
-			</div>
-		</div>
-	</div>
+      <li>
+        <a href='/visuals/rendered-floor-plans' class='service-card' aria-label='View rendered floor plans examples'>
+          <div class='card-image'>
+            <img
+              src='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/768w'
+              srcset='
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/320w 320w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/640w 640w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/768w 768w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/f7d623ac-b786-43af-1049-9dc7503ea300/1024w 1024w
+              '
+              sizes='(max-width: 799px) 100vw, (max-width: 1199px) 50vw, 600px'
+              alt='Rendered floor plan example'
+              loading='lazy'
+            />
+          </div>
+          <h3>Rendered Floor Plans</h3>
+          <p>Colour-rendered floor plans that make layouts and zoning instantly clear for your clients.</p>
+          <span class='link'>See Examples</span>
+        </a>
+      </li>
+
+      <li>
+        <a href='/visuals/rendered-elevations' class='service-card' aria-label='View rendered elevations examples'>
+          <div class='card-image'>
+            <img
+              src='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/768w'
+              srcset='
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/320w 320w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/640w 640w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/768w 768w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/89483a8a-eb10-4ac3-c047-f56d166f1200/1024w 1024w
+              '
+              sizes='(max-width: 799px) 100vw, (max-width: 1199px) 50vw, 600px'
+              alt='Rendered elevation example'
+              loading='lazy'
+            />
+          </div>
+          <h3>Rendered Elevations</h3>
+          <p>Interior elevations that highlight finishes, joinery and key design details in a client-friendly way.</p>
+          <span class='link'>See Examples</span>
+        </a>
+      </li>
+
+      <li>
+        <a href='/visuals/technical-drawings' class='service-card' aria-label='View technical drawings examples'>
+          <div class='card-image'>
+            <img
+              src='https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/1e747d20-c932-4c22-07ec-b05970cd8500/768w'
+              srcset='
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/1e747d20-c932-4c22-07ec-b05970cd8500/320w 320w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/1e747d20-c932-4c22-07ec-b05970cd8500/640w 640w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/1e747d20-c932-4c22-07ec-b05970cd8500/768w 768w,
+                https://imagedelivery.net/OsbYeWCzhRDS5xpqlDmBXA/1e747d20-c932-4c22-07ec-b05970cd8500/1024w 1024w
+              '
+              sizes='(max-width: 799px) 100vw, (max-width: 1199px) 50vw, 600px'
+              alt='Technical drawing example'
+              loading='lazy'
+            />
+          </div>
+          <h3>Technical drawings & layouts</h3>
+          <p>Plans, lighting and electrical layouts, and joinery drawings, branded for your studio if needed.</p>
+          <span class='link'>See Examples</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class='service-description'>
+      <p>
+        Interior visuals turn your drawings and ideas into client‑ready images that are easy to understand and easy to
+        present.</p>
+
+      <p>From colour floor plans and elevations to full 3D visuals, I help you show space, finishes and details clearly
+        so you can avoid misunderstandings and move projects forward faster.
+        These services are tailored for interior designers, studios and architects who need clear, professional visuals
+        without hiring in‑house support.
+      </p>
+    </div>
+  </div>
 </section>
 
-<section class="large vLine">
-	<div>
-		<h1 class="boxTitle">
-			<span id="renderedFloorPlans">Rendered Floor Plans</span>
-		</h1>
-		<div class="boxes reverse dark">
-			<div>
-				<img
-					class="boxImage"
-					src="{base}/images/rendered-floor-plan.jpg"
-					alt="Rendered Floor Plan"
-					width="750"
-					height="579"
-				/>
-			</div>
-			<div>
-				<h2>Overview</h2>
-				<p>
-					With color-rendered floor plans, it's easier to distinguish between various elements and
-					spaces, making it more straightforward for clients to understand the design.
-				</p>
+<section class='white'>
+  <div>
+    <h1>Our Process</h1>
 
-				<p>
-					Color-rendered floor plans can be versatile, serving various purposes from client
-					presentations to marketing materials, and can be easily adapted to different styles and
-					themes.
-				</p>
+    <ul class='process-grid'>
+      <li>
+        <div class='process-step'>
+          <span class='step-number'>Step 1</span>
+          <h3>Free initial consultation</h3>
+          <p>Let's discuss your project, clarify the scope and agree on a clear quote.</p>
+        </div>
+      </li>
 
-				<p>These plans usually start at £80.</p>
+      <li>
+        <div class='process-step'>
+          <span class='step-number'>Step 2</span>
+          <h3>Booking the project</h3>
+          <p>Once you're ready, we book the project, confirm the timeline and any deposit.</p>
+        </div>
+      </li>
 
-				<p>
-					<a class="btn-forward" href="{base}/portfolio/rendered-floor-plans"
-						>Rendered Floor Plans</a
-					>
-				</p>
-			</div>
-		</div>
-	</div>
+      <li>
+        <div class='process-step'>
+          <span class='step-number'>Step 3</span>
+          <h3>Design and revision</h3>
+          <p>I create the first visuals and send them for your feedback.</p>
+        </div>
+      </li>
+
+      <li>
+        <div class='process-step'>
+          <span class='step-number'>Step 4</span>
+          <h3>Final design</h3>
+          <p>I refine the visuals if needed and deliver the final images plus invoice.</p>
+        </div>
+      </li>
+    </ul>
+    <div class='process-description'>
+      <p>
+        From the first conversation to the final visuals, most projects take 2 - 4 days, depending on the scope. Read
+        more about the <a href='/price'>process here</a>.</p>
+    </div>
+  </div>
 </section>
 
-<section class="large vLine">
-	<div>
-		<h1 class="boxTitle">
-			<span id="rendered2dElevations">Rendered 2D Elevations</span>
-		</h1>
-		<div class="boxes vLine light">
-			<div>
-				<img
-					class="boxImage"
-					src="{base}/images/rendered-2d-elevation.jpg"
-					alt="Rendered 2D Elevation"
-					width="561"
-					height="419"
-				/>
-			</div>
-			<div>
-				<h2>Overview</h2>
-				<p>
-					Color-rendered interior elevations, like color-rendered floor plans, offer several
-					advantages. They provide a more realistic and detailed representation of interior spaces,
-					allowing clients to visualise the final design better.
-				</p>
+<style lang='scss'>
 
-				<p>
-					The use of colour enhances the overall aesthetics of the elevation drawings, making them
-					more visually appealing and engaging.
-				</p>
+  .hero {
+    > div {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 0;
 
-				<p>
-					Colour elevations allow you to emphasise specific design elements, such as focal points or
-					custom furnishings, which can be crucial for conveying the design intent.
-				</p>
+      // Mobile: visual comes first in DOM order
+      .visual {
+        order: -1;
+        width: 100%;
+        overflow: hidden;
+        padding: 2rem;
+        max-height: 500px;
 
-				<p>These plans usually start at £80.</p>
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          border-radius: 1rem;
+          aspect-ratio: 3 / 4;
+        }
+      }
 
-				<p>
-					<a class="btn-forward" href="{base}/portfolio/rendered-2d-elevations"
-						>Rendered 2D Elevations</a
-					>
-				</p>
-			</div>
-		</div>
-	</div>
-</section>
+      .content {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-<section class="large vLine">
-	<div>
-		<h1 class="boxTitle">
-			<span id="rendered3dVisuals">Rendered 3D visuals</span>
-		</h1>
-		<div class="boxes reverse dark">
-			<div>
-				<img
-					class="boxImage"
-					src="{base}/images/3d-render.jpg"
-					alt="3D Render"
-					width="750"
-					height="533"
-				/>
-			</div>
-			<div>
-				<h2>Overview</h2>
-				<p>
-					Give your clients a “WOW” factor with 3D visuals. These visuals help you match your
-					proposal to your client's requirements and avoid misunderstandings. This, in turn,
-					prevents disappointment, additional expenditure, or extra time to deliver the project.
-				</p>
-				<p>
-					The process involves constructing a virtual scene with 3D objects and setting up lighting
-					and materials to make them look realistic. These visuals start at £130.
-				</p>
+        h1 {
+          margin-bottom: 3rem;
+          max-width: 24ch;
+        }
 
-				<p>
-					<a class="btn-forward" href="{base}/portfolio/rendered-3d-visuals">Rendered 3D visuals</a>
-				</p>
-			</div>
-		</div>
-	</div>
-</section>
+        p {
+          font-size: 1.125rem;
+          line-height: 1.6;
+          margin-bottom: 4rem;
+          max-width: 28ch;
+        }
+      }
 
-<section class="large vLine">
-	<div>
-		<h1 class="boxTitle">
-			<span id="technicalDrawings">Technical Drawings</span>
-		</h1>
-		<div class="boxes vLine light">
-			<div>
-				<img
-					class="boxImage"
-					src="{base}/images/technical-drawing.jpg"
-					alt="Technical drawing"
-					width="750"
-					height="530"
-				/>
-			</div>
-			<div>
-				<h2>Overview</h2>
-				<p>Classical black and white or colour rendered to highlight your design selections.</p>
-				<p>
-					The drawing solutions include a range of options - initial floorplans, elevations,
-					electrical and lighting layouts and bespoke joinery.
-				</p>
-				<p>
-					Depending on your requirements they can be presented to scale, with dimensions, title
-					block and your branding.
-				</p>
-				<p>These plans usually start at &pound;50.</p>
-				<p>
-					<a class="btn-forward" href="{base}/portfolio/technical-drawings">Technical Drawings</a>
-				</p>
-			</div>
-		</div>
-	</div>
-</section>
+      // Desktop: two-column layout at 800px
+      @media (min-width: 800px) {
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
 
-<section class="large vLine steps">
-	<div>
-		<h1 class="boxTitle">
-			<span id="easyFourStep">Easy four step process</span>
-		</h1>
-		<div class="boxes">
-			<div class="light">
-				<p>Step 1</p>
-				<h2>Free initial consultation</h2>
-				<p>
-					To discuss a project, gather technical details and provide a written quotation for work.
-				</p>
-				<p>Please use <a class="animate" href="{base}/contact">Contact Form</a> to get in touch.</p>
-			</div>
-			<div>&nbsp;</div>
-		</div>
+        .visual {
+          order: 0;
+          min-height: 500px;
+          max-height: initial;
+          padding-left: 0;
+        }
 
-		<div class="boxes reverse">
-			<div class="light">
-				<p>Step 2</p>
-				<h2>Booking the project</h2>
-				<p>
-					50% deposit is paid upon booking. <br />Detailed project information is submitted via
-					Email or DropBox.<br />
-					The information required can vary, however, standard project will require:
-				</p>
-				<ul>
-					<li>
-						floor plan and elevations with dimensions <br />(including hand drawn sketches, existing
-						AutoCAD, SketchUp files etc.)
-					</li>
-					<li>furniture layout with dimensions</li>
-					<li>dimensions of windows and doors</li>
-					<li>
-						images or website links to all finishes <br />(paint colour, fabric, hardware etc.)
-					</li>
-				</ul>
-				<p>For branded documents:</p>
-				<ul>
-					<li>your logo,</li>
-					<li>your contact info</li>
-					<li>fonts, text size etc.</li>
-					<li>title block (if applicable)</li>
-				</ul>
-			</div>
-			<div>&nbsp;</div>
-		</div>
+        .content {
+          padding-right: 3rem;
+        }
+      }
 
-		<div class="boxes">
-			<div class="light">
-				<p>Step 3</p>
-				<h2>Design and revision stage</h2>
-				<p>After studying the submitted information I start construction.</p>
-				<p>
-					In order for this stage to run smoothly and within agreed timescale make sure you provide
-					as much relevant information as possible.
-				</p>
-				<p>Design draft is sent to the client for approval.</p>
-			</div>
-			<div>&nbsp;</div>
-		</div>
+      // Larger screens: adjust proportions
+      @media (min-width: 1200px) {
+        .visual {
+          min-height: 600px;
+        }
+      }
+    }
+  }
 
-		<div class="boxes reverse">
-			<div class="light">
-				<p>Step 4</p>
-				<h2>Final design</h2>
-				<p>
-					If applicable, revisions are made, the final drawings are sent to the client via Email or
-					DropBox and the final invoice is issued.
-				</p>
-			</div>
-			<div>&nbsp;</div>
-		</div>
-	</div>
-</section>
+  .grey {
+    .services-grid {
+      list-style: none;
+      padding: 0;
+      margin: 3rem 0 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
 
-<section class="large vline dark last">
-	<div>
-		<div class="boxes">
-			<div>
-				<div class="roundedImage">
-					<img
-						src="{base}/images/aija-svarcs-gallery.jpg"
-						alt="Aija Svarcs"
-						width="350"
-						height="350"
-					/>
-				</div>
-			</div>
-			<div>
-				<h1 class="mediumTitle">Hi, my name is Aija <br /><i>(pronounce as I-ya)</i></h1>
-				<p>
-					There is a technical term for what I do <br />
-					- <em>Interior Design visualiser</em>,<br />
-					but I would like to call myself <em>Spatial Magician</em>.
-				</p>
-				<p>
-					I can virtually transfer existing living space and show you images of the property that
-					hasn't even been built yet.
-				</p>
-				<p>
-					I specialise in Technical Drawings, Rendered Floor Plans, Rendered 2D Elevations and 3D
-					visuals.
-				</p>
-				<p>
-					<a class="btn-forward" href="{base}/contact">Contact me</a>
-				</p>
-			</div>
-		</div>
-	</div>
-</section>
+      li {
+        list-style: none;
+        padding: 0;
+      }
 
-<div style="transform: translate3d(0, {scrollY}px, 0)" id="animatedLine"></div>
-<svelte:window bind:scrollY />
+      .service-card {
+        display: block;
+        height: 100%;
+        background: var(--aya-white);
+        border-radius: 0.5rem;
+        overflow: hidden;
+        /*box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);*/
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        text-decoration: none;
+        color: inherit;
 
-<style lang="scss">
-	@keyframes jumping {
-		0% {
-			transform: translate3d(0, 0, 0);
-		}
-		30% {
-			transform: translate3d(0, 0, 0);
-		}
-		50% {
-			transform: translate3d(0, 12px, 0);
-		}
-		70% {
-			transform: translate3d(0, 0, 0);
-		}
-		100% {
-			transform: translate3d(0, 0, 0);
-		}
-	}
+        &:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 
-	@keyframes spinColors {
-		0% {
-			filter: hue-rotate(0deg);
-		}
-		100% {
-			filter: hue-rotate(360deg);
-		}
-	}
+          .link:after {
+            transform: scaleX(0.8);
+          }
+        }
 
-	.intro {
-		> div {
-			padding: 0;
-		}
+        &:focus {
+          outline: 2px solid var(--aya-navy-500);
+          outline-offset: 2px;
+        }
 
-		div:nth-child(1) {
-			dt {
-				font-weight: 300;
-				font-size: 2.5rem;
-				letter-spacing: 0.875rem;
-				margin-right: -0.875rem;
-			}
+        .card-image {
+          width: 100%;
+          height: 240px;
+          overflow: hidden;
 
-			dd {
-				font-weight: 600;
-				font-size: clamp(3rem, 9vw, 3.7rem);
-				line-height: clamp(4rem, 7vw, 6.25rem);
-				margin-top: 2rem;
-			}
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+          }
+        }
 
-			div {
-				text-align: center;
+        h3 {
+          font-size: 1.5rem;
+          margin: 1.5rem 1.5rem 1rem;
+        }
 
-				a {
-					display: inline-block;
-					animation: 3s jumping 7;
-				}
+        p {
+          font-size: 1rem;
+          line-height: 1.6;
+          margin: 0 1.5rem 1.5rem;
+          color: var(--aya-navy-900);
+        }
 
-				img {
-					width: 32px;
-					height: 32px;
-				}
-			}
+        .link {
+          display: inline-block;
+          margin: 0 1.5rem 1.5rem;
+          color: var(--aya-navy-900);
+          text-decoration: none;
+          position: relative;
+          cursor: pointer;
 
-			p:first-of-type {
-				padding: 2rem 0 0;
-			}
-		}
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: currentColor;
+            transform: scaleX(1);
+            transition: transform 0.2s ease;
+          }
+        }
+      }
 
-		.icnChevron {
-			margin-bottom: 1rem;
-		}
-	}
+      // Medium screens: center cards with max-width
+      @media (min-width: 500px) and (max-width: 799px) {
+        .service-card {
+          max-width: 500px;
+          margin: 0 auto;
+        }
+      }
 
-	@media (min-width: 800px) {
-		.intro {
-			height: 100%;
-			min-height: calc(100vh - 112px);
+      // Desktop: 2-column grid
+      @media (min-width: 800px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
 
-			div:nth-child(1) {
-				dl {
-					margin-right: 4rem;
-				}
+      // Larger screens: increase gap
+      @media (min-width: 1200px) {
+        gap: 2.5rem;
+      }
+    }
+  }
 
-				dd {
-					font-size: clamp(4rem, 7vw, 6.25rem);
-				}
+  .service-description,
+  .process-description {
+    margin-top: 3rem;
+    max-width: 600px;
+    margin-inline: auto;
+  }
 
-				div {
-					text-align: right;
-					align-items: end;
+  .white {
+    .process-grid {
+      list-style: none;
+      padding: 0;
+      margin: 3rem 0 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
 
-					a {
-						margin-right: -8px;
-					}
-				}
+      li {
+        position: relative;
+        list-style: none;
+        padding: 0;
+      }
 
-				p:first-of-type {
-					width: 100%;
-					max-width: 420px;
-					margin-left: auto;
-					padding: 2rem 4rem 0 0;
-				}
+      .process-step {
+        background: var(--aya-sand-50);
+        border-radius: 0.5rem;
+        padding: 3rem 1rem 2rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-				p {
-					padding-right: 4rem;
-				}
-			}
+        &:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
 
-			div:nth-child(2) {
-				/*border-left: 4px solid var(--cBlack10);*/
+        .step-number {
+          position: absolute;
+          left: -4px;
+          top: -4px;
+          display: inline-block;
+          background: var(--aya-navy-700);
+          color: var(--aya-white);
+          padding: 0.5rem 1rem;
+          border-radius: 0.25rem;
+          font-size: 0.875rem;
+          font-weight: 300;
+          margin-bottom: 1.5rem;
+          width: fit-content;
+        }
 
-				img {
-					margin-left: 2rem;
-				}
-			}
-		}
-	}
+        h3 {
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+          color: var(--aya-navy-900);
+        }
 
-	.boxImage {
-		max-width: 500px;
-		margin: auto;
+        p {
+          font-size: 1rem;
+          line-height: 1.6;
+          margin: 0;
+          color: var(--aya-navy-700);
+        }
+      }
 
-		@media (min-width: 800px) {
-			max-width: 100%;
-		}
-	}
+      // Tablet: 2-column grid
+      @media (min-width: 500px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-	.steps {
-		.boxes {
-			gap: 2px;
-		}
-	}
+      // Desktop: 4-column grid
+      @media (min-width: 800px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
 
-	.roundedImage {
-		--card-width: 300px;
+      // Larger screens: adjust gap
+      @media (min-width: 1200px) {
+        gap: 2.5rem;
+      }
+    }
+  }
 
-		position: relative;
-		margin: auto;
-		aspect-ratio: 1;
-		max-width: calc(var(--card-width) + 2rem);
-
-		&:before {
-			background: hsl(0, 30%, 50%);
-			animation: spinColors 5.5s linear infinite;
-
-			display: block;
-			position: absolute;
-
-			content: '';
-			top: 0;
-			left: 0;
-			z-index: 0;
-			max-height: var(--card-width);
-			max-width: var(--card-width);
-			width: 100%;
-			height: 100%;
-			border-radius: 50%;
-			box-shadow: 0 0 9px 3px hsl(0, 60%, 50%);
-			transform: translate3d(0, 0, 0);
-		}
-
-		img {
-			position: relative;
-			margin: auto;
-			max-width: var(--card-width);
-			aspect-ratio: 1;
-			border-radius: 50%;
-			overflow: hidden;
-		}
-	}
-
-	.last {
-		margin-bottom: 0;
-	}
-
-	@media (min-width: 800px) {
-		#animatedLine {
-			position: absolute;
-			top: 14vh;
-			left: calc(50% + 1px);
-			width: 4px;
-			height: 100vh;
-			max-height: calc(100vh - 20vh);
-			background: var(--cBlack10);
-			z-index: -1;
-			transform: translate3d(0, 0, 0);
-			transition: transform 200ms;
-		}
-	}
 </style>

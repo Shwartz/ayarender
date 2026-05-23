@@ -12,7 +12,10 @@ const config = {
         include: ['/*'],
         exclude: ['/_app/*', '/images/*', '/assets/*', '/fonts/*', '/icons/*']
       }
-    })
+    }),
+    alias: {
+      $components: 'src/components'
+    }
   }
 };
 

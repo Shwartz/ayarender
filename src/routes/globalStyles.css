@@ -9,160 +9,193 @@
     - The "html" element is excluded, otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
  */
 *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
-    all: unset;
-    display: revert;
+  all: unset;
+  display: revert;
 }
 
 /* Preferred box-sizing value */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 /* Reapply the pointer cursor for anchor tags */
 a, button {
-    cursor: revert;
+  cursor: revert;
+}
+
+button:focus,
+a:focus-visible {
+  outline: 1px solid var(--aya-white);
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
 /* Remove list styles (bullets/numbers) */
 ol, ul, menu {
-    list-style: none;
+  list-style: none;
 }
 
 /* For images to not be able to exceed their container */
 img {
-    max-inline-size: 100%;
-    max-block-size: 100%;
-    width: 100%;
-    height: auto;
-    aspect-ratio: attr(width) / attr(height);
+  max-inline-size: 100%;
+  max-block-size: 100%;
+  width: 100%;
+  height: auto;
+  aspect-ratio: attr(width) / attr(height);
 }
 
 em {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 i {
-    font-style: italic;
+  font-style: italic;
 }
 
 /* removes spacing between cells in tables */
 table {
-    border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 /* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
 input, textarea {
-    -webkit-user-select: auto;
+  -webkit-user-select: auto;
 }
 
 /* revert the 'white-space' property for textarea elements on Safari */
 textarea {
-    white-space: revert;
+  white-space: revert;
 }
 
 /* minimum style to allow to style meter element */
 meter {
-    -webkit-appearance: revert;
-    appearance: revert;
+  -webkit-appearance: revert;
+  appearance: revert;
 }
 
 /* preformatted text - use only for this feature */
 :where(pre) {
-    all: revert;
+  all: revert;
 }
 
 /* reset default text opacity of input placeholder */
 ::placeholder {
-    color: unset;
+  color: unset;
 }
 
 /* remove default dot (•) sign */
 ::marker {
-    content: initial;
+  content: initial;
 }
 
 /* fix the feature of 'hidden' attribute.
    display:revert; revert to element instead of attribute */
 :where([hidden]) {
-    display: none;
+  display: none;
 }
 
 /* revert for bug in Chromium browsers
    - fix for the content editable attribute will work properly.
    - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
 :where([contenteditable]:not([contenteditable="false"])) {
-    -moz-user-modify: read-write;
-    -webkit-user-modify: read-write;
-    overflow-wrap: break-word;
-    -webkit-line-break: after-white-space;
-    -webkit-user-select: auto;
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
 }
 
 /* apply back the draggable feature - exist only in Chromium and Safari */
 :where([draggable="true"]) {
-    -webkit-user-drag: element;
+  -webkit-user-drag: element;
 }
 
 /**
 GLOBAL SETUP
 */
 @font-face {
-    font-family: 'OpenSans';
-    src: local(''), url('/fonts/OpenSans/OpenSans-Bold.ttf') format('truetype');
-    src: local(''), url('/fonts/OpenSans/OpenSans-Bold.woff2') format('woff2');
-    font-weight: 600;
-    font-style: normal;
-    font-stretch: normal;
+  font-family: 'OpenSans';
+  src: local(''), url('/fonts/OpenSans/OpenSans-Bold.ttf') format('truetype');
+  src: local(''), url('/fonts/OpenSans/OpenSans-Bold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
 }
 
 @font-face {
-    font-family: 'OpenSans';
-    src: local(''), url('/fonts/OpenSans/OpenSans-Regular.ttf') format('truetype');
-    src: local(''), url('/fonts/OpenSans/OpenSans-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-stretch: normal;
+  font-family: 'OpenSans';
+  src: local(''), url('/fonts/OpenSans/OpenSans-Regular.ttf') format('truetype');
+  src: local(''), url('/fonts/OpenSans/OpenSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
 }
 
 @font-face {
-    font-family: 'OpenSans';
-    src: local(''), url('/fonts/OpenSans/OpenSans-Light.ttf') format('truetype');
-    src: local(''), url('/fonts/OpenSans/OpenSans-Light.woff2') format('woff2');
-    font-weight: 300;
-    font-style: normal;
-    font-stretch: normal;
+  font-family: 'OpenSans';
+  src: local(''), url('/fonts/OpenSans/OpenSans-Light.ttf') format('truetype');
+  src: local(''), url('/fonts/OpenSans/OpenSans-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
 }
 
 /* Refactor fonts to use one font family only */
 :root {
-    --font-body: 'OpenSans',Helvetica Neue,Helvetica,Arial,sans-serif,Roboto,Oxygen,Ubuntu,
-    Cantarell,'Open Sans',sans-serif;
-    font-family: var(--font-body);
-    --cWhite: #fff;
-    --cGrey: #D8D8D8;
-    --cBlack10: #2A2C38;
-    --cBlack5: #a7abc5;
-    --cNight: #000;
-    --cBrick10: #C26F60;
-    --cOrange10: #FFAA4D;
-    --cGreen10: #709F54;
+  --font-body: 'OpenSans', Helvetica Neue, Helvetica, Arial, sans-serif, Roboto, Oxygen, Ubuntu,
+  Cantarell, 'Open Sans', sans-serif;
+  font-family: var(--font-body), serif;
+
+  --aya-navy-900:    #0D1B2A;
+  --aya-navy-700:    #415A77;
+  --aya-navy-500:    #778DA9;
+  --aya-sand-100:    #E0E1DD;
+  --aya-sand-50:     #f5f6f1;
+  --aya-white:       #ffffff;
+
+  --aya-rose-700:    #af696e;
+  --aya-rose-500:    #e5989b;
+  --aya-rose-300:    #ffb4a2;
+}
+
+@supports (color: oklch(0.5 0 0)) {
+  :root {
+    --aya-navy-900:  oklch(0.24 0.06 260);
+    --aya-navy-700:  oklch(0.44 0.07 250);
+    --aya-navy-500:  oklch(0.60 0.05 240);
+
+    --aya-sand-100:  oklch(0.93 0.02 100);
+    --aya-sand-50:   oklch(0.97 0.01 110);
+    --aya-white:     oklch(1.00 0.00 0);
+
+    --aya-rose-700:  oklch(0.63 0.10 20);
+    --aya-rose-500:  oklch(0.74 0.12 25);
+    --aya-rose-300:  oklch(0.82 0.11 30);
+  }
 }
 
 body {
-    font-size: 16px;
-    color: var(--cBlack10);
+  font-size: 16px;
+  color: var(--aya-navy-900);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--aya-sand-100);
 }
 
 textarea::placeholder,
 input::placeholder {
-    color: var(--cBlack5);
-    font-size: 1.2rem;
+  color: var(--aya-navy-900);
+  font-size: 1.2rem;
 }
 
 /**
@@ -170,64 +203,31 @@ SITE SKELETON
  */
 section,
 .section {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    /*scroll-margin-top: 3rem;*/
+  display: flex;
+  justify-content: center;
 }
 
 section > div,
 .section > * {
-    width: 100%;
-    padding: 1rem 1rem 1rem;
-
-    @media (min-width: 800px) {
-        padding: 1rem 1rem 4rem;
-    }
-}
-
-.page section:last-of-type {
-    margin-bottom: 12rem;
-
+  width: 100%;
+  padding: 3rem 1rem;
 }
 
 @media (min-width: 500px) {
-    section > div,
-    .section > * {
-        padding: 2rem;
-    }
+  section > div,
+  .section > * {
+    padding: 4rem 2rem;
+  }
 }
 
-section.medium > div,
-.section.medium > * {
-    max-width: 900px;
+section.hero {
+  background: var(--aya-navy-900);
+  color: var(--aya-white);
+  border-top: 1px solid var(--aya-navy-700);
 }
 
-section.large > div,
-.section.large > * {
-    max-width: 1128px;
-}
-
-section.dark {
-    background: var(--cBlack10);
-    color: var(--cWhite);
-
-    @media (min-width: 800px) {
-        background-image:
-                linear-gradient(180deg, var(--cGrey), var(--cGrey)),
-                linear-gradient(var(--cBlack10), var(--cBlack10));
-        background-repeat: repeat-y, no-repeat;
-        background-position: 50%, 0;
-        background-size: 1px auto, 100%;
-    }
-
-}
-
-@media (min-width: 800px) {
-    .vLine {
-        background: linear-gradient(180deg, var(--cGrey), var(--cGrey)) repeat-y 50%;
-        background-size: 2px auto;
-    }
+section.grey {
+  background: var(--aya-sand-50);
 }
 
 /**
@@ -235,244 +235,162 @@ section.dark {
 Boxes layout
 ****************************************
  */
-.boxes {
-    display: flex;
-    flex-direction: column;
+.box {
+  display: flex;
+  flex-direction: column;
 }
 
-/*.boxes > div {outline: 0.5px dotted blue;}*/
-
-.boxes > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1rem;
-}
-
-/*.boxes.light {
-    background-color: var(--cWhite);
-}*/
-
-.boxes.dark {
-    background-color: var(--cBlack10);
-    color: var(--cWhite);
-}
-
-.boxes.dark p {font-weight: 300}
-
-@media (min-width: 800px) {
-    .boxes {
-        flex-direction: row;
-        width: 100%;
-    }
-
-    .boxes > div {
-        width: 50%;
-        padding: 1.4rem;
-    }
-
-    .boxes.reverse {
-        flex-direction: row-reverse;
-    }
-}
-
-.boxTitle {
-    text-align: center;
-}
-
-.boxTitle span {
-    display: inline-block;
-    margin: 3rem auto;
-    padding: 0.5rem 1rem;
-    font-size: 40px;
-    font-weight: 300;
-    background: var(--cGrey);
-
-    @media (min-width: 800px) {
-        margin: 8rem auto 2rem;
-    }
-}
-
-.boxes h2 {
-    font-size: 2rem;
-    font-weight: 700;
-}
-
-@media (min-width: 800px) {
-    .hero {
-        height: 320px;
-        aspect-ratio: auto;
-    }
+.box > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
 }
 
 /**
 UTILITIES
  */
 .overflow {
-    overflow: hidden;
-}
-p, label {
-    margin-top: 1rem;
+  overflow: hidden;
 }
 
-a.animate {
-    color: inherit;
-    text-decoration: none;
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--aya-rose-700);
+  color: var(--aya-white);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 
-    background-size: 100% 0.1em, 0 0.1em;
-    background:
-            linear-gradient(to right, var(--cBlack10), var(--cBlack5)) 100% 100% no-repeat,
-            linear-gradient(to right, #063587, #f4db3f, #f34a41) 0 100% no-repeat;
-    background-size: 100% 0.1rem, 0 0.1rem;
-    transition: background-size 400ms;
-
-    &:hover,
-    &:focus {
-        background-size: 0 0.1rem, 100% 0.1rem;
-    }
-}
-
-ul {
-    margin-top: 0.5rem;
-}
-
-li {
-    line-height: 1.5;
-    padding-left: 1.5rem;
-    background: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iIzJhMmMzOCIgY2xhc3M9ImJpIGJpLWNoZWNrIiB2aWV3Qm94PSIwIDAgMTYgMTYiIGlkPSJpY29uLWNoZWNrLTE3Ij48cGF0aCBkPSJNMTAuOTcgNC45N2EuNzUuNzUgMCAwIDEgMS4wNyAxLjA1bC0zLjk5IDQuOTlhLjc1Ljc1IDAgMCAxLTEuMDguMDJMNC4zMjQgOC4zODRhLjc1Ljc1IDAgMSAxIDEuMDYtMS4wNmwyLjA5NCAyLjA5MyAzLjQ3My00LjQyNWEuMjY3LjI2NyAwIDAgMSAuMDItLjAyMnoiPjwvcGF0aD48L3N2Zz4=) no-repeat 0 0.3rem;
-}
-
-.btn-back, .btn-forward {
-    border: 1px solid var(--cBlack10);
-    border-radius: 1rem;
-    text-decoration: none;
-    color: var(--cBlack10);
-    transition: background-position 300ms;
-    display: inline-block;
-    font-weight: 600;
-}
-
-.dark .btn-back,
-.dark .btn-forward {
-    border: 1px solid var(--cWhite);
-    color: var(--cWhite);
-}
-
-
-.btn-back {
-    padding: 0.5rem 1rem 0.5rem 2.5rem;
-    background: url(/icons/icn-arrow-left-light.svg) no-repeat 16px 54%;
-}
-
-.btn-forward {
-    padding: 0.5rem 2.5rem 0.5rem 1rem;
-    background: url(/icons/icn-arrow-right-light.svg) no-repeat calc(100% - 16px) 54%;
-}
-
-.light .btn-back {
-    background: url(/icons/icn-arrow-left-dark.svg) no-repeat 16px 54%;
-}
-
-.light .btn-forward {
-    background: url(/icons/icn-arrow-right-dark.svg) no-repeat calc(100% - 16px) 54%;
-}
-
-.btn-back:hover, .btn-back:focus {
-    color: var(--cBlack10);
-    background-position: 8px 54%;
-}
-
-.btn-forward:hover, .btn-forward:focus {
-    background-position: calc(100% - 8px) 54%;
+  &:hover {
+    background-color: oklch(from var(--aya-rose-700) calc(l - 0.1) c h);
+  }
 }
 
 svg {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 /**
 ****************************************
-Hero
+Typography
 ****************************************
  */
-.hero {
-    display: flex;
-    position: relative;
-    padding: 0;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: clamp(300px, 30vw, 460px);
-    background: black;
+
+h1 {
+  font-size: clamp(2rem, 1rem + 3vw, 3rem);
+  margin-bottom: 2rem;
+  font-weight: 300;
+  line-height: 1.2;
 }
 
-.hero div {
-    overflow: hidden;
+h2 {
+  font-size: clamp(1.8rem, 1rem + 3vw, 2.5rem);
+  margin-bottom: 2rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 1rem + 2vw, 2rem);
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+p {
+  /*font-size: clamp(1rem, 0.875rem + 0.5vw, 1.125rem);*/
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+p a:not(.btn):not(:has(> img:only-child)) {
+  color: var(--aya-navy-900);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease;
+
+  /* Animated underline similar to "See Examples" */
+  &:after {
+    content: '';
     position: absolute;
-    inset: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
-}
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    transform: scaleX(1);
+    transition: transform 0.2s ease;
+  }
 
-@keyframes jumbo {
-    from {
-        background-position: 50% 50%, 50% 50%;
+  &:hover {
+    color: var(--aya-navy-500);
+
+    &:after {
+      transform: scaleX(0.8);
     }
-    to {
-        background-position: 350% 50%, 350% 50%;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--aya-navy-500);
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+}
+
+.list {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+
+  li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+}
+
+.standout-note {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--aya-sand-50);
+  border-left: 4px solid var(--aya-navy-700);
+  border-radius: 0.25rem;
+
+  p {
+    margin-bottom: 0;
+    color: var(--aya-navy-700);
+    font-size: 0.95rem;
+
+    strong {
+      color: var(--aya-navy-900);
+      font-weight: 600;
     }
+  }
 }
 
-.hero .jumbo {
-    --stripesDark: repeating-linear-gradient(
-            100deg,
-            #000 0%,
-            #000 7%,
-            transparent 10%,
-            transparent 12%,
-            #000 16%
-    );
-    --rainbow: repeating-linear-gradient(
-            100deg,
-            #60a5fa 10%,
-            #e879f9 15%,
-            #60a5fa 20%,
-            #5eead4 25%,
-            #60a5fa 30%
-    );
-
-    position: absolute;
-    opacity: 0.6;
-    background-image: var(--stripesDark), var(--rainbow);
-    background-size: 300%, 200%;
-    background-position: 50% 50%, 50% 50%;
-    filter: blur(10px) opacity(50%) saturate(200%);
-    mask-image: radial-gradient(ellipse at 100% 0%, black 40%, transparent 70%);
-    pointer-events: none;
-    inset: -10px;
-}
-
-.hero .jumbo::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    animation: jumbo 60s linear infinite;
-    background-image: var(--stripesDark), var(--rainbow);
-    background-size: 200%, 100%;
-    background-attachment: fixed;
-    mix-blend-mode: difference;
-    transform: translate3d(0,0,0);
-}
-
-.hero .title {
+.gallery {
+    list-style: none;
+    padding: 0;
+    margin: 3rem 0 0 0;
     display: flex;
-    position: relative;
-    padding: 0 8px;
-    color: white;
-    align-items: center;
-    text-align: center;
-    font-size: clamp(3.6rem, 7vw, 5.5rem);
-    text-shadow: 0 0 8px black;
+    flex-direction: column;
+
+    li {
+      list-style: none;
+      padding: 0;
+      width: 100%;
+
+      div {
+        margin-bottom: 3rem;
+      }
+    }
+
+  @media (min-width: 800px) {
+    li {
+      display: flex;
+      gap: 1.5rem;
+    }
+  }
 }
