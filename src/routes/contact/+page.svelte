@@ -185,10 +185,13 @@ imageAlt="AyaRender – interior renders alongside the tagline 'Have a project i
     <div class='standout-note'>
       <h3>Quick facts</h3>
       <ul class='list'>
-        <li>Based in Surrey, working with UK and international clients.</li>
-        <li>Background in [interior design / related] uni</li>
-        <li>Experienced with [software you want designers to know you use]</li>
-        <li>Comfortable working from sketches, CAD or existing 3D models</li>
+        <li>Based in Surrey, working with UK & international interior designers and studios.</li>
+        <li>Foundation degree in Interior Design.</li>
+        <li>Creating design-led SketchUp visuals, including floor plans, elevations and layouts.</li>
+        <li>Focused on clear, client-ready presentation visuals that support design decisions.</li>
+        <li>Working from sketches, moodboards, CAD drawings and early-stage concepts.</li>
+        <li>Strong emphasis on composition, materiality and spatial clarity.</li>
+        <li>Supporting studios with project-based visualisation during busy workloads.</li>
       </ul>
     </div>
   </div>
