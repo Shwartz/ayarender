@@ -65,6 +65,7 @@
 <svelte:head>
   <title>{fullTitle}</title>
   <meta name="description" content={description} />
+  <link rel="canonical" href="{base}{path}" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{base}{path}" />
   <meta property="og:site_name" content="Ayarender" />
