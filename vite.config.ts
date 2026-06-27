@@ -17,5 +17,8 @@ export default defineConfig({
 				api: 'modern-compiler' // or 'modern'
 			}
 		}
+	},
+	ssr: {
+		noExternal: ['sveltekit-superforms', 'resend', 'typebox']
 	}
 });
