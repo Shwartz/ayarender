@@ -23,7 +23,7 @@
   <ul class='gallery'>
     <li>
       <Image
-        imgId='0d0b4b0c-fada-4740-cc9d-7deb69767100'
+        imgId='a006ac59-f131-4f7a-523a-a299d9008200'
         alt='3D interior visual example'
         expandable={true}
         aspectRatio='15/9'
@@ -31,7 +31,7 @@
     </li>
     <li>
       <Image
-        imgId='69749870-3878-4a15-db96-6d641a6ac100'
+        imgId='f3f559e5-1736-449d-41ee-e49d710ec000'
         alt='3D interior visual example'
         expandable={true}
         aspectRatio='7/3'
@@ -53,7 +53,7 @@
     </li>
     <li>
       <Image
-        imgId='89cb666e-ac06-4c19-8d33-d4c5dd8f2800'
+        imgId='579089f1-797a-46c1-4ae1-3264127e2d00'
         alt='3D interior visual example'
         expandable={true}
         aspectRatio='5/3'
