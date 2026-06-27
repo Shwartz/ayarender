@@ -1,5 +1,7 @@
 # Project Context for AI Assistant
 
+> **Important:** See `.github/ai-guidelines.md` for AI behavior, commit policy, and communication style.
+
 ## Project Overview
 - **Project Name:** AyaRender
 - **Framework:** SvelteKit 2.x (Svelte 5.x)

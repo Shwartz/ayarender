@@ -13,4 +13,3 @@ vite.config.ts.timestamp-*
 .vscode
 .wrangler
 .dev.vars
-package-lock.json
