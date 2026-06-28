@@ -9,7 +9,7 @@
 - **Deployment Platform:** Cloudflare Pages
 - **Adapter:** `@sveltejs/adapter-cloudflare`
 - **Styling:** Sass/SCSS (component-scoped styles)
-- **Node Version:** >=20.0.0 <23.0.0
+- **Node Version:** 22 (locked in `.nvmrc` and `package.json` engines)
 - **Image Hosting:** Cloudflare Images (imagedelivery.net)
 
 ## Key Architecture Details
@@ -188,6 +188,25 @@
   - Responsive table with hover effects
   - Navy header, white rows with sand borders
   - Horizontal scroll on mobile if needed
+
+## Known Issues / Temporary Fixes
+
+### Vite 6.4.3 Pinned + Superforms Adapter Alias
+**Issue:** Vite 6.4.3 has strict package export enforcement. `sveltekit-superforms/adapters` barrel import loads ALL adapters (including TypeBox), which has export issues with Vite 6.4.x.
+
+**Fix Applied:**
+- Vite version pinned to `6.4.3` in package.json (prevents auto-upgrade surprises)
+- Vite resolve alias in `vite.config.ts` maps `sveltekit-superforms/adapters/zod` directly to zod.js file
+- This bypasses the barrel import, preventing TypeBox from loading
+
+**When to Remove:**
+- After upgrading `sveltekit-superforms` (they may fix adapter exports)
+- After upgrading to Vite 7.x (may have looser export resolution)
+- Test by: Remove alias from vite.config.ts, remove Vite pin, run `npm install`, test `/contact` page loads without TypeBox errors
+
+**References:**
+- See inline comments in `vite.config.ts` for technical details
+- Production builds work fine (bundler handles it differently)
 
 ## Known Considerations
 - WWW to root domain redirection handled by Cloudflare (not in code)
