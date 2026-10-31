@@ -9,6 +9,8 @@
   let { children }: Props = $props();
 
   let url = $derived(page.url.pathname.split('/')[1]);
+  // Client presentations are white-label: no Aya nav or footer around them.
+  let isClientRoute = $derived(url === 'projects');
   let mobileMenuOpen = $state(false);
   let mobileMenuPanel: HTMLDivElement | undefined = $state();
 
@@ -35,6 +37,9 @@
 
 <svelte:window onkeydown={handleKeydown} />
 
+{#if isClientRoute}
+  {@render children?.()}
+{:else}
 <div class='page'>
   <div class='wrap'>
     <header class='main'>
@@ -181,6 +186,7 @@
     </footer>
   </div>
 </div>
+{/if}
 
 <style lang='scss'>
   .wrap {

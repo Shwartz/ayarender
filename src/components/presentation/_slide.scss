@@ -1,0 +1,16 @@
+// Design coordinate system shared by all slide components (1 design px = 100cqw / 1200).
+// Everything is multiples of 8 so spacing stays on the 8-point grid.
+@function u($px) {
+  @return calc(#{$px} * var(--u));
+}
+
+$slide-width: 1200;
+$slide-height: 848;
+$pad: 16;
+$footer-height: 96;
+$gap: 8;
+
+$ink: #1c1c1c;
+$line: #dcdcde;
+$side-band: #ededef;
+$font: Helvetica, Arial, sans-serif;
