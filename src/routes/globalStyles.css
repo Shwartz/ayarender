@@ -190,6 +190,11 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-color: var(--aya-sand-100);
+
+  @media (min-width: 1200px) {
+    padding: 0 4rem;
+  }
+
 }
 
 textarea::placeholder,

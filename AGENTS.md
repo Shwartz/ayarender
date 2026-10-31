@@ -14,7 +14,7 @@ Single source of truth for all AI tools (Claude Code, Copilot, others).
 ## Project overview
 Marketing site for AyaRender (interior visualisation studio). Single SvelteKit app, no separate backend.
 - SvelteKit 2.x / Svelte 5 (runes: `$props`, `$derived`, snippets), TypeScript, Sass/SCSS component-scoped styles
-- Deployed to Cloudflare Pages via `@sveltejs/adapter-cloudflare`; Node `>=20 <23`
+- Deployed to Cloudflare Pages via `@sveltejs/adapter-cloudflare`; Node 22 (`.nvmrc`; engines allow `>=20 <23`)
 - Images on Cloudflare Images (`imagedelivery.net`)
 
 ## Commands
@@ -83,6 +83,7 @@ Look at an existing page (e.g. `src/routes/+page.svelte`) for the exact grid/car
 - `@ts-expect-error` on `superValidate(zod(...))` in `contact/+page.server.ts` — known superforms/zod adapter typing mismatch.
 - `react`/`react-dom` devDependencies — peer dependency of `resend`, needed for `npm ci` on Cloudflare.
 - `static/images/` legacy assets — being phased out, don't migrate unasked.
+- Vite pinned to `6.4.3` plus the alias in `vite.config.ts` mapping `sveltekit-superforms/adapters/zod` straight to zod.js — avoids the barrel import loading the TypeBox adapter, which breaks under Vite 6.4's strict exports. Remove both only after upgrading superforms or Vite 7, then verify `/contact` loads.
 
 ## Keeping these instructions current
 - If a pattern or module changes, update this file in the same change.

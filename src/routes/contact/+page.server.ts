@@ -2,7 +2,7 @@ import { env as svelteEnv } from '$env/dynamic/private';
 import { getResend } from "$lib/emailSetup.server";
 import { superValidate, message } from "sveltekit-superforms";
 import { contactSchema } from '$lib/contactSchema';
-import { zod } from 'sveltekit-superforms/adapters';
+import { zod } from 'sveltekit-superforms/adapters/zod';
 import type { Actions } from './$types';
 
 
